@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {6}User Profile}{3}
 \contentsline {section}{\numberline {7}Stakeholder Profiles}{3}
 \contentsline {subsection}{\numberline {7.1}Stakeholder: Team Sriram}{3}
-\contentsline {subsection}{\numberline {7.2}Stakeholder: Sriram Mohan}{4}
+\contentsline {subsection}{\numberline {7.2}Stakeholder: Sriram Mohan}{3}
 \contentsline {subsection}{\numberline {7.3}Stakeholder: Tim Ekl}{4}
 \contentsline {section}{\numberline {8}User Environment}{4}
 \contentsline {section}{\numberline {9}User Needs}{4}
@@ -14,7 +14,7 @@
 \contentsline {section}{\numberline {11}Product Overview}{4}
 \contentsline {subsection}{\numberline {11.1}Product Perspective}{4}
 \contentsline {subsection}{\numberline {11.2}Elevator Statement}{4}
-\contentsline {subsection}{\numberline {11.3}Summary of Capabilities}{5}
+\contentsline {subsection}{\numberline {11.3}Summary of Capabilities}{4}
 \contentsline {subsection}{\numberline {11.4}Assumptions and Dependencies}{5}
 \contentsline {subsection}{\numberline {11.5}Rough Estimate of the Cost}{5}
 \contentsline {subsection}{\numberline {11.6}Feature Listing}{5}
