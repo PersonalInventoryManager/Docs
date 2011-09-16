@@ -20,7 +20,10 @@
 \contentsline {subsection}{\numberline {11.3}Summary of Capabilities}{5}
 \contentsline {subsection}{\numberline {11.4}Assumptions and Dependencies}{5}
 \contentsline {subsection}{\numberline {11.5}Rough Estimate of the Cost}{5}
-\contentsline {subsection}{\numberline {11.6}Feature Listing}{5}
-\contentsline {subsection}{\numberline {11.7}Constraints}{6}
+\contentsline {subsection}{\numberline {11.6}Requirements}{5}
+\contentsline {subsubsection}{\numberline {11.6.1}General}{5}
+\contentsline {subsubsection}{\numberline {11.6.2}Testing}{5}
+\contentsline {subsection}{\numberline {11.7}Feature Listing}{6}
+\contentsline {subsection}{\numberline {11.8}Constraints}{6}
 \contentsline {section}{\numberline {12}Index and Glossary}{6}
 \contentsline {section}{\numberline {13}References}{6}

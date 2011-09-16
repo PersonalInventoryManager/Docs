@@ -103,6 +103,22 @@ Ease of information access & Web-based system; centralized database\\
 \subsection{Rough Estimate of the Cost}
 Since the solution will be the product of a course project, no capital will be given nor required.  As for calculating a time budget, given four team members as well as the project spanning over two courses, 1280 man hours will be invested into the final product (16 hours per week).
 
+\subsection{Requirements}
+\subsubsection{General}
+\begin{itemize}
+\item Runs on local network, so make sure it's responsive
+\item Local-file based (use SQLite? Sinatara uses this)
+\item Be able to do this: Take directory, tar, move it, untar it
+\item Reliability: no crash, or at least handle the crash gracefully (avoid hard server restarts or corruptions)
+\end{itemize}
+
+\subsubsection{Testing}
+\begin{itemize}
+\item Not high priority, but at least try to do it manually
+\item Cucumber prefered
+\item Rspec another option
+\end{itemize}
+
 \subsection{Feature Listing}
 \begin{tabular}{ | p{0.25in} | p{3.25in} | p{0.5in} | p{0.5in} | p{0.5in} | }
 \hline
