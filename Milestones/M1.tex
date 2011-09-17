@@ -47,11 +47,30 @@ TO ASK: Do we need to keep track of key responsibilities, deliverables, trends t
 \textbf{Failure:} The final product is not easily usable and cannot be extended without major reworking.
 
 \section{User Environment}
-TODO\\
-Ask what system he uses, how long he usually searches for something before giving up, how long he expects to search for something w/ the new system
+\begin{itemize}
+\item Uses chrome whenever possible, target chrome (ought to guarantee firefox + opera), try targeting secondary browser of firefox
+\item Linux server with standard languages + apache
+\end{itemize}
 
 \section{User Needs}
-TODO
+\subsection{Primary}
+\begin{itemize}
+\item (id 0) Searching for parts that meet a certain specification (broad)
+\item (id 1) Deployable on Linux architecture
+\end{itemize}
+\subsection{Other Needs}
+\begin{itemize}
+\item (id 2) Put parts in system at any point (don't freeze the database)
+\item (id 3) No SOAP, use REST
+\item (id 4) Make changes, keep notes to parts
+\end{itemize}
+\subsection{Smaller Needs (Likes)}
+\begin{itemize}
+\item (id 5) Bar codes
+\item (id 6) Web API to write a web application later
+\item (id 7) Language that he prefers (Ruby, Sinatra)
+\end{itemize}
+
 
 \section{Alternatives and Competition}
 Tim has researched alternative solutions but has not been able to find one that fits his needs.  The other systems have all been for corporate use and have been overly complicated and for too large of a scale.  Other issues that he had with these products were that they were only available on windows, expensive, and were not web-based.  Tim has also considered making a system himself, but has never had the time to implement it.
@@ -84,12 +103,32 @@ Ease of information access & Web-based system; centralized database\\
 \subsection{Rough Estimate of the Cost}
 Since the solution will be the product of a course project, no capital will be given nor required.  As for calculating a time budget, given four team members as well as the project spanning over two courses, 1280 man hours will be invested into the final product (16 hours per week).
 
+\subsection{Requirements}
+\subsubsection{General}
+\begin{itemize}
+\item Runs on local network, so make sure it's responsive
+\item Local-file based (use SQLite? Sinatara uses this)
+\item Be able to do this: Take directory, tar, move it, untar it
+\item Reliability: no crash, or at least handle the crash gracefully (avoid hard server restarts or corruptions)
+\end{itemize}
+
+\subsubsection{Testing}
+\begin{itemize}
+\item Not high priority, but at least try to do it manually
+\item Cucumber prefered
+\item Rspec another option
+\end{itemize}
+
 \subsection{Feature Listing}
-\begin{tabular}{ | l | l | l | l | l | l | }
+\begin{tabular}{ | p{0.25in} | p{3.25in} | p{0.5in} | p{0.5in} | p{0.5in} | }
 \hline
-ID & Feature & Need & Votes & Effort & Risk\\
+ID & Feature & Need & Effort & Risk\\
 \hline
-0 & Open source & Need 0 & 13 & low & low\\
+0 & Search for tags/matching attribute (bar code, text description, unified search [all three]) & Need 0 &  & \\
+\hline
+1 & Insert objects in database & Need 2 &  & \\
+\hline
+2 & Each type of thing has a set of attributes related to specific categories (optional entry) & Need 0 &  & \\
 \hline
 \end{tabular}
 
@@ -100,11 +139,11 @@ Source & Constraint & Rational\\
 \hline
 Development & The project must be open source. & The ethos of the client and his desire to be able to extend the project’s functionality easily.\\
 \hline
-Time & The project must be completed in 1 term \newline (NOTE: verify this) & After this period, the Requirements and Specifications class will be \newline over and the team will be disbanded\\
+Time & The project must be completed in 1 term (NOTE: verify this) & After this period, the Requirements and Specifications class will be over and the team will be disbanded\\
 \hline
-Budget & The project must be completed without \newline funding from the client. & This is an academic undertaking and is not for monetary gain.\\
+Budget & The project must be completed without funding from the client. & This is an academic undertaking and is not for monetary gain.\\
 \hline
-Operating System & The solution must be able to \newline be run / hosted in a Windows-less environment. & The client’s existing hosting is \newline Linux / Mac and there will be no addition of a Windows server\\
+Operating System & The solution must be able to be run / hosted in a Windows-less environment. & The client’s existing hosting is Linux / Mac and there will be no addition of a Windows server\\
 \hline
 \end{tabular}
 
