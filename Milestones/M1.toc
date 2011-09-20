@@ -3,27 +3,27 @@
 \contentsline {section}{\numberline {3}Client Background}{3}
 \contentsline {section}{\numberline {4}Current System}{3}
 \contentsline {section}{\numberline {5}User/Stakeholder Description}{3}
-\contentsline {section}{\numberline {6}User Profile}{3}
-\contentsline {section}{\numberline {7}Stakeholder Profiles}{3}
-\contentsline {subsection}{\numberline {7.1}Stakeholder: Team Sriram}{3}
-\contentsline {subsection}{\numberline {7.2}Stakeholder: Sriram Mohan}{4}
-\contentsline {subsection}{\numberline {7.3}Stakeholder: Tim Ekl}{4}
-\contentsline {section}{\numberline {8}User Environment}{4}
-\contentsline {section}{\numberline {9}User Needs}{4}
-\contentsline {subsection}{\numberline {9.1}Primary}{4}
-\contentsline {subsection}{\numberline {9.2}Other Needs}{4}
-\contentsline {subsection}{\numberline {9.3}Smaller Needs (Likes)}{4}
-\contentsline {section}{\numberline {10}Alternatives and Competition}{4}
-\contentsline {section}{\numberline {11}Product Overview}{5}
-\contentsline {subsection}{\numberline {11.1}Product Perspective}{5}
-\contentsline {subsection}{\numberline {11.2}Elevator Statement}{5}
-\contentsline {subsection}{\numberline {11.3}Summary of Capabilities}{5}
-\contentsline {subsection}{\numberline {11.4}Assumptions and Dependencies}{5}
-\contentsline {subsection}{\numberline {11.5}Rough Estimate of the Cost}{5}
-\contentsline {subsection}{\numberline {11.6}Requirements}{5}
-\contentsline {subsubsection}{\numberline {11.6.1}General}{5}
-\contentsline {subsubsection}{\numberline {11.6.2}Testing}{5}
-\contentsline {subsection}{\numberline {11.7}Feature Listing}{6}
-\contentsline {subsection}{\numberline {11.8}Constraints}{6}
-\contentsline {section}{\numberline {12}Index and Glossary}{6}
-\contentsline {section}{\numberline {13}References}{6}
+\contentsline {subsection}{\numberline {5.1}User Profile}{3}
+\contentsline {subsection}{\numberline {5.2}Stakeholder Profiles}{3}
+\contentsline {subsubsection}{\numberline {5.2.1}Stakeholder: Team Sriram}{3}
+\contentsline {subsubsection}{\numberline {5.2.2}Stakeholder: Sriram Mohan}{4}
+\contentsline {subsubsection}{\numberline {5.2.3}Stakeholder: Tim Ekl}{4}
+\contentsline {subsection}{\numberline {5.3}User Environment}{4}
+\contentsline {subsection}{\numberline {5.4}User Needs}{4}
+\contentsline {subsubsection}{\numberline {5.4.1}Primary}{4}
+\contentsline {subsubsection}{\numberline {5.4.2}Secondary Needs}{4}
+\contentsline {subsubsection}{\numberline {5.4.3}Optional Needs (Likes)}{4}
+\contentsline {subsection}{\numberline {5.5}Alternatives and Competition}{4}
+\contentsline {section}{\numberline {6}Product Overview}{5}
+\contentsline {subsection}{\numberline {6.1}Product Perspective}{5}
+\contentsline {subsection}{\numberline {6.2}Elevator Statement}{5}
+\contentsline {subsection}{\numberline {6.3}Summary of Capabilities}{5}
+\contentsline {subsection}{\numberline {6.4}Assumptions and Dependencies}{5}
+\contentsline {subsection}{\numberline {6.5}Rough Estimate of the Cost}{5}
+\contentsline {section}{\numberline {7}Nonfunctional Requirements}{5}
+\contentsline {subsection}{\numberline {7.1}General}{5}
+\contentsline {subsection}{\numberline {7.2}Testing}{5}
+\contentsline {section}{\numberline {8}Feature Listing}{6}
+\contentsline {section}{\numberline {9}Constraints}{6}
+\contentsline {section}{\numberline {10}Index and Glossary}{6}
+\contentsline {section}{\numberline {11}References}{6}
