@@ -1,5 +1,11 @@
 \documentclass{article}
 \usepackage{fullpage}
+\usepackage{color}
+\usepackage[normalem]{ulem}
+\newcommand{\eric}{\textcolor{blue}{[Eric]}}
+\newcommand{\richard}{\textcolor{red}{[Richard]}}
+\newcommand{\taylor}{\textcolor{green}{[Taylor]}}
+\newcommand{\susi}{\textcolor{cyan}{[Susi]}}
 \hyphenpenalty=100000
 \begin{document}
 \setlength{\voffset}{3.5in}
@@ -13,7 +19,7 @@
 \tableofcontents
 \clearpage
 \section{Executive Summary}
-This milestone, the first of a series, documents the context for a software project proposed by the primary client: Tim Ekl. The primary stakeholders are Team Sriram (the software developers and documentors), Sriram Mohan (the course instructor), and Tim Ekl.  The software solution will eventually be open-sourced which means that external developers and end-users will be involved as stakeholders, however these parties can be ignored for the time being. The current issue raised by the client is the inability to easily and consistently locate personal belongings and hardware. Ths milestone will cover the background of the client, their current system, involved parties, an overview of the product and costs, features of the product, and constraints to the solution; the solution intended as a simplified asset-tracker scaled for personal usage. This document will provide utility for the next milestone which will focus on the project background, use cases, feature-to-use-case mapping, and Data flow Diagrams.
+This milestone, the first of a series, documents the context for a software project proposed by the \sout{primary }\eric{}client: Tim Ekl. The primary stakeholders are Team Sriram (the software developers and documentors), Sriram Mohan (the course instructor), and Tim Ekl.  The software solution will eventually be open-sourced which means that external developers and end-users will be involved as stakeholders, however these parties can be ignored for the time being. The current issue raised by the client is the inability to easily and consistently locate personal belongings and hardware. \sout{Ths}\eric{}\uline{This} milestone will cover the background of the client, their current system, involved parties, an overview of the product and costs, features of the product, and constraints to the solution; the solution intended as a simplified asset-tracker scaled for personal usage. This document will provide utility for the next milestone which will focus on the project background, use cases, feature-to-use-case mapping, and Data flow Diagrams.
 
 \section{Introduction}
 Our client, Tim Ekl, would like a system to keep track of personal belongings. Tim's profession and interests with computers has caused him to accumulate a large collection of computer hardware. Currently, Tim maintains a crude organization system which involves labeling containers in order to categorize the different areas to place objects--whether it be for storage or extraction. However, the current system is not as effective as the client would like since there have been multiple instances in which items were not found when they were needed and replaced unecessarily, resulting in lost capital. In addition, the current system's generic labeling is not a sure-fire to find items; they are only meant to guide Tim and help him make educated guesses concerning the general location of his items. This results with lost time looking for items which may nto even exist.\\
@@ -28,7 +34,7 @@ The client currently does not have a software solution in place.  Currently, Tim
 \section{User/Stakeholder Description}
 
 \subsection{User Profile}
-The client will be the main user of the system. While the client is very familiar with sophisticated technologies and software, the final product will be open-source and will be exposed to many more users who will have a broad spectrum of technical proficiency- so the final product will be made with these possible end users in mind. The client themselves is an accumulator of hardware and disc media, having approximately <TODO: insert # of items to catalogue here> such items which he wants catalogued. The client regularly makes use of his hardware components in his personal computers and servers. TODO: find out PC’s and Servers is all he uses his hardware for.
+The client will be the main user of the system. While the client is very familiar with sophisticated technologies and software, the final product will be open-source and will be exposed to many more users who will have a broad spectrum of technical proficiency- so the final product will be made with these possible end users in mind. The client themselves is an accumulator of hardware and disc media, having approximately <TODO: insert \# of items to catalogue here> such items which he wants catalogued. The client regularly makes use of his hardware components in his personal computers and servers. TODO: find out PC’s and Servers is all he uses his hardware for.
 
 \subsection{Stakeholder Profiles}
 
