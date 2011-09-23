@@ -15,7 +15,7 @@
 \contentsline {subsection}{\numberline {6.1}Product Perspective}{6}
 \contentsline {subsection}{\numberline {6.2}Elevator Statement}{6}
 \contentsline {subsection}{\numberline {6.3}Summary of Capabilities}{6}
-\contentsline {subsection}{\numberline {6.4}Assumptions and Dependencies}{6}
+\contentsline {subsection}{\numberline {6.4}Assumptions and Dependencies}{7}
 \contentsline {subsection}{\numberline {6.5}Rough Cost Estimate}{7}
 \contentsline {section}{\numberline {7}Non-functional Requirements}{7}
 \contentsline {subsection}{\numberline {7.1}General}{7}
