@@ -18,12 +18,14 @@
 \contentsline {subsection}{\numberline {6.1}Product Perspective}{5}
 \contentsline {subsection}{\numberline {6.2}Elevator Statement}{5}
 \contentsline {subsection}{\numberline {6.3}Summary of Capabilities}{5}
-\contentsline {subsection}{\numberline {6.4}Assumptions and Dependencies}{5}
-\contentsline {subsection}{\numberline {6.5}Rough Estimate of the Cost}{5}
-\contentsline {section}{\numberline {7}Nonfunctional Requirements}{6}
+\contentsline {subsection}{\numberline {6.4}Assumptions and Dependencies}{6}
+\contentsline {subsection}{\numberline {6.5}Rough Cost Estimate}{6}
+\contentsline {section}{\numberline {7}Non-functional Requirements}{6}
 \contentsline {subsection}{\numberline {7.1}General}{6}
 \contentsline {subsection}{\numberline {7.2}Testing}{6}
-\contentsline {section}{\numberline {8}Feature Listing}{6}
-\contentsline {section}{\numberline {9}Constraints}{6}
-\contentsline {section}{\numberline {10}Index and Glossary}{6}
-\contentsline {section}{\numberline {11}References}{6}
+\contentsline {section}{\numberline {8}Features}{7}
+\contentsline {subsection}{\numberline {8.1}Feature Listing}{7}
+\contentsline {subsection}{\numberline {8.2}Feature-to-Need Correspondence}{7}
+\contentsline {section}{\numberline {9}Constraints}{8}
+\contentsline {section}{\numberline {10}Index and Glossary}{8}
+\contentsline {section}{\numberline {11}References}{8}
