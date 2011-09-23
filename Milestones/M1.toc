@@ -9,16 +9,13 @@
 \contentsline {subsubsection}{\numberline {5.2.2}Stakeholder: Team Sriram}{4}
 \contentsline {subsubsection}{\numberline {5.2.3}Stakeholder: Sriram Mohan}{4}
 \contentsline {subsection}{\numberline {5.3}User Environment}{4}
-\contentsline {subsection}{\numberline {5.4}User Needs}{4}
-\contentsline {subsubsection}{\numberline {5.4.1}Primary}{4}
-\contentsline {subsubsection}{\numberline {5.4.2}Secondary}{5}
-\contentsline {subsubsection}{\numberline {5.4.3}Optional}{5}
+\contentsline {subsection}{\numberline {5.4}User Needs}{5}
 \contentsline {subsection}{\numberline {5.5}Alternatives and Competition}{5}
 \contentsline {section}{\numberline {6}Product Overview}{5}
 \contentsline {subsection}{\numberline {6.1}Product Perspective}{5}
 \contentsline {subsection}{\numberline {6.2}Elevator Statement}{5}
 \contentsline {subsection}{\numberline {6.3}Summary of Capabilities}{5}
-\contentsline {subsection}{\numberline {6.4}Assumptions and Dependencies}{6}
+\contentsline {subsection}{\numberline {6.4}Assumptions and Dependencies}{5}
 \contentsline {subsection}{\numberline {6.5}Rough Cost Estimate}{6}
 \contentsline {section}{\numberline {7}Non-functional Requirements}{6}
 \contentsline {subsection}{\numberline {7.1}General}{6}
