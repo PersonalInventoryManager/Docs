@@ -19,76 +19,76 @@
 \tableofcontents
 \clearpage
 \section{Executive Summary}
-This milestone, the first of a series, documents the context for a software project proposed by the \sout{primary }\eric{}client: Tim Ekl. The primary stakeholders are Team Sriram (the software developers and documentors), Sriram Mohan (the course instructor), and Tim Ekl.  The software solution will eventually be open-sourced which means that external developers and end-users will be involved as stakeholders, however these parties can be ignored for the time being. The current issue raised by the client is the inability to easily and consistently locate personal belongings and hardware. \sout{Ths}\eric{}\uline{This} milestone will cover the background of the client, their current system, involved parties, an overview of the product and costs, features of the product, and constraints to the solution; the solution intended as a simplified asset-tracker scaled for personal usage. This document will provide utility for the next milestone which will focus on the project background, use cases, feature-to-use-case mapping, and Data \sout{flow}\eric{}\uline{Flow} Diagrams.
+This milestone, the first of a series, documents the context for a software project proposed by the client: Tim Ekl. The primary stakeholders are Team Sriram (the software developers and documentors), Sriram Mohan (the course instructor), and Tim Ekl.  The software solution will eventually be open-sourced which means that external developers and end-users will be involved as stakeholders, however these parties can be ignored for the time being. The current issue raised by the client is the inability to easily and consistently locate personal belongings and hardware. This milestone will cover the background of the client, their current system, involved parties, an overview of the product and costs, features of the product, and constraints to the solution; the solution is intended as a simplified asset-tracker scaled for personal usage. This document will provide utility for the next milestone which will focus on the project background, use cases, feature-to-use-case mapping, and Data Flow Diagrams.
 
 \section{Introduction}
-Our client, Tim Ekl, would like a system to keep track of personal belongings. Tim's profession and interests with computers \sout{has}\eric{}\uline{have} caused him to accumulate a large collection of computer hardware. Currently, Tim maintains a crude organization system which involves labeling containers in order to categorize the different areas to place objects--whether it be for storage or extraction. However, the current system is not as effective as the client would like since there have been multiple instances in which items were not found when they were needed and replaced unecessarily, resulting in lost capital. In addition, the current system's generic labeling is not a sure-fire to find items; they are only meant to guide Tim and help him make educated guesses concerning the general location of his items. This results with lost time looking for items which may \sout{nto}\eric\uline{not} even exist.\\
-The client wishes to replace this current system with one that \sout{ought to}\eric{}\uline{should} be comparable to corporate asset-tracking systems with the capability to tag a wide variety of assets, though more streamlined since it's intended for use on a personal scale. Since this project is an initiative from\eric{}\uline{a } college course, there will be no monetary capital invested towards development. However, it is expected that each developer involved in the project will invest aproximately five hours weekly towards the project; this results in roughly 340 man hours in terms of a time budget for the project. In addition, all developers will respect the client's preference to construct the product utilizing Ruby (\sout{programmign}\eric{}\uline{programming} language) and Sinatra (web framework). There exist more requiremnts and constraints which will be elaborated further in this document. Ultimately the product will be a web application backed by a database.
+Our client, Tim Ekl, would like a system to keep track of personal belongings. Tim's profession and interests with computers have caused him to accumulate a large collection of computer hardware. Currently, Tim maintains a crude organization system which involves labeling containers in order to categorize the different areas to place objects--whether it be for storage or extraction. However, the current system is not as effective as the client would like since there have been multiple instances in which items were not found when they were needed and replaced unecessarily, resulting in lost capital. In addition, the current system's generic labeling is not a sure-fire method for finding items; they are only meant to guide Tim and help him make educated guesses concerning the general location of his items. This results in lost time looking for items which may not even exist.\\
+The client wishes to replace the current system with one that should be comparable to corporate asset-tracking systems with the capability to tag assets with a wide variety of attributes, though more streamlined since it is intended for use on a personal scale. Since this project is an initiative from a college program, there will be no monetary capital invested towards development. However, it is expected that each developer involved in the project will invest aproximately five hours weekly towards the project; this results in roughly 340 man hours in terms of a time budget for the project. In addition, all developers will respect the client's preference to construct the product utilizing Ruby (programming language) and Sinatra (web framework). There exist more requirements and constraints which will be elaborated on later in this document. Ultimately the product will be a web application backed by a database.
 
 \section{Client Background}
-Tim Ekl is a Rose-Hulman graduate student who possesses a significant amount of computer hardware.  He plans on using this system to be able to \sout{easily and quickly}\eric{}\uline{quickly and easily} locate the equipment he wants to use as he builds or upgrades a computer.  Tim is an experienced developer and plans on maintaining the system after it is finished.  
+Tim Ekl is a Rose-Hulman graduate student who possesses a significant amount of computer hardware.  He plans on using this system to be able to quickly and easily locate the equipment he wants to use.  Tim is an experienced developer and plans on maintaining the system after it is finished.  
 
 \section{Current System}
-The client currently does not have a software solution in place.  \sout{Currently}\eric{}\uline{Right now}, Tim has a primitive categorization system in place which involves labeling boxes and then trying to deduce the location of a desired component.  The current system has a few issues such as that it does not always allow him to find his items, i.e. there \sout{has}\eric{}\uline{have} been instances where an item was found after capital was spent to replace it.
+The client does not have a software solution in place.  Currently, Tim has a primitive categorization system in place which involves labeling boxes and then trying to deduce the location of a desired component.  The current system poses a few issues such as not always allowing him to find his items, i.e. there have been instances where an item was found after capital was spent to replace it.
 
 \section{User/Stakeholder Description}
 
 \subsection{User Profile}
-The client will be the main user of the system. While the client is very familiar with sophisticated technologies and software, the final product will be open-source and will be exposed to many more users who will have a broad spectrum of technical proficiency\sout{- }\eric{}\uline{--}so the final product will be made with these possible end users in mind. The client \sout{themselves}\eric{}\uline{himself} is an accumulator of hardware and disc media, having approximately <TODO: insert \# of items to catalogue here> such items which he wants catalogued. The client regularly makes use of his hardware components in his personal computers and servers. TODO: find out PC’s and Servers is all he uses his hardware for.
+The client will be the main user of the system. While the client is very familiar with sophisticated technologies and software, the final product will be open-source and will be exposed to many more users who will have a broad spectrum of technical proficiency--so the final product will be made with these prospective end users in mind. The client is an accumulator of hardware and disc media, having approximately 1,000 such items which he wants catalogued.
 
 \subsection{Stakeholder Profiles}
 
+\subsubsection{Stakeholder: Tim Ekl}
+\textbf{Role:} Client\\
+\textbf{Success:} The final product reasonably satisfies the needs and requirements as defined.\\
+\textbf{Failure:} The final product is not easily usable and cannot be extended without major reworking.
+
 \subsubsection{Stakeholder: Team Sriram}
-\textbf{Role:} Development team involved in the planning of the final project.\\
-\textbf{Success:} The final product has its requirements defined and prioritized and a satisfactory amount of the high priority features are implemented.  The client is able to easily extend and work with the source code provided.\\
-\textbf{Failure:} The final product does not satisfy a reasonable amount of the requirements defined.
+\textbf{Role:} Requirements, Specifications, and Development Team\\
+\textbf{Success:} The final product has its requirements defined and prioritized with a satisfactory amount of the high priority features implemented.  The client is able to easily extend and work with the source code provided.\\
+\textbf{Failure:} The final product delivered fails to successfully implement the critical features requested by the client.
 
 \subsubsection{Stakeholder: Sriram Mohan}
 \textbf{Role:} Class Instructor\\
-\textbf{Success:} The team involved understood the concepts and processes utilized during the course of the project and will remember them for future projects. The client is satisfied with the final product.\\
-\textbf{Failure:} The team was unable to deduce any concepts or processes discussed during the course. The client is not satisfied with the final product.
-
-\subsubsection{Stakeholder: Tim Ekl}
-\textbf{Role:} The client who defines the requirements and criteria for the project.\\
-\textbf{Success:} The final product reasonably satisfies his needs and requirements. (This might have some redundancy)\\
-\textbf{Failure:} The final product is not easily usable and cannot be extended without major reworking.
+\textbf{Success:} Team Sriram understood the concepts and processes utilized during the course of the project. The client is satisfied with the final product.\\
+\textbf{Failure:} Team Sriram was unable to deduce any concepts or processes discussed during the course. The client is not satisfied with the final product.
 
 \subsection{User Environment}
 \begin{itemize}
-\item Uses Chrome whenever possible, target Chrome (ought to guarantee Firefox \sout{+}\eric{}\uline{\&} Opera), try targeting secondary browser of Firefox
-\item Linux server with standard programming languages, programming frameworks, and Apache.  Additional packages can be installed if necessary.
+\item The client uses Chrome whenever possible and prefers that development support Chrome and Firefox browsers.
+\item The final product ought to operate on a Linux server with standard programming languages, programming frameworks, and Apache.  Additional packages can be installed if necessary.
 \end{itemize}
 
 \subsection{User Needs}
 \subsubsection{Primary}
 \begin{itemize}
-\item (N0) Able to search for parts that meet a certain specification (broad)
-\item (N1) Deployable on Linux architecture
+\item (N0) Search for parts based off their attributes.
+\item (N1) Deploy on Linux architecture.
+\item (N2) Identify items via bar codes.
 \end{itemize}
-\subsubsection{Secondary Needs}
+\subsubsection{Secondary}
 \begin{itemize}
-\item (N2) Insert objects in the system at any point; do not freeze the database.
-\item (N3) Use REST, not SOAP, for the software architecture.
-\item (N4) Be able to change objects; includes adding notes to the objects.
+\item (N3) Insert objects in the system at any point; do not freeze the database.
+\item (N4) Use REST (not SOAP) for the software architecture.
+\item (N5) Modify objects; including adding notes to the objects.
 \end{itemize}
-\subsubsection{Optional Needs (Likes)}
+\subsubsection{Optional}
 \begin{itemize}
-\item (N5) Identify items via bar codes.
 \item (N6) Create web API for extending into a web application.
-\item (N7) Write it in a preferred language (Ruby and Sinatra).
+\item (N7) Write it in a preferred language and web framework (Ruby with Sinatra).
 \end{itemize}
 
 
 \subsection{Alternatives and Competition}
-Tim has researched alternative solutions but has not been able to find one that fits his needs.  The other systems have all been for corporate use and have been overly complicated and designed for a much larger scale.  Other issues that he had with these products were that they were only available on Windows, were expensive, and/or were not web-based.  Tim has also considered making a system himself, but has never had the time to implement it.
+Tim has researched alternative solutions but has not been able to find one that fits his needs.  Alternative systems have been intended for corporate use, are overly complicated, and designed for large scale use.  Other issues associated with these products include incompatibility with non-Windows environments, excessive cost, and locally restricted access (not accessible through the Internet).  The client has also considered making a system for himself, however he has never had the time to implement it.
 
 \section{Product Overview}
 
 \subsection{Product Perspective}
-This system will be an independent system, hosted on one of Tim's servers.  This system will use the current solution as a way to physically organize the items and will improve the current solution by keeping track of exactly where a specific piece of hardware is.
+The software will be an independent system--hosted on one of Tim's servers.  The product will replace the current solution by electronically keeping track of exactly where a specific piece of hardware is.**
 
 \subsection{Elevator Statement}
-Everyone accumulates items that they currently have no use for, but do not want to dispose of.  Given enough time, a person will accumulate more items than they will be able to consciously keep track of. We propose a web application which will easily allow for simple asset tagging and recall.
+Everyone accumulates items that they currently have no use for, but do not want to dispose of.  Given enough time, a person will accumulate more items than they will be able to consciously keep track of. We propose a web application which will allow for simple and streamlined asset tracking.
 
 \subsection{Summary of Capabilities}
 \begin{tabular}{ | p{2.5in} | p{3.5in} | }
@@ -144,16 +144,16 @@ Since the solution will be the product of a course project, no\eric{}\uline{ mon
 \end{tabular}\\
 ~\\
 ~\\
-\begin{tabular}{ | c || c | c | c | c | c | c | c| c | c | }
+\begin{tabular}{ | c || c | c | c | c | c | c | c| c | }
 \hline
-   & N0 & N1 & N2 & N3 & N4 & N5 & N6 & N7 & N8\\
+   & N0 & N1 & N2 & N3 & N4 & N5 & N6 & N7\\
 \hline
 \hline
-F0 & X  &    &    &    &    &    &    &    &   \\
+F0 & X  & X  &    &    &    &    &    &   \\
 \hline
-F1 &    &    & X  &    &    &    &    &    &   \\
+F1 &    &    & X  &    &    &    &    &   \\
 \hline
-F2 & X  &    & X  &    & X  & X  &    &    &   \\
+F2 & X  &    & X  &    & X  & X  &    &   \\
 \hline
 \end{tabular}
 
