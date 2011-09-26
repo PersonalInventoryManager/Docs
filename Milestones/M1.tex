@@ -21,68 +21,67 @@
 ~\\
 \begin{Large}\textbf{Changes (based off Git commits)}\end{Large}\\
 ~\\
-\begin{tabular}{ | p{3.75in} | p{1.5in} | p{1.25in} | }
+\begin{tabular}{ | p{2in} | p{4.5in} | }
 \hline
-\textbf{Description} & \textbf{Date} & \textbf{Committer}\\
+\textbf{Date Time} & \textbf{Description}\\
 \hline
 \hline
-Document started & 15 September 2011 & Richard Thai\\
+15 September 2011  3:04 pm & Document started\\
 \hline
-Initial work on document & 15 September 2011 & Eric Henderson\\
+15 September 2011  3:13 pm & Initial work on document\\
 \hline
-Some formatting added to document & 15 September 2011 & Eric Henderson\\
+15 September 2011  5:02 pm & Some formatting added to document \\
 \hline
-Formatting work continued, Table of Contents added & 15 September 2011 & Eric Henderson\\
+15 September 2011  5:27 pm & Formatting work continued, Table of Contents added \\
 \hline
-Fixed some table formatting issues & 15 September 2011 & Eric Henderson\\
+15 September 2011  5:46 pm & Fixed some table formatting issues \\
 \hline
-Vertically center title page & 15 September 2011 & Eric Henderson\\
+15 September 2011  5:58 pm & Vertically center title page \\
 \hline
-Reformatted code & 15 September 2011 & Eric Henderson\\
+15 September 2011  6:24 pm & Reformatted code \\
 \hline
-Added some more content & 16 September 2011 & Eric Henderson\\
+16 September 2011  11:39 am & Added some more content \\
 \hline
-Added initial requirements list & 16 September 2011 & Eric Henderson\\
+16 September 2011  11:50 am & Added initial requirements list \\
 \hline
-Added executive summary and updated requirements/needs & 18 September 2011 & Richard Thai\\
+18 September 2011  10:15 pm & Added executive summary and updated requirements/needs\\
 \hline
-Changed formatting, sectioning, and wording & 20 September 2011 & Eric Henderson\\
+20 September 2011  11:40 am & Changed formatting, sectioning, and wording \\
 \hline
-Changed date format/value & 20 September 2011 & Eric Henderson\\
+20 September 2011  12:15 pm & Changed date format/value \\
 \hline
-Working on improving executive summary and introduction & 21 September 2011 & Richard Thai\\
+21 September 2011  12:36 pm & Working on improving executive summary and introduction\\
 \hline
-Committed for peer reviews & 21 September 2011 & Richard Thai\\
+21 September 2011  2:33 pm & Committed for peer reviews \\
 \hline
-Made commands for marking editing/proofreading changes & 21 September 2011 & Eric Henderson\\
+21 September 2011  3:36 pm & Made commands for marking editing/proofreading changes \\
 \hline
-Added initial features/needs matrix & 21 September 2011 & Eric Henderson\\
+21 September 2011  5:38 pm & Added initial features/needs matrix \\
 \hline
-Finished my proofreading & 21 September 2011 & Eric Henderson\\
+21 September 2011  5:58 pm & Finished my proofreading \\
 \hline
-Initial work on finalizing document & 22 September 2011 & Eric Henderson\\
+22 September 2011  8:39 pm & Initial work on finalizing document \\
 \hline
-Document mostly finalized & 22 September 2011 & Richard Thai\\
+23 September 2011  1:05 am & Document mostly finalized \\
 \hline
-Document finalized except for now & 22 September 2011 & Richard Thai\\
+23 September 2011  2:27 am & Document finalized except for now \\
 \hline
-Made some changes after proofreading, fixed table of contents & 23 September 2011 & Eric Henderson\\
+23 September 2011  12:50 pm & Made some changes after proofreading, fixed table of contents \\
 \hline
-Added needs table & 23 September 2011 & Susi Cisneros\\
+23 September 2011  12:59 pm & Added needs table \\
 \hline
-Added this change history & 23 September 2011 & Eric Henderson\\
+23 September 2011  1:23 pm & Added this change history \\
 \hline
-\end{tabular}\\
-~\\
-~\\
-Note: The committers listed are the people who made the commit, and are not necessarily an accurate depiction of contributions to the milestone.
+\end{tabular}
 \clearpage
 \section{Executive Summary}
-This milestone, the first of a series, documents the context for a software project proposed by the client: Tim Ekl. The primary stakeholders are Team Sriram (the software developers and documenters), Sriram Mohan (the course instructor), and Tim Ekl.  The software solution will eventually be open-sourced which means that external developers and end-users will be involved as stakeholders, however these parties can be ignored for the time being. The current issue raised by the client is the inability to easily and consistently locate personal belongings and hardware. This milestone will cover the background of the client, their current system, involved parties, an overview of the product and costs, features of the product, and constraints to the solution; the solution is intended as a simplified asset-tracker scaled for personal usage. This document will provide utility for the next milestone which will focus on the project background, use cases, feature-to-use-case mapping, and Data Flow Diagrams.
-
+This milestone, the first of a series, documents the context for a software project proposed by the client: Tim Ekl. The primary stakeholders are Team Sriram (the software developers and documenters), Sriram Mohan (the course instructor), and Tim Ekl.  The software solution will eventually be open-sourced which means that external developers and end-users will be involved as stakeholders, however these parties can be ignored for the time being. The current issue raised by the client is the inability to easily and consistently locate personal belongings and hardware. This milestone will cover the background of the client, their current system, involved parties, an overview of the product and costs, features of the product, and constraints to the solution; the solution is intended as a simplified asset-tracker scaled for personal usage.
 \section{Introduction}
 Our client, Tim Ekl, would like a system to keep track of personal belongings. Tim's profession and interests with computers have caused him to accumulate a large collection of computer hardware. Currently, Tim maintains a crude organization system which involves labeling containers in order to categorize the different areas to place objects--whether it be for storage or extraction. However, the current system is not as effective as the client would like since there have been multiple instances in which items were not found when they were needed and replaced unnecessarily, resulting in lost capital. In addition, the current system's generic labeling is not a sure-fire method for finding items; they are only meant to guide Tim and help him make educated guesses concerning the general location of his items. This results in lost time looking for items which may not even exist.\\
-The client wishes to replace the current system with one that should be comparable to corporate asset-tracking systems with the capability to tag assets with a wide variety of attributes, though more streamlined since it is intended for use on a personal scale. Since this project is an initiative from a college program, there will be no monetary capital invested towards development. However, it is expected that each developer involved in the project will invest approximately five hours weekly towards the project; this results in roughly 340 man hours in terms of a time budget for the project. In addition, all developers will respect the client's preference to construct the product utilizing Ruby (programming language) and Sinatra (web framework). There exist more requirements and constraints which will be elaborated on later in this document. Ultimately the product will be a web application backed by a database.
+~\\
+The client wishes to replace the current system with one that should be comparable to corporate asset-tracking systems with the capability to tag assets with a wide variety of attributes, though more streamlined since it is intended for use on a personal scale. Since this project is an initiative from a college program, there will be no monetary capital invested towards development. However, it is expected that each developer involved in the project will invest approximately five hours weekly towards the project; this results in roughly 340 man hours in terms of a time budget for the project. In addition, all developers will respect the client's preference to construct the product utilizing Ruby (programming language) and Sinatra (web framework). There exist more requirements and constraints which will be elaborated on later in this document. Ultimately the product will be a web application backed by a database.\\
+~\\
+This document will provide utility and the initial background for upcoming milestones.  The sections on client background, current system, user needs, features, and the feature-to-need correspondence provide the project background needed for all future milestones. The non-functional requirements and constraints sections specifically satisfy the various requirements as well the design constraints involved in the third milestone.  Finally, the section on testing introduces the topic of test cases that is expanded upon in the fourth milestone.
 
 \section{Client Background}
 Tim Ekl is a Rose-Hulman graduate student who possesses a significant amount of computer hardware.  He plans on using this system to be able to quickly and easily locate the equipment he wants to use.  Tim is an experienced developer and plans on maintaining the system after it is finished.  
@@ -115,7 +114,7 @@ The client will be the main user of the system. While the client is very familia
 \subsection{User Environment}
 \begin{itemize}
 \item The client uses Chrome whenever possible and prefers that development support Chrome and Firefox browsers.
-\item The final product ought to operate on a Linux server with standard programming languages, programming frameworks, and Apache.  Additional packages can be installed if necessary.
+\item The final product should operate on a Linux server with standard programming languages, programming frameworks, and Apache.  Additional packages can be installed if necessary.
 \end{itemize}
 
 \subsection{User Needs}
@@ -155,7 +154,7 @@ Tim has researched alternative solutions but has not been able to find one that 
 The software will be an independent system to be hosted on the client's servers.  The product will replace the current solution by electronically keeping track of asset locations. In addition, the software will maintain data associated with each asset.
 
 \subsection{Elevator Statement}
-Everyone accumulates items that they currently have no use for, but do not want to dispose of.  Given enough time, a person will accumulate more items than they will be able to consciously keep track of. We propose a web application which will allow for simple and streamlined asset tracking. The software will maintain an organized and systematic inventory which will also keep track of each item's location.
+Everyone accumulates items that they currently do not use, but do not want to discard.  Given enough time, a person will accumulate more items than they will be able to consciously track. We propose a web application which will allow for simple and streamlined asset tracking. The software will maintain an organized and systematic inventory which will also keep track of each item's location.
 
 \subsection{Summary of Capabilities}
 \begin{tabular}{ | p{4.0in} | p{2.0in} | }
