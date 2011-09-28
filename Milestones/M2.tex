@@ -40,23 +40,364 @@ TODO: \richard
 \section{Use Case Identification}
 
 \section{Use Cases}
-\subsection{Title Here}
 
-\subsubsection{Brief Description}
+\subsection{Add an Item}
+ 
+\paragraph{Brief Description}
+This use case shows the procedure for adding an item to the inventory.
+ 
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
+ 
+\paragraph{Basic Flow of Events}
+\begin{enumerate}
+\item The user clicks the "Add Item" link. [A0]
+\item The user fills in the required fields. [A1]
+\item The system dynamically adds the optional attribute fields for the category chosen.
+\item The user fills in the appropriate optional attributes and "Notes" fields.
+\item The user clicks the "Add Item" button. [A2]
+\item The system adds the item to the inventory database.
+\end{enumerate}
+ 
+\paragraph{Alternative Flows of Events}
 
-\subsubsection{Actors}
+\subparagraph{Alternative Flow A0: Server is Down}
+\begin{enumerate}
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+\subparagraph{Alternative Flow A1: Required Fields Ommitted}
+\begin{enumerate}
+\item The user does not fill in the required title or UPC fields.
+\item Steps 3, 4, and 5 from the basic flow.
+\item The server notifies the user that the required fields were not completed.
+\end{enumerate}
+\subparagraph{Alternative Flow A2: UPC not Unique}
+\begin{enumerate}
+\item The system notifies the user that the item cannot be added because the UPC is not unique.
+\end{enumerate}
+ 
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must have a link to the "Add Item" page.
+\end{itemize}
+ 
+\paragraph{Post-conditions}
+\begin{itemize}
+\item The user is brought to the home page.
+\item The added item is displayed under the "Recently Modified" list.
+\end{itemize}
+ 
+\paragraph{Extension Points}
+None
 
-\subsubsection{Basic Flow of Events}
+\paragraph{Special Requirements}
+None
 
-\subsubsection{Alternative Flow of Events}
+\subsection{Basic Search for an Item}
 
-\subsubsection{Pre-conditions}
+\paragraph{Brief Description}
+This use case shows how a basic search from any page  would proceed. This case will encompass the progression from the user entering the search term to the display of the search result(s).
 
-\subsubsection{Post-conditions}
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
 
-\subsubsection{Extension Points}
+\paragraph{Basic Flow of Events}
+\begin{enumerate}
+\item The user types a query in the search box.
+\item The user clicks the search button.
+\item The browser sends a request to the server. [A0]
+\item The server queries the database for items entered into the system that match the query. [A1]
+\item The server responds with the formatted and sorted results of the database query. [A2]
+\item The user is directed to the Advanced Search page with the results of the basic search displayed at the bottom.
+\end{enumerate}
 
-\subsubsection{Special Requirements}
+\paragraph{Alternative Flows of Events}
+
+\subparagraph{Alternative Flow A0: Empty Query}
+\begin{enumerate}
+\item The user remains on the current page.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A1: Server is Down}
+\begin{enumerate}
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A2: No Matches}
+\begin{enumerate}
+\item The server responds with the message "No results."
+\item The results page displays the message returned by the server.
+\end{enumerate}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must have a basic search box.
+\end{itemize}
+
+\paragraph{Post-conditions}
+\begin{itemize}
+\item The results page will display the response from the server or that the server was unreachable.
+\item The search box will preserve the search term that was originally entered.
+\item The results will be prioritized and sorted according to exact matching, then fuzzy matching.
+\item The results will be matched using wildcards if they are present in the query.  This will replace the exact matching, and fuzzy matching will then be done on the query with the wildcard characters removed.
+\end{itemize}
+
+\paragraph{Extension Points}
+\begin{itemize}
+\item 5.4 Search Result Sorting
+\item 5.5 View Details of an Item
+\end{itemize}
+
+\paragraph{Special Requirements}
+None
+
+
+\subsection{Advanced Search for an Item}
+
+\paragraph{Brief Description}
+This use case shows how a search from the advanced search page  would proceed. This case will encompass the progression from the user entering the search term to the display of the search result(s).
+
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
+
+\paragraph{Basic Flow of Events}
+\begin{enumerate}
+\item The user chooses a category from a dropdown menu. [A0]
+\item The category selection is sent to the server.
+\item The server responds with the attribute fields related to the category. [A1]
+\item The category's attribute fields are dynamically added to the page.
+\item The user optionally fills in the attribute, name, and UPC fields appropriately.
+\item The user clicks the search button.
+\item The browser sends a request to the server.
+\item The server queries the database for items entered into the system that match the query. [A1]
+\item The server responds with the formatted and sorted results of the database query. [A3]
+\item The list of candidates for the search parameter(s) provided is dynamically added to the bottom part of the page.
+\end{enumerate}
+
+\paragraph{Alternative Flow of Events}
+
+\subparagraph{Alternative Flow A0: No Category}
+\begin{enumerate}
+\item The user fills in the name and/or UPC.
+\item Return to basic flow step 6.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A1: Server is Down}
+\begin{enumerate}
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A2: Empty Query}
+\begin{enumerate}
+\item The user remains on the current page.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A3: No Matches}
+\begin{enumerate}
+\item The server responds with the message "No results."
+\item The results page displays the message returned by the server.
+\end{enumerate}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must be the advanced search page.
+\end{itemize}
+
+\paragraph{Post-conditions}
+\begin{itemize}
+\item The results page will display the results of the search.
+\item The search fields will preserve the search parameter(s) that were originally entered.
+\item If appropriate, the results will be prioritized and sorted according to exact matching, then fuzzy matching.
+\item The results will be matched using wildcards if they are present in the query.  This will replace the exact matching, and fuzzy matching will then be done on the query with the wildcard characters removed.
+\item If completed, the category field will only use exact matching.
+\end{itemize}
+
+\paragraph{Extension Points}
+\begin{itemize}
+\item 5.4 Search Result Sorting
+\item 5.5 View Details of an Item
+\end{itemize}
+
+\paragraph{Special Requirements}
+None
+
+
+\subsection{Search Result Sorting}
+
+\paragraph{Brief Description}
+This use case shows how changing the sorting of the items on the search results page would proceed. This case will encompass the progression from the user clicking the sort type link to the display of the search result(s) in the new order.
+
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
+
+\paragraph{Basic Flow of Events}
+\begin{enumerate}
+\item The user clicks on a sort type link (options are Name, UPC, Recently Created, and Recently Modified).
+\item The browser sends a request to the server.
+\item The server queries the database for items entered into the system that match the query. [A0]
+\item The server responds with the formatted and sorted results of the database query. [A1]
+\item The screen displays to the user a list of candidates for the search parameter(s) provided.
+\end{enumerate}
+
+\paragraph{Alternative Flow of Events}
+
+\subparagraph{Alternative Flow A0: Server is Down}
+\begin{enumerate}
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A1: No Matches}
+\begin{enumerate}
+\item The server responds with the message "No results."
+\item The results page displays the message returned by the server.
+\end{enumerate}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must be the search results page.
+\end{itemize}
+
+\paragraph{Post-conditions}
+\begin{itemize}
+\item The results page will display the results of the search.
+\item The search field(s) will preserve the search parameter(s) that were originally entered.
+\item The search fields will be sorted by match method first (wildcard, exact, or fuzzy), then by the selected sort type.
+\end{itemize}
+
+\paragraph{Extension Points}
+\begin{itemize}
+\item 5.5 View Details of an Item
+\end{itemize}
+
+\paragraph{Special Requirements}
+None
+
+
+\subsection{View Details of an Item}
+\paragraph{Brief Description}
+
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
+
+\paragraph{Basic Flow of Events}
+\begin{enumerate}
+\item ~
+\end{enumerate}
+
+\paragraph{Alternative Flow of Events}
+
+\subparagraph{Alternative Flow A0: Server is Down}
+\begin{enumerate}
+\item ~
+\end{enumerate}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item ~
+\end{itemize}
+
+\paragraph{Post-conditions}
+\begin{itemize}
+\item ~
+\end{itemize}
+
+\paragraph{Extension Points}
+\begin{itemize}
+\item 5.6 Edit Details of an Item
+\end{itemize}
+
+\paragraph{Special Requirements}
+None
+
+\subsection{Edit Details of an Item}
+
+\paragraph{Brief Description}
+
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
+
+\paragraph{Basic Flow of Events}
+\begin{enumerate}
+\item ~
+\end{enumerate}
+
+\paragraph{Alternative Flow of Events}
+
+\subparagraph{Alternative Flow A0: Server is Down}
+\begin{enumerate}
+\item ~
+\end{enumerate}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item ~
+\end{itemize}
+
+\paragraph{Post-conditions}
+\begin{itemize}
+\item ~
+\end{itemize}
+
+\paragraph{Extension Points}
+None
+
+\paragraph{Special Requirements}
+None
+
+\subsection{Generate Inventory Report}
+
+\paragraph{Brief Description}
+This use case shows the procedure for generating reports of the item inventory.
+ 
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
+ 
+\paragraph{Basic Flow of Events}
+\begin{enumerate}
+\item The user clicks the "Generate Report" link. [A0]
+\item The user is brought to the "Generate Report" page.
+\item The user chooses what type of report to generate.
+\item The user chooses appropriate report fields for the respective option.
+\item The system generates the report accordingly.
+\end{enumerate}
+ 
+\paragraph{Alternative Flows of Events}
+
+\subparagraph{Alternative Flow A0: Server is Down}
+\begin{enumerate}
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+ 
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must have a link to the "Generate Report" page.
+\end{itemize}
+
+\paragraph{Post-conditions}
+\begin{itemize}
+\item After basic step 5, the user is displayed the report which is generated as specified.
+\end{itemize}
+
+\paragraph{Extension Points}
+None
+
+\paragraph{Special Requirements}
+None
+
 
 \section{Context Flow Diagrams}
 TODO: \susi

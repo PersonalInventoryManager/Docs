@@ -3,13 +3,82 @@
 \contentsline {section}{\numberline {3}Project Background}{3}
 \contentsline {section}{\numberline {4}Use Case Identification}{3}
 \contentsline {section}{\numberline {5}Use Cases}{3}
-\contentsline {subsection}{\numberline {5.1}Title Here}{3}
-\contentsline {subsubsection}{\numberline {5.1.1}Brief Description}{3}
-\contentsline {subsubsection}{\numberline {5.1.2}Actors}{3}
-\contentsline {subsubsection}{\numberline {5.1.3}Basic Flow of Events}{3}
-\contentsline {subsubsection}{\numberline {5.1.4}Alternative Flow of Events}{3}
-\contentsline {subsubsection}{\numberline {5.1.5}Pre-conditions}{3}
-\contentsline {subsubsection}{\numberline {5.1.6}Post-conditions}{3}
-\contentsline {subsubsection}{\numberline {5.1.7}Extension Points}{3}
-\contentsline {subsubsection}{\numberline {5.1.8}Special Requirements}{3}
-\contentsline {section}{\numberline {6}Context Flow Diagrams}{3}
+\contentsline {subsection}{\numberline {5.1}Add an Item}{3}
+\contentsline {paragraph}{Brief Description}{3}
+\contentsline {paragraph}{Actors}{3}
+\contentsline {paragraph}{Basic Flow of Events}{3}
+\contentsline {paragraph}{Alternative Flows of Events}{3}
+\contentsline {subparagraph}{Alternative Flow A0: Server is Down}{3}
+\contentsline {subparagraph}{Alternative Flow A1: Required Fields Ommitted}{4}
+\contentsline {subparagraph}{Alternative Flow A2: UPC not Unique}{4}
+\contentsline {paragraph}{Pre-conditions}{4}
+\contentsline {paragraph}{Post-conditions}{4}
+\contentsline {paragraph}{Extension Points}{4}
+\contentsline {paragraph}{Special Requirements}{4}
+\contentsline {subsection}{\numberline {5.2}Basic Search for an Item}{4}
+\contentsline {paragraph}{Brief Description}{4}
+\contentsline {paragraph}{Actors}{4}
+\contentsline {paragraph}{Basic Flow of Events}{4}
+\contentsline {paragraph}{Alternative Flows of Events}{4}
+\contentsline {subparagraph}{Alternative Flow A0: Empty Query}{4}
+\contentsline {subparagraph}{Alternative Flow A1: Server is Down}{5}
+\contentsline {subparagraph}{Alternative Flow A2: No Matches}{5}
+\contentsline {paragraph}{Pre-conditions}{5}
+\contentsline {paragraph}{Post-conditions}{5}
+\contentsline {paragraph}{Extension Points}{5}
+\contentsline {paragraph}{Special Requirements}{5}
+\contentsline {subsection}{\numberline {5.3}Advanced Search for an Item}{5}
+\contentsline {paragraph}{Brief Description}{5}
+\contentsline {paragraph}{Actors}{5}
+\contentsline {paragraph}{Basic Flow of Events}{5}
+\contentsline {paragraph}{Alternative Flow of Events}{6}
+\contentsline {subparagraph}{Alternative Flow A0: No Category}{6}
+\contentsline {subparagraph}{Alternative Flow A1: Server is Down}{6}
+\contentsline {subparagraph}{Alternative Flow A2: Empty Query}{6}
+\contentsline {subparagraph}{Alternative Flow A3: No Matches}{6}
+\contentsline {paragraph}{Pre-conditions}{6}
+\contentsline {paragraph}{Post-conditions}{6}
+\contentsline {paragraph}{Extension Points}{6}
+\contentsline {paragraph}{Special Requirements}{6}
+\contentsline {subsection}{\numberline {5.4}Search Result Sorting}{7}
+\contentsline {paragraph}{Brief Description}{7}
+\contentsline {paragraph}{Actors}{7}
+\contentsline {paragraph}{Basic Flow of Events}{7}
+\contentsline {paragraph}{Alternative Flow of Events}{7}
+\contentsline {subparagraph}{Alternative Flow A0: Server is Down}{7}
+\contentsline {subparagraph}{Alternative Flow A1: No Matches}{7}
+\contentsline {paragraph}{Pre-conditions}{7}
+\contentsline {paragraph}{Post-conditions}{7}
+\contentsline {paragraph}{Extension Points}{7}
+\contentsline {paragraph}{Special Requirements}{7}
+\contentsline {subsection}{\numberline {5.5}View Details of an Item}{7}
+\contentsline {paragraph}{Brief Description}{7}
+\contentsline {paragraph}{Actors}{8}
+\contentsline {paragraph}{Basic Flow of Events}{8}
+\contentsline {paragraph}{Alternative Flow of Events}{8}
+\contentsline {subparagraph}{Alternative Flow A0: Server is Down}{8}
+\contentsline {paragraph}{Pre-conditions}{8}
+\contentsline {paragraph}{Post-conditions}{8}
+\contentsline {paragraph}{Extension Points}{8}
+\contentsline {paragraph}{Special Requirements}{8}
+\contentsline {subsection}{\numberline {5.6}Edit Details of an Item}{8}
+\contentsline {paragraph}{Brief Description}{8}
+\contentsline {paragraph}{Actors}{8}
+\contentsline {paragraph}{Basic Flow of Events}{8}
+\contentsline {paragraph}{Alternative Flow of Events}{8}
+\contentsline {subparagraph}{Alternative Flow A0: Server is Down}{8}
+\contentsline {paragraph}{Pre-conditions}{8}
+\contentsline {paragraph}{Post-conditions}{8}
+\contentsline {paragraph}{Extension Points}{9}
+\contentsline {paragraph}{Special Requirements}{9}
+\contentsline {subsection}{\numberline {5.7}Generate Inventory Report}{9}
+\contentsline {paragraph}{Brief Description}{9}
+\contentsline {paragraph}{Actors}{9}
+\contentsline {paragraph}{Basic Flow of Events}{9}
+\contentsline {paragraph}{Alternative Flows of Events}{9}
+\contentsline {subparagraph}{Alternative Flow A0: Server is Down}{9}
+\contentsline {paragraph}{Pre-conditions}{9}
+\contentsline {paragraph}{Post-conditions}{9}
+\contentsline {paragraph}{Extension Points}{9}
+\contentsline {paragraph}{Special Requirements}{9}
+\contentsline {section}{\numberline {6}Context Flow Diagrams}{9}
