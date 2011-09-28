@@ -283,6 +283,7 @@ None
 
 \subsection{View Details of an Item}
 \paragraph{Brief Description}
+This use case shows how a user would select an item from a list to view more detailed information about it.
 
 \paragraph{Actors}
 \begin{itemize}
@@ -291,24 +292,32 @@ None
 
 \paragraph{Basic Flow of Events}
 \begin{enumerate}
-\item ~
+\item The user clicks on an item (in search results, the recent changes list, or any other place with items listed).
+\item The browser queries the server for the item using the UPC code to specify the item.
+\item The server responds with all the data stored about the item. [A0]
+\item The browser takes the user to a new page with all the data about the item that the server sent.  It is displayed in divs labeled with “Category:”, “Size:”, etc. [A1]
 \end{enumerate}
 
 \paragraph{Alternative Flow of Events}
 
 \subparagraph{Alternative Flow A0: Server is Down}
 \begin{enumerate}
-\item ~
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A1: Item not Found}
+\begin{enumerate}
+\item The page displays a message saying that the item could not be found.
 \end{enumerate}
 
 \paragraph{Pre-conditions}
 \begin{itemize}
-\item ~
+\item The current page must have a link to the item which the user would like to view, as might happen in search results list or the recently modified items list.
 \end{itemize}
 
 \paragraph{Post-conditions}
 \begin{itemize}
-\item ~
+\item The page will display all data about the item that the system currently has logged for the item
 \end{itemize}
 
 \paragraph{Extension Points}
@@ -322,6 +331,7 @@ None
 \subsection{Edit Details of an Item}
 
 \paragraph{Brief Description}
+This use case shows how a user would modify an item that already exists in the server and save the edited/new field information for future viewing.
 
 \paragraph{Actors}
 \begin{itemize}
@@ -330,24 +340,39 @@ None
 
 \paragraph{Basic Flow of Events}
 \begin{enumerate}
-\item ~
+\item The user clicks on the value of a field (this starts off as a div element).
+\item The page replaces the div element with a text field containing the text that was in the div element.
+\item The user makes the desired changes to the value.
+\item The user clicks outside of the field.
+\item The browser sends a request to the server asking the value to be changed in the database.
+\item The server changes the value in the database. [A0, A1]
+\item The server responds that the value was changed.
+\item The page changes the text field back into a div element that contains the updated value of the field.
 \end{enumerate}
 
 \paragraph{Alternative Flow of Events}
 
 \subparagraph{Alternative Flow A0: Server is Down}
 \begin{enumerate}
-\item ~
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A1: Change Unsuccessful}
+\begin{enumerate}
+\item The server responds that the value could not be changed.
+\item The page notifies the user that the value could not be changed.
+\item The user presses "Ok" in the message dialog.
+\item The text field is focused again.
 \end{enumerate}
 
 \paragraph{Pre-conditions}
 \begin{itemize}
-\item ~
+\item The current page must be an item's detailed description page.
 \end{itemize}
 
 \paragraph{Post-conditions}
 \begin{itemize}
-\item ~
+\item The data on the page will represent the updated state of the data in the system.
 \end{itemize}
 
 \paragraph{Extension Points}
