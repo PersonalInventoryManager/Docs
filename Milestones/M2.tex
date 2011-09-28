@@ -295,7 +295,7 @@ This use case shows how a user would select an item from a list to view more det
 \item The user clicks on an item (in search results, the recent changes list, or any other place with items listed).
 \item The browser queries the server for the item using the UPC code to specify the item.
 \item The server responds with all the data stored about the item. [A0]
-\item The browser takes the user to a new page with all the data about the item that the server sent.  It is displayed in divs labeled with “Category:”, “Size:”, etc. [A1]
+\item The browser takes the user to a new page with all the data about the item that the server sent.  It is displayed in elements labeled with “Category:”, “Size:”, etc. [A1]
 \end{enumerate}
 
 \paragraph{Alternative Flow of Events}
@@ -340,8 +340,8 @@ This use case shows how a user would modify an item that already exists in the s
 
 \paragraph{Basic Flow of Events}
 \begin{enumerate}
-\item The user clicks on the value of a field (this starts off as a div element).
-\item The page replaces the div element with a text field containing the text that was in the div element.
+\item The user clicks on the value of a field.
+\item The page replaces the element with a text field containing the text that was in the element.
 \item The user makes the desired changes to the value.
 \item The user clicks outside of the field.
 \item The browser sends a request to the server asking the value to be changed in the database.
