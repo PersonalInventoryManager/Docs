@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {7.2}Testing}{7}
 \contentsline {section}{\numberline {8}Features}{8}
 \contentsline {subsection}{\numberline {8.1}Feature Listing}{8}
-\contentsline {subsection}{\numberline {8.2}Feature-to-Need Correspondence}{8}
+\contentsline {subsection}{\numberline {8.2}Feature-to-Need Correspondence}{9}
 \contentsline {section}{\numberline {9}Constraints}{9}
 \contentsline {section}{\numberline {10}Index and Glossary}{9}
-\contentsline {section}{\numberline {11}References}{9}
+\contentsline {section}{\numberline {11}References}{10}

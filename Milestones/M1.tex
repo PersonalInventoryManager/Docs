@@ -125,23 +125,21 @@ The client will be the main user of the system. While the client is very familia
 \hline
 N0 & Search for parts based off their attributes & Primary \\
 \hline
-N1 & Compatible with a UNIX architecture & Primary \\
+N1 & Identify items via bar codes & Primary \\
 \hline
-N2 & Identify items via bar codes & Primary \\
+N2 & Keep track of the data associated with an asset & Primary \\
 \hline
-N3 & Keep track of the data associated with an asset & Primary \\
+N3 & Organize search results & Primary \\
 \hline
-N4 & Organize search results & Primary \\
+N4 & Insert objects in the system at any point; do not freeze the database & Secondary \\
 \hline
-N5 & Insert objects in the system at any point; do not freeze the database & Secondary \\
+N5 & Modify objects; including adding notes to the objects & Secondary \\
 \hline
-N6 & Modify objects; including adding notes to the objects & Secondary \\
+N6 & Access from a second physical location & Optional \\
 \hline
-N7 & Accessible from any computer & Optional \\
+N7 & View most-recently acquired asset(s) & Optional \\
 \hline
-N8 & View most-recently acquired asset(s) & Optional \\
-\hline
-N9 & View a summary of inventory data & Optional \\
+N8 & View a summary of inventory data & Optional \\
 \hline
 \end{tabular}
 
@@ -209,25 +207,31 @@ Since the solution will be the product of a course project, no monetary capital 
 \textbf{ID} & \textbf{Feature} & \textbf{Priority} & \textbf{Effort} & \textbf{Risk} & \textbf{Stability} & \textbf{Target Release} & \textbf{Assigned To} \\
 \hline
 \hline
-F0 & Web-accessible with an online API & Critical & High & High & Low & 1.0 & Unassigned \\
+F0 & Online UI & Critical & High & High & Low & 1.0 & Eric \\
 \hline
-F1 & Search for matching attribute (such as a bar code, text description, or unified search); have simple and advanced searches & Critical & High & High & Low & 1.0 & Unassigned \\
+F1 & Add assets to the inventory & Critical & Low & High & Low & 1.0 & Richard \\
 \hline
-F2 & Add assets to the inventory & Critical & Low & High & Low & 1.0 & Unassigned \\
+F2 & Modify assets in the inventory & Critical & Low & High & Low & 1.0 & Taylor \\
 \hline
-F3 & Modify assets in the inventory & Critical & Low & High & Low & 1.0 & Unassigned \\
+F3 & The system keeps track of attributes based on category & Critical & Low & High & Low & 1.0 & Susi \\
 \hline
-F4 & Each category of an asset has a related set of optional attributes & Critical & Low & High & Low & 1.0 & Unassigned \\
+F4 & Use a UPC-A barcode as the unique identifier for each asset & Critical & Low & Medium & Low & 1.0 & Eric \\
 \hline
-F5 & Use a UPC-A barcode as the unique identifier for each asset & Critical & Low & Medium & Low & 1.0 & Unassigned \\
+F5 & Provide an updated list of recently-added assets & Useful & Medium & Low & Medium & 1.5 & Richard \\
 \hline
-F6 & Provide an updated list of recently-added assets & Useful & Medium & Low & Medium & 1.5 & Unassigned \\
+F6 & Generate reports of asset inventory & Useful & High & Low & Medium & 2.0 & Taylor \\
 \hline
-F7 & Generate reports of asset inventory & Useful & High & Low & Medium & 2.0 & Unassigned \\
+F7 & Sort search results based off of barcode, title, and modified/created timestamp & Useful & High & Low & Low & 2.0 & Susi \\
 \hline
-F8 & Sort search results based off of barcode, title, and modified/created timestamp & Useful & High & Low & Low & 2.0 & Unassigned \\
+F8 & Basic search for items based on name or UPC & Critical & High & High & Low & 1.0 & Eric \\
 \hline
-F9 & Deployable on a Linux-based operating system & Critical & Low & High & Low & 1.0 & Team Sriram \\
+F9 & Advanced search for items based on all fields related to the item and its category & Critical & High & High & Low & 1.0 & Richard \\
+\hline
+F10 & Basic and Advanced searches allow the user to include wildcards in the query & Critical & High & High & Low & 1.0 & Taylor \\
+\hline
+F11 & Basic and Advanced searches will search first by exact/wildcard match, then by fuzzy match & Critical & High & High & Low & 1.0 & Susi \\
+\hline
+F12 & REST API & Critical & High & High & Low & 1.0 & Eric \\
 \hline
 \end{tabular}\\
 ~\\
@@ -235,28 +239,34 @@ F9 & Deployable on a Linux-based operating system & Critical & Low & High & Low 
 \subsection{Feature-to-Need Correspondence}
 \begin{tabular}{ | c || c | c | c | c | c | c | c | c | c | c | }
 \hline
-   & N0 & N1 & N2 & N3 & N4 & N5 & N6 & N7 & N8 & N9 \\
+    & N0 & N1 & N2 & N3 & N4 & N5 & N6 & N7 & N8 \\
 \hline
 \hline
-F0 &    &    &    &    &    &    &    & X  &    &    \\
+F0  &    &    &    &    &    &    & X  &    &    \\
 \hline
-F1 & X  &    & X  &    &    &    &    &    &    &    \\
+F1  &    &    & X  &    & X  &    &    &    &    \\
 \hline
-F2 &    &    &    & X  &    & X  &    &    &    &    \\
+F2  &    &    & X  &    &    & X  &    &    &    \\
 \hline
-F3 &    &    &    & X  &    &    & X  &    &    &    \\
+F3  &    &    & X  &    & X  & X  &    &    &    \\
 \hline
-F4 &    &    &    & X  &    & X  & X  &    &    &    \\
+F4  & X  & X  & X  &    &    &    &    &    &    \\
 \hline
-F5 & X  &    & X  & X  &    &    &    &    &    &    \\
+F5  &    &    &    &    &    &    &    & X  &    \\
 \hline
-F6 &    &    &    &    &    &    &    &    & X  &    \\
+F6  &    &    &    &    &    &    &    &    & X  \\
 \hline
-F7 &    &    &    &    &    &    &    &    &    & X  \\
+F7  & X  & X  &    & X  &    &    &    &    &    \\
 \hline
-F8 & X  &    & X  &    & X  &    &    &    &    &    \\
+F8  & X  & X  & X  & X  &    &    &    &    &    \\
 \hline
-F9 &    & X  &    &    &    &    &    &    &    &    \\
+F9  & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F10 & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F11 & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F12 &    &    &    &    &    &    & X  &    &    \\
 \hline
 \end{tabular}
 
@@ -275,6 +285,8 @@ C2 & Budget & The project must be completed without funding from the client. & T
 C3 & Software Architecture & The project must utilize REST, not SOAP. & The client strongly prefers not to use SOAP based off of past experience. & Low \\
 \hline
 C4 & Technology & Develop in Ruby utilizing Sinatra for web framework. & The client prefers the development language and framework to be familiar to him for further extension. & Medium \\
+\hline
+C5 & Availability & Accessible via the web. & The client does not want to be restricted to one computer for working with the system.  In addition, the client could potentially extend the system as a mobile application, which implies web accessibility. & Low\\
 \hline
 \end{tabular}
 
