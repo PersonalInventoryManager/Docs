@@ -162,6 +162,11 @@ This use case shows the procedure for adding an item to the inventory.
 \item User
 \end{itemize}
 
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must have a link to the "Add Item" page.
+\end{itemize}
+
 \paragraph{Basic Flow of Events}
 \begin{enumerate}
 \item The user clicks the "Add Item" link. [A0]
@@ -189,11 +194,6 @@ This use case shows the procedure for adding an item to the inventory.
 \item The system notifies the user that the item cannot be added because the UPC is not unique.
 \end{enumerate}
 
-\paragraph{Pre-conditions}
-\begin{itemize}
-\item The current page must have a link to the "Add Item" page.
-\end{itemize}
-
 \paragraph{Post-conditions}
 \begin{itemize}
 \item The user is brought to the home page.
@@ -214,6 +214,11 @@ This use case shows how a basic search from any page  would proceed. This case w
 \paragraph{Actors}
 \begin{itemize}
 \item User
+\end{itemize}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must have a basic search box.
 \end{itemize}
 
 \paragraph{Basic Flow of Events}
@@ -244,11 +249,6 @@ This use case shows how a basic search from any page  would proceed. This case w
 \item The results page displays the message returned by the server.
 \end{enumerate}
 
-\paragraph{Pre-conditions}
-\begin{itemize}
-\item The current page must have a basic search box.
-\end{itemize}
-
 \paragraph{Post-conditions}
 \begin{itemize}
 \item The results page will display the response from the server or that the server was unreachable.
@@ -275,6 +275,11 @@ This use case shows how a search from the advanced search page  would proceed. T
 \paragraph{Actors}
 \begin{itemize}
 \item User
+\end{itemize}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must be the advanced search page.
 \end{itemize}
 
 \paragraph{Basic Flow of Events}
@@ -315,11 +320,6 @@ This use case shows how a search from the advanced search page  would proceed. T
 \item The results page displays the message returned by the server.
 \end{enumerate}
 
-\paragraph{Pre-conditions}
-\begin{itemize}
-\item The current page must be the advanced search page.
-\end{itemize}
-
 \paragraph{Post-conditions}
 \begin{itemize}
 \item The results page will display the results of the search.
@@ -349,6 +349,11 @@ This use case shows how changing the sorting of the items on the search results 
 \item User
 \end{itemize}
 
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must be the search results page.
+\end{itemize}
+
 \paragraph{Basic Flow of Events}
 \begin{enumerate}
 \item The user clicks on a sort type link (options are Name, UPC, Recently Created, and Recently Modified).
@@ -370,11 +375,6 @@ This use case shows how changing the sorting of the items on the search results 
 \item The server responds with the message "No results."
 \item The results page displays the message returned by the server.
 \end{enumerate}
-
-\paragraph{Pre-conditions}
-\begin{itemize}
-\item The current page must be the search results page.
-\end{itemize}
 
 \paragraph{Post-conditions}
 \begin{itemize}
@@ -401,6 +401,11 @@ This use case shows how a user would select an item from a list to view more det
 \item User
 \end{itemize}
 
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must have a link to the item which the user would like to view, as might happen in search results list or the recently modified items list.
+\end{itemize}
+
 \paragraph{Basic Flow of Events}
 \begin{enumerate}
 \item The user clicks on an item (in search results, the recent changes list, or any other place with items listed).
@@ -420,11 +425,6 @@ This use case shows how a user would select an item from a list to view more det
 \begin{enumerate}
 \item The page displays a message saying that the item could not be found.
 \end{enumerate}
-
-\paragraph{Pre-conditions}
-\begin{itemize}
-\item The current page must have a link to the item which the user would like to view, as might happen in search results list or the recently modified items list.
-\end{itemize}
 
 \paragraph{Post-conditions}
 \begin{itemize}
@@ -447,6 +447,11 @@ This use case shows how a user would modify an item that already exists in the s
 \paragraph{Actors}
 \begin{itemize}
 \item User
+\end{itemize}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must be an item's detailed description page.
 \end{itemize}
 
 \paragraph{Basic Flow of Events}
@@ -476,11 +481,6 @@ This use case shows how a user would modify an item that already exists in the s
 \item The text field is focused again.
 \end{enumerate}
 
-\paragraph{Pre-conditions}
-\begin{itemize}
-\item The current page must be an item's detailed description page.
-\end{itemize}
-
 \paragraph{Post-conditions}
 \begin{itemize}
 \item The data on the page will represent the updated state of the data in the system.
@@ -502,6 +502,11 @@ This use case shows the procedure for generating reports of the item inventory.
 \item User
 \end{itemize}
 
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must have a link to the "Generate Report" page.
+\end{itemize}
+
 \paragraph{Basic Flow of Events}
 \begin{enumerate}
 \item The user clicks the "Generate Report" link. [A0]
@@ -517,11 +522,6 @@ This use case shows the procedure for generating reports of the item inventory.
 \begin{enumerate}
 \item The user is notified that the server could not be reached.
 \end{enumerate}
-
-\paragraph{Pre-conditions}
-\begin{itemize}
-\item The current page must have a link to the "Generate Report" page.
-\end{itemize}
 
 \paragraph{Post-conditions}
 \begin{itemize}
