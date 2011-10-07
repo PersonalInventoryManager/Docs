@@ -605,7 +605,7 @@ With the bidirectional arrows the data listed on above the arrow (like A) flows 
 
 \section{Storyboards}
 \graphicspath{{../StoryboardImages/}}
-\subsection{Add Item}
+\subsection{Add an Item}
 \clearpage
 ~\\
 \begin{tabular}{ p{4.5in} }
@@ -668,6 +668,125 @@ A popup appears that informs the user that the UPC field is required. The user c
 F2S5\\
 \includegraphics[keepaspectratio, width=4.5in]{addItemF2S5.pdf} \\
 A popup appears that informs the user that the UPC field is not unique. The user clicks ok and the popup goes away.
+\end{tabular}
+
+\subsection{Basic Search for an Item}
+\begin{tabular}{ p{4.5in} }
+F0S0\\
+\includegraphics[keepaspectratio, width=4.5in]{basicSearchF0S0.pdf} \\
+The user fills in "2GB DDR3" into the search bar and clicks the "Search" button. This takes the user to the Advanced Search results page. [if query is empty, stay here]
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S1\\
+\includegraphics[keepaspectratio, width=4.5in]{basicSearchF0S1.pdf} \\
+The "Name" attribute is filled with the user's old query phrase and at the bottom of the screen is the list of search results. [if there are no search results, goto F2S1]
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F2S1\\
+\includegraphics[keepaspectratio, width=4.5in]{basicSearchF2S1.pdf} \\
+The "Name" attribute is filled with the user's old query phrase and at the bottom of the screen is the title "Search Results" with "no results" underneath it.
+\end{tabular}
+
+\subsection{Advanced Search for an Item}
+\begin{tabular}{ p{4.5in} }
+F0S0\\
+\includegraphics[keepaspectratio, width=4.5in]{advancedSearchF0S0.pdf} \\
+The user clicks on the "Advanced Search" link and is taken to the "Advanced Search" page.
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S1\\
+\includegraphics[keepaspectratio, width=4.5in]{advancedSearchF0S1.pdf} \\
+The user opens the category selection box, which opens to display the available categories. [if instead of setting the category, the user fills in the UPC field and clicks search, go to F1S3]
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S2\\
+\includegraphics[keepaspectratio, width=4.5in]{advancedSearchF0S2.pdf} \\
+The user selects "RAM" as the category from the combo box. Each possible attribute type of RAM is displayed below with the ability to set the field value for each attribute.
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S3\\
+\includegraphics[keepaspectratio, width=4.5in]{advancedSearchF0S3.pdf} \\
+The user then fills in some attributes and clicks search.  This creates a list of item that match the search at the bottom of the screen to appear.
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F1S3\\
+\includegraphics[keepaspectratio, width=4.5in]{advancedSearchF1S3.pdf} \\
+The Item with the matching UPC number is shown.
+\end{tabular}
+
+\subsection{Search Result Sorting}
+\begin{tabular}{ p{4.5in} }
+F0S0\\
+\includegraphics[keepaspectratio, width=4.5in]{sortResultsF0S0.pdf} \\
+The user is on the advanced search results page with some results at the bottom that match his search. He clicks the "UPC" link in the "Sort By:" bar. 
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S1\\
+\includegraphics[keepaspectratio, width=4.5in]{sortResultsF0S1.pdf} \\
+The same results page is loaded again, this time with the items sorted by ascending UPC.
+\end{tabular}
+
+\subsection{View Details of an Item}
+\begin{tabular}{ p{4.5in} }
+F0S0\\
+\includegraphics[keepaspectratio, width=4.5in]{viewDetailsF0S0.pdf} \\
+The user clicks on an item in the "Recent Changes" list. This takes the user to the Item Details page.
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S1\\
+\includegraphics[keepaspectratio, width=4.5in]{viewDetailsF0S1.pdf} \\
+The details page displays all of the stored information about the item and holds empty attribute/field spaces if the user wants to add more information.
+\end{tabular}
+
+\subsection{Edit Details of an Item}
+\begin{tabular}{ p{4.5in} }
+F0S0\\
+\includegraphics[keepaspectratio, width=4.5in]{modifyDetailsF0S0.pdf} \\
+The user is at an item details page and clicks on the empty field that exists at the bottom of the list of filled out data.
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S1\\
+\includegraphics[keepaspectratio, width=4.5in]{modifyDetailsF0S1.pdf} \\
+A dropdown box drops down and has the list of different attributes for RAM available. The user selects "speed."
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S2\\
+\includegraphics[keepaspectratio, width=4.5in]{modifyDetailsF0S2.pdf} \\
+The dropdown collapses then fills in "speed" into the attribute field. The user then fills in the information for the "speed" attribute.
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S3\\
+\includegraphics[keepaspectratio, width=4.5in]{modifyDetailsF0S3.pdf} \\
+The user's input, "DDR3" fills in the field.
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S4\\
+\includegraphics[keepaspectratio, width=4.5in]{modifyDetailsF0S4.pdf} \\
+The user then clicks off of the editable sections of the item page and all of the fields go back to looking immutable.
 \end{tabular}
 
 \section{Index and Glossary}

@@ -95,6 +95,11 @@
 \contentsline {paragraph}{Level 1: View/Modify Item}{18}
 \contentsline {paragraph}{Level 2: View/Modify Item--Querier}{18}
 \contentsline {section}{\numberline {11}Storyboards}{18}
-\contentsline {subsection}{\numberline {11.1}Add Item}{18}
-\contentsline {section}{\numberline {12}Index and Glossary}{23}
-\contentsline {section}{\numberline {13}References}{24}
+\contentsline {subsection}{\numberline {11.1}Add an Item}{18}
+\contentsline {subsection}{\numberline {11.2}Basic Search for an Item}{23}
+\contentsline {subsection}{\numberline {11.3}Advanced Search for an Item}{25}
+\contentsline {subsection}{\numberline {11.4}Search Result Sorting}{27}
+\contentsline {subsection}{\numberline {11.5}View Details of an Item}{28}
+\contentsline {subsection}{\numberline {11.6}Edit Details of an Item}{29}
+\contentsline {section}{\numberline {12}Index and Glossary}{32}
+\contentsline {section}{\numberline {13}References}{32}
