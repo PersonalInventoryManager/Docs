@@ -7,11 +7,10 @@
 \contentsline {subsection}{\numberline {5.2}Feature-to-Need Correspondence}{6}
 \contentsline {section}{\numberline {6}Client Background}{6}
 \contentsline {section}{\numberline {7}Current System}{6}
-\contentsline {section}{\numberline {8}Project Background}{6}
-\contentsline {section}{\numberline {9}Use Case-to-Feature Correspondence}{6}
-\contentsline {section}{\numberline {10}Use Cases}{6}
+\contentsline {section}{\numberline {8}Use Case-to-Feature Correspondence}{6}
+\contentsline {section}{\numberline {9}Use Cases}{6}
 \contentsline {paragraph}{Use case syntax}{6}
-\contentsline {subsection}{\numberline {10.1}Add an Item}{7}
+\contentsline {subsection}{\numberline {9.1}Add an Item}{7}
 \contentsline {paragraph}{Brief Description}{7}
 \contentsline {paragraph}{Actors}{7}
 \contentsline {paragraph}{Pre-conditions}{7}
@@ -22,7 +21,7 @@
 \contentsline {subparagraph}{Alternative Flow A2: UPC not Unique}{8}
 \contentsline {paragraph}{Post-conditions}{8}
 \contentsline {paragraph}{Extension Points}{8}
-\contentsline {subsection}{\numberline {10.2}Basic Search for an Item}{8}
+\contentsline {subsection}{\numberline {9.2}Basic Search for an Item}{8}
 \contentsline {paragraph}{Brief Description}{8}
 \contentsline {paragraph}{Actors}{8}
 \contentsline {paragraph}{Pre-conditions}{8}
@@ -33,7 +32,7 @@
 \contentsline {subparagraph}{Alternative Flow A2: No Matches}{9}
 \contentsline {paragraph}{Post-conditions}{9}
 \contentsline {paragraph}{Extension Points}{9}
-\contentsline {subsection}{\numberline {10.3}Advanced Search for an Item}{9}
+\contentsline {subsection}{\numberline {9.3}Advanced Search for an Item}{9}
 \contentsline {paragraph}{Brief Description}{9}
 \contentsline {paragraph}{Actors}{9}
 \contentsline {paragraph}{Pre-conditions}{9}
@@ -45,7 +44,7 @@
 \contentsline {subparagraph}{Alternative Flow A3: No Matches}{10}
 \contentsline {paragraph}{Post-conditions}{10}
 \contentsline {paragraph}{Extension Points}{10}
-\contentsline {subsection}{\numberline {10.4}Search Result Sorting}{10}
+\contentsline {subsection}{\numberline {9.4}Search Result Sorting}{10}
 \contentsline {paragraph}{Brief Description}{10}
 \contentsline {paragraph}{Actors}{10}
 \contentsline {paragraph}{Pre-conditions}{10}
@@ -55,7 +54,7 @@
 \contentsline {subparagraph}{Alternative Flow A1: No Matches}{11}
 \contentsline {paragraph}{Post-conditions}{11}
 \contentsline {paragraph}{Extension Points}{11}
-\contentsline {subsection}{\numberline {10.5}View Details of an Item}{11}
+\contentsline {subsection}{\numberline {9.5}View Details of an Item}{11}
 \contentsline {paragraph}{Brief Description}{11}
 \contentsline {paragraph}{Actors}{11}
 \contentsline {paragraph}{Pre-conditions}{11}
@@ -65,7 +64,7 @@
 \contentsline {subparagraph}{Alternative Flow A1: Item not Found}{12}
 \contentsline {paragraph}{Post-conditions}{12}
 \contentsline {paragraph}{Extension Points}{12}
-\contentsline {subsection}{\numberline {10.6}Edit Details of an Item}{12}
+\contentsline {subsection}{\numberline {9.6}Edit Details of an Item}{12}
 \contentsline {paragraph}{Brief Description}{12}
 \contentsline {paragraph}{Actors}{12}
 \contentsline {paragraph}{Pre-conditions}{12}
@@ -75,7 +74,7 @@
 \contentsline {subparagraph}{Alternative Flow A1: Change Unsuccessful}{13}
 \contentsline {paragraph}{Post-conditions}{13}
 \contentsline {paragraph}{Extension Points}{13}
-\contentsline {subsection}{\numberline {10.7}Generate Inventory Report}{13}
+\contentsline {subsection}{\numberline {9.7}Generate Inventory Report}{13}
 \contentsline {paragraph}{Brief Description}{13}
 \contentsline {paragraph}{Actors}{13}
 \contentsline {paragraph}{Pre-conditions}{13}
@@ -84,7 +83,7 @@
 \contentsline {subparagraph}{Alternative Flow A0: Server is Down}{13}
 \contentsline {paragraph}{Post-conditions}{13}
 \contentsline {paragraph}{Extension Points}{14}
-\contentsline {section}{\numberline {11}Data Flow Diagrams}{14}
+\contentsline {section}{\numberline {10}Data Flow Diagrams}{14}
 \contentsline {paragraph}{DFD Legend}{14}
 \contentsline {paragraph}{Context/Level 0}{14}
 \contentsline {paragraph}{Level 1: Add Item}{15}
@@ -95,7 +94,7 @@
 \contentsline {paragraph}{Level 1: Generate Report}{17}
 \contentsline {paragraph}{Level 1: View/Modify Item}{18}
 \contentsline {paragraph}{Level 2: View/Modify Item--Querier}{18}
-\contentsline {section}{\numberline {12}Storyboards}{18}
-\contentsline {subsection}{\numberline {12.1}Add Item}{18}
-\contentsline {section}{\numberline {13}Index and Glossary}{23}
-\contentsline {section}{\numberline {14}References}{23}
+\contentsline {section}{\numberline {11}Storyboards}{18}
+\contentsline {subsection}{\numberline {11.1}Add Item}{18}
+\contentsline {section}{\numberline {12}Index and Glossary}{23}
+\contentsline {section}{\numberline {13}References}{24}
