@@ -79,7 +79,7 @@ This milestone, the first of a series, documents the context for a software proj
 \section{Introduction}
 Our client, Tim Ekl, would like a system to keep track of personal belongings. Tim's profession and interests with computers have caused him to accumulate a large collection of computer hardware. Currently, Tim maintains a crude organization system which involves labeling containers in order to categorize the different areas to place objects--whether it be for storage or extraction. However, the current system is not as effective as the client would like since there have been multiple instances in which items were not found when they were needed and replaced unnecessarily, resulting in lost capital. In addition, the current system's generic labeling is not a sure-fire method for finding items; they are only meant to guide Tim and help him make educated guesses concerning the general location of his items. This results in lost time looking for items which may not even exist.\\
 ~\\
-The client wishes to replace the current system with one that should be comparable to corporate asset-tracking systems with the capability to tag assets with a wide variety of attributes, though more streamlined since it is intended for use on a personal scale. Since this project is an initiative from a college program, there will be no monetary capital invested towards development. However, it is expected that each developer involved in the project will invest approximately five hours weekly towards the project; this results in roughly 340 man hours in terms of a time budget for the project. In addition, all developers will respect the client's preference to construct the product utilizing Ruby (programming language) and Sinatra (web framework). There exist more requirements and constraints which will be elaborated on later in this document. Ultimately the product will be a web application backed by a database.\\
+The client wishes to replace the current system with one that should be comparable to corporate asset-tracking systems with the capability to tag assets with a wide variety of attributes, though more streamlined since it is intended for use on a personal scale. Since this project is an initiative from a college program, there will be no monetary capital invested towards development. However, it is expected that each developer involved in the project will invest approximately five hours weekly towards the project; this results in roughly 340 man hours in terms of a time budget for the project. In addition, all developers will respect the client's preference to construct the product utilizing Ruby (programming language) [2] and Sinatra (web framework) [3]. There exist more requirements and constraints which will be elaborated on later in this document. Ultimately the product will be a web application backed by a database.\\
 ~\\
 This document will provide utility and the initial background for upcoming milestones.  The sections on client background, current system, user needs, features, and the feature-to-need correspondence provide the project background needed for all future milestones. The non-functional requirements and constraints sections specifically satisfy the various requirements as well the design constraints involved in the third milestone.  Finally, the section on testing introduces the topic of test cases that is expanded upon in the fourth milestone.
 
@@ -177,7 +177,7 @@ Change data associated with items & F3\\
 \subsection{Assumptions and Dependencies}
 \begin{itemize}
 \item Availability of network/web hosting.
-\item Availability of Ruby and Sinatra framework to run the software.
+\item Availability of Ruby [2] and Sinatra [3] framework to run the software.
 \item Operates on the Unix operating system.
 \end{itemize}
 
@@ -189,14 +189,14 @@ Since the solution will be the product of a course project, no monetary capital 
 \subsection{General}
 \begin{itemize}
 \item Responsive on the local network.
-\item Local/client storage on web browsers using SQLite and Sinatra.
+\item Local/client storage on web browsers using SQLite [5] and Sinatra [3].
 \item Allow for easy transfer of inventory data; involves a simple copying, tar'ing, moving, and untar'ing of the directory.
 \item Avoid crashing the application or at least handle the crash gracefully; avoid hard server restarts or corruptions.
 \end{itemize}
 
 \subsection{Testing}
 \begin{itemize}
-\item Cucumber is the preferred testing framework. RSpec is recommended if Cucumber is not used.
+\item Cucumber [6] is the preferred testing framework. RSpec [7] is recommended if Cucumber [6] is not used.
 \item Manually coded unit tests should be used at minimum if no testing framework is utilized.
 \end{itemize}
 
@@ -284,7 +284,7 @@ C2 & Budget & The project must be completed without funding from the client. & T
 \hline
 C3 & Software Architecture & The project must utilize REST, not SOAP. & The client strongly prefers not to use SOAP based off of past experience. & Low \\
 \hline
-C4 & Technology & Develop in Ruby utilizing Sinatra for web framework. & The client prefers the development language and framework to be familiar to him for further extension. & Medium \\
+C4 & Technology & Develop in Ruby [2] utilizing Sinatra [3] for web framework. & The client prefers the development language and framework to be familiar to him for further extension. & Medium \\
 \hline
 C5 & Availability & Accessible via the web. & The client does not want to be restricted to one computer for working with the system.  In addition, the client could potentially extend the system as a mobile application, which implies web accessibility. & Low\\
 \hline
@@ -308,6 +308,34 @@ C5 & Availability & Accessible via the web. & The client does not want to be res
 \emph{Managing Software Requirements: a Use Case Approach}.
 Addison-Wesley, Boston,
 2nd Edition,
-2003.
+2003.\\
+
+\noindent\hangindent=1.4cm
+\textbf{(2)} "Ruby 1.9.2" 
+\emph{Download Ruby.} Ruby. Web.  6 October 2011. \\
+
+\noindent\hangindent=1.4cm
+\textbf{(3)} "Sinatra 1.3.0" 
+\emph{Sinatra: Documentation.} Sinatra. Web.  6 October 2011.\\
+
+\noindent\hangindent=1.4cm
+\textbf{(4)} "Ubuntu 11.04" 
+\emph{Download Ubuntu.} Ubuntu. Web.  6 October 2011.\\
+
+\noindent\hangindent=1.4cm
+\textbf{(5)} "SQLite 3.7.8" 
+\emph{SQLite Download Page.} SQLite. Web.  6 October 2011.\\
+
+\noindent\hangindent=1.4cm
+\textbf{(6)} "Cucumber 1.1.0" 
+\emph{cucumber/cucumber.} Cucumber. Web.  6 October 2011.\\
+
+\noindent\hangindent=1.4cm
+\textbf{(7)} "RSpec 2.6.0" 
+\emph{RSpec Documentation.} Relish. Web.  6 October 2011.\\
+
+\noindent\hangindent=1.4cm
+\textbf{(8)} "DataMapper 1.1.0" 
+\emph{DataMapper - Documentation.} DataMapper. Web.  6 October 2011.\\
 
 \end{document}
