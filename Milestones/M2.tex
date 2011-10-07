@@ -148,9 +148,20 @@ The client does not have a software solution in place.  Currently, Tim has a pri
 \section{Project Background}
 TODO: \richard
 
-\section{Use Case Identification}
-
 \section{Use Cases}
+
+\paragraph{Use case syntax}\\
+~\\
+Each use case is divided into 8 sections:
+\begin{itemize}
+\item A “Basic Description” section which gives an overview of what functionality the use case demonstrates.
+\item An “Actors” section to describe who or what interacts with the system in the use case.
+\item A “Pre-conditions” section which contains the assumptions made, especially those pertaining to the state of the system, prior to the start of the use case.
+\item A “Basic Flow of Events” section which details the order of events done by the actor(s) and the system under standard conditions. If a particular step in the basic flow has the possibility of failing to occur successfully, one or more alternative flow listings are presented in brackets following the possibility of failure. Each alternative flow listing matches to an alternative flow in the “Alternative Flow” section. If a basic flow step fails, the alternative flow that is listed with it is followed as the next step.
+\item An “Alternative Flow of Events” section which holds each alternative flow listed in the basic flow. Each alternative flow has a unique identifier used to reference it, a short name describing the condition that would cause the alternative flow to be followed, and the order of actions performed by the actor(s) and the system under the flow’s conditions. If an action has the possibility of failing, alternatives to that flow are presented just as they are in the basic flow with a reference to the alternative flow to take.
+\item A “Post-conditions” section which contains guarantees on the result of the use case. 
+\item An “Extension Points” section which contains references to other use cases which the completion of the current use case might lead into.
+\end{itemize}
 
 \subsection{Add an Item}
 
@@ -201,9 +212,6 @@ This use case shows the procedure for adding an item to the inventory.
 \end{itemize}
 
 \paragraph{Extension Points}
-None
-
-\paragraph{Special Requirements}
 None
 
 \subsection{Basic Search for an Item}
@@ -262,9 +270,6 @@ This use case shows how a basic search from any page  would proceed. This case w
 \item 5.4 Search Result Sorting
 \item 5.5 View Details of an Item
 \end{itemize}
-
-\paragraph{Special Requirements}
-None
 
 
 \subsection{Advanced Search for an Item}
@@ -335,9 +340,6 @@ This use case shows how a search from the advanced search page  would proceed. T
 \item 5.5 View Details of an Item
 \end{itemize}
 
-\paragraph{Special Requirements}
-None
-
 
 \subsection{Search Result Sorting}
 
@@ -388,9 +390,6 @@ This use case shows how changing the sorting of the items on the search results 
 \item 5.5 View Details of an Item
 \end{itemize}
 
-\paragraph{Special Requirements}
-None
-
 
 \subsection{View Details of an Item}
 \paragraph{Brief Description}
@@ -435,9 +434,6 @@ This use case shows how a user would select an item from a list to view more det
 \begin{itemize}
 \item 5.6 Edit Details of an Item
 \end{itemize}
-
-\paragraph{Special Requirements}
-None
 
 \subsection{Edit Details of an Item}
 
@@ -489,9 +485,6 @@ This use case shows how a user would modify an item that already exists in the s
 \paragraph{Extension Points}
 None
 
-\paragraph{Special Requirements}
-None
-
 \subsection{Generate Inventory Report}
 
 \paragraph{Brief Description}
@@ -531,11 +524,18 @@ This use case shows the procedure for generating reports of the item inventory.
 \paragraph{Extension Points}
 None
 
-\paragraph{Special Requirements}
-None
 
+\section{Data Flow Diagrams}
+\paragraph{DFD Legend}
+~\\
+\includegraphics[keepaspectratio, width=4in]{dfd_legend.pdf}\\
+\begin{itemize}
+\item Actor = some user or another system that interacts with the system.
+\item Process = name of some action that will be taken on the data
+\item Data Store = something like a file or database that stores data
+\end{itemize}
+With the bidirectional arrows the data listed on above the arrow (like A) flows left-to-right, data listed below the arrow (like B) flows right-to-left, data listed to the right of the arrow (like C) flows top-to-bottom, and data listed to the left of the arrow (like D) flows bottom-to-top.
 
-\section{Context Flow Diagrams}
 \paragraph{Context/Level 0}
 ~\\
 \includegraphics[keepaspectratio, width=6.5in]{dfd_context_level0.pdf}\\
