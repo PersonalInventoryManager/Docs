@@ -94,5 +94,7 @@
 \contentsline {paragraph}{Level 1: Generate Report}{17}
 \contentsline {paragraph}{Level 1: View/Modify Item}{18}
 \contentsline {paragraph}{Level 2: View/Modify Item--Querier}{18}
-\contentsline {section}{\numberline {11}Index and Glossary}{19}
-\contentsline {section}{\numberline {12}References}{19}
+\contentsline {section}{\numberline {11}Storyboards}{18}
+\contentsline {subsection}{\numberline {11.1}Add Item}{18}
+\contentsline {section}{\numberline {12}Index and Glossary}{23}
+\contentsline {section}{\numberline {13}References}{23}

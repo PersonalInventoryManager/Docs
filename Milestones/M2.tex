@@ -150,7 +150,7 @@ TODO: \richard
 
 \section{Use Cases}
 
-\paragraph{Use case syntax}\\
+\paragraph{Use case syntax}
 ~\\
 Each use case is divided into 8 sections:
 \begin{itemize}
@@ -580,6 +580,73 @@ With the bidirectional arrows the data listed on above the arrow (like A) flows 
 ~\\
 \includegraphics[keepaspectratio, width=6.5in]{dfd_level2_view_modify_item_querier.pdf}\\
 ~\\
+
+\section{Storyboards}
+\graphicspath{{../StoryboardImages/}}
+\subsection{Add Item}
+\clearpage
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S0\\
+\includegraphics[keepaspectratio, width=4.5in]{addItemF0S0.pdf}\\
+The user clicks on the “Add Item” link and is taken to the “Add Item” page. 
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S1\\
+\includegraphics[keepaspectratio, width=4.5in]{addItemF0S1.pdf}\\
+The user opens the category selection box, which opens to display the available categories.
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S2\\
+\includegraphics[keepaspectratio, width=4.5in]{addItemF0S2.pdf}  \\
+The user selects “ram” as the category from the combo box.
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S3\\
+\includegraphics[keepaspectratio, width=4.5in]{addItemF0S3.pdf}\\
+The user expands the drop down box of attributes, which is filled with RAM attribute types.
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S4\\
+\includegraphics[keepaspectratio, width=4.5in]{addItemF0S4.pdf} \\
+The user selects the “size” attribute and a new attribute/value line comes up which the user types the new attribute type “Manufacturer” into.
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S5\\
+\includegraphics[keepaspectratio, width=4.5in]{addItemF0S5.pdf}\\
+The user then goes about filling in all of the information for the name, UPC, and each attribute. Then the user clicks the “add” button, which returns them to the “Recent Changes” screen. [if no UPC filled before clicking “add,” go to F1S5] [if UPC already exists in system upon clicking “add,” go to F2S5] 
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F0S6\\
+\includegraphics[keepaspectratio, width=4.5in]{addItemF0S6.pdf} \\
+The top listing in the recent changes list is the RAM that the user had just added to the system.
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F1S5\\
+\includegraphics[keepaspectratio, width=4.5in]{addItemF1S5.pdf} \\
+A popup appears that informs the user that the UPC field is required. The user clicks “ok” and the popup goes away.
+\end{tabular}\\
+~\\
+~\\
+\begin{tabular}{ p{4.5in} }
+F2S5\\
+\includegraphics[keepaspectratio, width=4.5in]{addItemF2S5.pdf} \\
+A popup appears that informs the user that the UPC field is not unique. The user clicks ok and the popup goes away.
+\end{tabular}
 
 \section{Index and Glossary}
 
