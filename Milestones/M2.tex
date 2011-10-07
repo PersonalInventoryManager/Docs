@@ -28,14 +28,28 @@
 \textbf{Date Time} & \textbf{Description}\\
 \hline
 \hline
+26 September 2011 7:11 pm & Initial version\\
+\hline
+28 September 2011 9:29 am & Changed use case template\\
+\hline
+28 September 2011 4:42 pm & Added some use cases\\
+\hline
+28 September 2011 5:22 pm & Added more use cases\\
+\hline
+28 September 2011 5:31 pm & Changed use cases\\
+\hline
+7 October 2011 5:00 pm & Finishing Milestone 2\\
+\hline
 \end{tabular}
 \clearpage
 
 \section{Executive Summary}
-This milestone, the second of a series, documents the context for a software project proposed by the client, Tim Ekl. This document also keeps track of the use cases involved with the final product which include adding an item, basic searching, advanced searching, sorting search results, viewing item details, editing item details, and generating inventory reports. All of the use cases satisfy a set of features and keep track of actors, basic/alternative flow of events, pre-conditions, post-conditions, extension points, and special requirements. In addition, this document storyboards the final product as well as keep track of the context/data flow diagrams.
+This milestone, the second of a series, documents the context for a software project proposed by the client, Tim Ekl. This document also keeps track of the use cases involved with the final product which include adding an item, basic searching, advanced searching, sorting search results, viewing item details, editing item details, and generating inventory reports. All of the use cases satisfy a set of features and keep track of actors, basic/alternative flow of events, pre-conditions, post-conditions, and extension points. In addition, this document storyboards the final product as well as keep track of the context/data flow diagrams.
 
 \section{Introduction}
-TODO: \richard
+This document is intended as an aid for both the client (Tim Ekl) and the development team (Team Sriram) in order to maintain a consistent notion of the final product.  In addition to the user environment, user needs, features, client background, and current system (information derived from the first milestone), this documentation also contains all of the intended use cases for the final product which include:  adding an item, basic searching, advanced searching, sorting search results, viewing item details, editing item details, and generating inventory reports.  The use cases are derived from a set of features and consist of a basic description of the functionality, a listing of all the entities that interact with the system, the assumptions of the system state before the basic flow of events, the procedure for a successful run-through, the procedure for alternative run-throughs, the assumptions of the system state after the basic flow of events, and references to extensions of the use case.\\
+~\\
+In addition to the use cases, the document also contains the context and data flow diagrams for all of the use cases as well as storyboards for most of the use cases.  Information from this document is intended to be carried over towards the project background and the test cases for the fourth milestone.
 
 \section{User Environment}
 \begin{itemize}
@@ -240,7 +254,7 @@ This use case shows the procedure for adding an item to the inventory.
 \paragraph{Post-conditions}
 \begin{itemize}
 \item The user is brought to the home page.
-\item The added item is displayed under the "Recently Modified" list.
+\item The added item is displayed under the "Recent Changes" list.
 \end{itemize}
 
 \paragraph{Extension Points}
@@ -567,7 +581,7 @@ None
 \item Process = name of some action that will be taken on the data
 \item Data Store = something like a file or database that stores data
 \end{itemize}
-With the bidirectional arrows the data listed on above the arrow (like A) flows left-to-right, data listed below the arrow (like B) flows right-to-left, data listed to the right of the arrow (like C) flows top-to-bottom, and data listed to the left of the arrow (like D) flows bottom-to-top.
+With the bidirectional arrows the data listed above the arrow (like A) flows left-to-right, data listed below the arrow (like B) flows right-to-left, data listed to the right of the arrow (like C) flows top-to-bottom, and data listed to the left of the arrow (like D) flows bottom-to-top.
 
 \paragraph{Context/Level 0}
 \label{cfd}
