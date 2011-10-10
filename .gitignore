@@ -1,3 +1,6 @@
 Milestones/*.log
 Milestones/*.aux
 Milestones/*.synctex.gz
+Milestones/M?.pdf
+Milestones/M?.toc
+
