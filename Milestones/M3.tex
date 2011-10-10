@@ -32,7 +32,8 @@
 \clearpage
 
 \section{Executive Summary}
-TODO: \richard
+TODO: \richard\\
+NOTE: mention that for supportability requirements, writing good code should take precedence over logging/tracing routes for errors
 
 \section{Introduction}
 TODO: \richard
@@ -42,36 +43,35 @@ TODO: \richard
 \section{Usability Requirements}
 \begin{itemize}
 \item User should be able to familiarize himself or herself with the software within one hour
-\item Ask Tim about task times for use cases
 \item The client will judge the usability of the program
-\item Ask Tim about the existence of an online help system/documentation
-\item Ask Tim about what usability standards we will adhere to
+\item An online help system/documentation will not be required
 \end{itemize}
 
 \section{Performance Requirements}
 \begin{itemize}
-\item Searches should take no longer than 5 seconds
-\item Ask Tim about Throughput and Capacity
-\item Ask Tim what should happen, if anything, when the system has been degraded (degradation modes)
+\item Searches should take no longer than 3 seconds
+\item System should handle 1000 entries about as quickly as 10 entries
+\item If the system becomes degraded, an error should be thrown or the system should go offline until client can restart it
 \end{itemize}
 
 \section{Reliability Requirements}
 \begin{itemize}
-\item Availability
-\item Mean time between failures
-\item Mean time to repair
-\item Accuracy
-\item Maximum bugs/defect rate
-\item Bugs per type
-\item Cyclomatic complexity
+\item System should not be down more than once every 2 months
+\item System will be repaired when the client gets around to it
+\item The system must not have data corruption (100\% accuracy)
+\item No more than 2 bugs per thousand lines of code
+\item Minimize the number of critical bugs, but they are still allowed
+\item Overly complex operations should be split up into several simpler operations
 \end{itemize}
 
 \section{Supportability Requirements}
 \begin{itemize}
 \item Should be able to be supported by open source community and the client
-\item Ask Tim about the effort required to add a function to the software
-\item Ask Tim about how API should tie into supportability
-\item Ask Tim how easy it should be to repair the software
+\item The source code needs to be kept clean and easy to understand
+\item The source code will follow Ruby coding standards and naming conventions
+\item The client should be able to extend the system with features of moderate complexity within four hours; this is an intended effect from following the Ruby coding standards
+\item The source code should be as modular as possible in order to simplify extension
+\item Adding/modifying an API route should as difficult as adding/modifying a web application feature of equal complexity
 \end{itemize}
 
 \section{Hardware and Software Interfaces}
@@ -83,10 +83,10 @@ TODO: \richard
 
 \section{Documentation, Installation, Legal, and Licensing Requirements}
 \begin{itemize}
-\item Ask Tim about what open source license to use
-\item Ask Tim about what level of documentation is required
-\item Installation should only require installing the necessary packages and putting the code in the web server directory
-\item Ask Tim about his standards on commenting in the code
+\item The project should be open source distributed under the BSD license
+\item Copyright ownership should be given to the client
+\item Installation should only require installing the necessary packages and pulling the code from the Git repository into the web server directory
+\item Only minimal documentation is required; other than a readme, it is mostly just necessary to document complex sections of code
 \end{itemize}
 
 \section{Design Constraints}
