@@ -190,16 +190,16 @@ NOTE: Any times described in the Performance Requirements are based on the clien
 
 \section{Reliability Requirements}
 \begin{itemize}
-\item System should not be down more than once every two months
-\item System will be repaired when the client gets around to it
-\item The system must not have data corruption (100\% accuracy)
-\item No more than two bugs per thousand lines of code
-\item Minimize the number of critical bugs, but they are still allowed
+\item The system should not be down more than once every two months
+\item The system repair will be the responsibility of the client after the product is delivered
+\item The system must have no data corruption (100\% accuracy)
+\item The system will have no more than two bugs per thousand lines of code
+\item The system should minimize the number of critical bugs, though there is no defined threshold
 \end{itemize}
 
 \section{Supportability Requirements}
 \begin{itemize}
-\item Should be able to be supported by open source community and the client
+\item The system should be able to be supported by open source community and the client
 \item The source code needs to be kept clean and easy to understand
 \item The source code will follow Ruby coding standards and naming conventions
 \item The client should be able to extend the system with features of moderate complexity within four hours; this is an intended effect from following the Ruby coding standards
@@ -227,7 +227,7 @@ The final product will utilize and/or be compatible with the following software 
 \item The project should be open source, distributed under the BSD license
 \item Copyright ownership will be given to the client
 \item Installation should only require installing the necessary packages and pulling the code from the Git repository into the web server directory
-\item Only minimal documentation is required; other than a readme, it is mostly just necessary to document complex sections of code
+\item The only documentation necessary is a simple readme as well as comments near complex sections of code
 \end{itemize}
 
 \section{Design Constraints}
