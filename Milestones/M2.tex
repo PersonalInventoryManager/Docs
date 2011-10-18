@@ -207,13 +207,13 @@ NOTE: F14 (REST API feature) is not mapped to a use case because it is not a vis
 ~\\
 Each use case is divided into 8 sections:
 \begin{itemize}
-\item A “Basic Description" section which gives an overview of what functionality the use case demonstrates.
-\item An "Actors" section to describe who or what interacts with the system in the use case.
-\item A "Pre-conditions" section which contains the assumptions made, especially those pertaining to the state of the system, prior to the start of the use case.\label{pre_cond}
-\item A "Basic Flow of Events" section which details the order of events done by the actor(s) and the system under standard conditions. If a particular step in the basic flow has the possibility of failing to occur successfully, one or more alternative flow listings are presented in brackets following the possibility of failure. Each alternative flow listing matches to an alternative flow in the "Alternative Flow" section. If a basic flow step fails, the alternative flow that is listed with it is followed as the next step.
-\item An "Alternative Flow of Events" section which holds each alternative flow listed in the basic flow. Each alternative flow has a unique identifier used to reference it, a short name describing the condition that would cause the alternative flow to be followed, and the order of actions performed by the actor(s) and the system under the flow's conditions. If an action has the possibility of failing, alternatives to that flow are presented just as they are in the basic flow with a reference to the alternative flow to take.
-\item A "Post-conditions" section which contains guarantees on the result of the use case.\label{post_cond}
-\item An "Extension Points" section which contains references to other use cases which the completion of the current use case might lead into.
+\item A ``Basic Description'' section which gives an overview of what functionality the use case demonstrates.
+\item An ``Actors'' section to describe who or what interacts with the system in the use case.
+\item A ``Pre-conditions'' section which contains the assumptions made, especially those pertaining to the state of the system, prior to the start of the use case.\label{pre_cond}
+\item A ``Basic Flow of Events'' section which details the order of events done by the actor(s) and the system under standard conditions. If a particular step in the basic flow has the possibility of failing to occur successfully, one or more alternative flow listings are presented in brackets following the possibility of failure. Each alternative flow listing matches to an alternative flow in the ``Alternative Flow'' section. If a basic flow step fails, the alternative flow that is listed with it is followed as the next step.
+\item An ``Alternative Flow of Events'' section which holds each alternative flow listed in the basic flow. Each alternative flow has a unique identifier used to reference it, a short name describing the condition that would cause the alternative flow to be followed, and the order of actions performed by the actor(s) and the system under the flow's conditions. If an action has the possibility of failing, alternatives to that flow are presented just as they are in the basic flow with a reference to the alternative flow to take.
+\item A ``Post-conditions'' section which contains guarantees on the result of the use case.\label{post_cond}
+\item An ``Extension Points'' section which contains references to other use cases which the completion of the current use case might lead into.
 \end{itemize}
 
 \subsection{Add an Item}
@@ -228,16 +228,16 @@ This use case shows the procedure for adding an item to the inventory.
 
 \paragraph{Pre-conditions}
 \begin{itemize}
-\item The current page must have a link to the "Add Item" page.
+\item The current page must have a link to the ``Add Item'' page.
 \end{itemize}
 
 \paragraph{Basic Flow of Events}
 \begin{enumerate}
-\item The user clicks the "Add Item" link. [A0]
+\item The user clicks the ``Add Item'' link. [A0]
 \item The user fills in the required fields (UPC and Name). [A1]
 \item The system dynamically adds the optional attribute fields for the category chosen.
-\item The user fills in the appropriate optional attributes and "Notes" fields.
-\item The user clicks the "Add Item" button. [A2]
+\item The user fills in the appropriate optional attributes and ``Notes'' fields.
+\item The user clicks the ``Add Item'' button. [A2]
 \item The system adds the item to the inventory database.
 \end{enumerate}
 
@@ -261,7 +261,7 @@ This use case shows the procedure for adding an item to the inventory.
 \paragraph{Post-conditions}
 \begin{itemize}
 \item The user is brought to the home page.
-\item The added item is displayed under the "Recent Changes" list.
+\item The added item is displayed under the ``Recent Changes'' list.
 \end{itemize}
 
 \paragraph{Extension Points}
@@ -306,7 +306,7 @@ This use case shows how a basic search from any page  would proceed. This case w
 
 \subparagraph{Alternative Flow A2: No Matches}
 \begin{enumerate}
-\item The server responds with the message "No results."
+\item The server responds with the message ``No results.''
 \item The results page displays the message returned by the server.
 \end{enumerate}
 
@@ -374,7 +374,7 @@ This use case shows how a search from the advanced search page  would proceed. T
 
 \subparagraph{Alternative Flow A3: No Matches}
 \begin{enumerate}
-\item The server responds with the message "No results."
+\item The server responds with the message ``No results.''
 \item The results page displays the message returned by the server.
 \end{enumerate}
 
@@ -427,7 +427,7 @@ This use case shows how changing the sorting of the items on the search results 
 
 \subparagraph{Alternative Flow A1: No Matches}
 \begin{enumerate}
-\item The server responds with the message "No results."
+\item The server responds with the message ``No results.''
 \item The results page displays the message returned by the server.
 \end{enumerate}
 
@@ -463,7 +463,7 @@ This use case shows how a user would select an item from a list to view more det
 \item The user clicks on an item (in search results, the recent changes list, or any other place with items listed).
 \item The browser queries the server for the item using the UPC code to specify the item.
 \item The server responds with all the data stored about the item. [A0]
-\item The browser takes the user to a new page with all the data about the item that the server sent.  It is displayed in elements labeled with "Category:", "Size:", etc. [A1]
+\item The browser takes the user to a new page with all the data about the item that the server sent.  It is displayed in elements labeled with ``Category:'', ``Size:'', etc. [A1]
 \end{enumerate}
 
 \paragraph{Alternative Flow of Events}
@@ -528,7 +528,7 @@ NOTE: This can happen when the database encounters an error or is not online.
 \begin{enumerate}
 \item The server responds that the value could not be changed.
 \item The page notifies the user that the value could not be changed.
-\item The user presses "Ok" in the message dialog.
+\item The user presses ``Ok'' in the message dialog.
 \item The text field is focused again.
 \end{enumerate}
 
@@ -552,13 +552,13 @@ This use case shows the procedure for generating reports of the item inventory.
 
 \paragraph{Pre-conditions}
 \begin{itemize}
-\item The current page must have a link to the "Generate Report" page.
+\item The current page must have a link to the ``Generate Report'' page.
 \end{itemize}
 
 \paragraph{Basic Flow of Events}
 \begin{enumerate}
-\item The user clicks the "Generate Report" link. [A0]
-\item The user is brought to the "Generate Report" page.
+\item The user clicks the ``Generate Report'' link. [A0]
+\item The user is brought to the ``Generate Report'' page.
 \item The user chooses the type of report to generate.
 \item The user chooses appropriate report fields for the respective option (the options are defined as Master or Category, which will be elaborated on near the completion).
 \item The system generates the report accordingly.
@@ -646,7 +646,7 @@ With the bidirectional arrows the data listed above the arrow (like A) flows lef
 \begin{tabular}{ p{4.5in} }
 F0S0\\
 \includegraphics[keepaspectratio, width=4.5in]{addItemF0S0.pdf}\\
-The user clicks on the ``Add Item'' link and is taken to the "Add Item" page. 
+The user clicks on the ``Add Item'' link and is taken to the ``Add Item'' page. 
 \end{tabular}\\
 ~\\
 ~\\
@@ -730,7 +730,7 @@ The ``Name'' attribute is filled with the user's old query phrase and at the bot
 \begin{tabular}{ p{4.5in} }
 F0S0\\
 \includegraphics[keepaspectratio, width=4.5in]{advancedSearchF0S0.pdf} \\
-The user clicks on the ``Advanced Search'' link and is taken to the "Advanced Search" page.
+The user clicks on the ``Advanced Search'' link and is taken to the ``Advanced Search'' page.
 \end{tabular}\\
 ~\\
 ~\\
@@ -744,7 +744,7 @@ The user opens the category selection box, which opens to display the available 
 \begin{tabular}{ p{4.5in} }
 F0S2\\
 \includegraphics[keepaspectratio, width=4.5in]{advancedSearchF0S2.pdf} \\
-The user selects "RAM" as the category from the combo box. Each possible attribute type of RAM is displayed below with the ability to set the field value for each attribute.
+The user selects ``RAM'' as the category from the combo box. Each possible attribute type of RAM is displayed below with the ability to set the field value for each attribute.
 \end{tabular}\\
 ~\\
 ~\\
@@ -765,7 +765,7 @@ The Item with the matching UPC number is shown.
 \begin{tabular}{ p{4.5in} }
 F0S0\\
 \includegraphics[keepaspectratio, width=4.5in]{sortResultsF0S0.pdf} \\
-The user is on the advanced search results page with some results at the bottom that match his search. He clicks the "UPC" link in the "Sort By:" bar. 
+The user is on the advanced search results page with some results at the bottom that match his search. He clicks the ``UPC'' link in the ``Sort By:'' bar. 
 \end{tabular}\\
 ~\\
 ~\\
@@ -779,7 +779,7 @@ The same results page is loaded again, this time with the items sorted by ascend
 \begin{tabular}{ p{4.5in} }
 F0S0\\
 \includegraphics[keepaspectratio, width=4.5in]{viewDetailsF0S0.pdf} \\
-The user clicks on an item in the "Recent Changes" list. This takes the user to the Item Details page.
+The user clicks on an item in the ``Recent Changes'' list. This takes the user to the Item Details page.
 \end{tabular}\\
 ~\\
 ~\\
@@ -800,21 +800,21 @@ The user is at an item details page and clicks on the empty field that exists at
 \begin{tabular}{ p{4.5in} }
 F0S1\\
 \includegraphics[keepaspectratio, width=4.5in]{modifyDetailsF0S1.pdf} \\
-A dropdown box drops down and has the list of different attributes for RAM available. The user selects "speed."
+A dropdown box drops down and has the list of different attributes for RAM available. The user selects ``speed.''
 \end{tabular}\\
 ~\\
 ~\\
 \begin{tabular}{ p{4.5in} }
 F0S2\\
 \includegraphics[keepaspectratio, width=4.5in]{modifyDetailsF0S2.pdf} \\
-The dropdown collapses then fills in "speed" into the attribute field. The user then fills in the information for the "speed" attribute.
+The dropdown collapses then fills in ``speed'' into the attribute field. The user then fills in the information for the ``speed'' attribute.
 \end{tabular}\\
 ~\\
 ~\\
 \begin{tabular}{ p{4.5in} }
 F0S3\\
 \includegraphics[keepaspectratio, width=4.5in]{modifyDetailsF0S3.pdf} \\
-The user's input, "DDR3" fills in the field.
+The user's input, ``DDR3'' fills in the field.
 \end{tabular}\\
 ~\\
 ~\\
@@ -851,43 +851,43 @@ Addison-Wesley, Boston,
 2003.\\
 
 \noindent\hangindent=1.4cm
-\textbf{(2)} "Ruby 1.9.2" 
+\textbf{(2)} ``Ruby 1.9.2'' 
 \emph{Download Ruby.} Ruby. Web.  6 October 2011. \\
 
 \noindent\hangindent=1.4cm
-\textbf{(3)} "Sinatra 1.3.0" 
+\textbf{(3)} ``Sinatra 1.3.0'' 
 \emph{Sinatra: Documentation.} Sinatra. Web.  6 October 2011.\\
 
 \noindent\hangindent=1.4cm
-\textbf{(4)} "Ubuntu 11.04" 
+\textbf{(4)} ``Ubuntu 11.04'' 
 \emph{Download Ubuntu.} Ubuntu. Web.  6 October 2011.\\
 
 \noindent\hangindent=1.4cm
-\textbf{(5)} "SQLite 3.7.8" 
+\textbf{(5)} ``SQLite 3.7.8'' 
 \emph{SQLite Download Page.} SQLite. Web.  6 October 2011.\\
 
 \noindent\hangindent=1.4cm
-\textbf{(6)} "Cucumber 1.1.0" 
+\textbf{(6)} ``Cucumber 1.1.0'' 
 \emph{cucumber/cucumber.} Cucumber. Web.  6 October 2011.\\
 
 \noindent\hangindent=1.4cm
-\textbf{(7)} "RSpec 2.6.0" 
+\textbf{(7)} ``RSpec 2.6.0'' 
 \emph{RSpec Documentation.} Relish. Web.  6 October 2011.\\
 
 \noindent\hangindent=1.4cm
-\textbf{(8)} "DataMapper 1.1.0" 
+\textbf{(8)} ``DataMapper 1.1.0'' 
 \emph{DataMapper - Documentation.} DataMapper. Web.  6 October 2011.\\
 
 \noindent\hangindent=1.4cm
-\textbf{(9)} "Google Chrome 14.0.8" 
+\textbf{(9)} ``Google Chrome 14.0.8'' 
 \emph{About Google Chrome.} Google. Web.  7 October 2011.\\
 
 \noindent\hangindent=1.4cm
-\textbf{(10)} "Firefox 7.0.1" 
+\textbf{(10)} ``Firefox 7.0.1'' 
 \emph{Mozilla Firefox Web Browser - Free Download.} Mozilla. Web.  7 October 2011.\\
 
 \noindent\hangindent=1.4cm
-\textbf{(11)} "Apache 2.2" 
+\textbf{(11)} ``Apache 2.2'' 
 \emph{Apache HTTP Server Version 2.2 Documentation - Apache HTTP Server.} Apache. Web.  7 October 2011.\\
 
 
