@@ -49,9 +49,9 @@ This milestone, the third of a series, documents the context for a software proj
 \section{Introduction}
 This document is intended to augment the second milestone, which defined the use cases that satisfied the needs and features of the product, by explaining and elaborating on the nonfunctional requirements and features since use cases focus on user experience.  In addition, the nonfunctional requirements will justify the feature, defined in the second milestone, which was not satisfied by a use case.\\
 ~\\
-This document will define the usability requirements, performance requirements, reliability requirements, supportability requirements, hardware/software interfaces, documentation/installation/legal/licensing requirements, and design constraints requirements--all of which are defined in the glossary.  The information listed is intended to describe behaviors of the system that are inherent in the use case pre-conditions, use case post-conditions, development phase, and post-development phase.\\
+In addition, this document will define the usability requirements, performance requirements, reliability requirements, supportability requirements, hardware/software interfaces, documentation/installation/legal/licensing requirements, and design constraints requirements--all of which are defined in the glossary.  The information listed is intended to describe behaviors of the system that are inherent in the use case pre-conditions, use case post-conditions, development phase, and post-development phase.  While not explicitly stated, the nonfunctional requirements encourage a prioritization of code quality over error logging.\\
 ~\\
-This document inherits information from the first milestone:  needs, features, and constraints.  Furthermore, the information in this document will be utilized in the usability report and the interface designs of the upcoming, fifth milestone.
+Finally, this document inherits information from the first milestone:  needs, features, and constraints.  Furthermore, the information in this document will be utilized in the usability report and the interface designs of the upcoming, fifth milestone.
 
 \section{User Environment}
 \begin{itemize}
@@ -181,10 +181,11 @@ The client does not have a software solution in place.  Currently, Tim has a pri
 \end{itemize}
 
 \section{Performance Requirements}
+NOTE: Any times described in the Performance Requirements are based on the client's machine specifications, which are: Pentium 4 2.8GHz processor with 1.5GB memory.
 \begin{itemize}
-\item Searches should take no longer than 3 seconds
+\item Searches should take no longer than three seconds
 \item There should be no noticeable (as judged by the client) difference in search performance (the most complex task) between 10 items and 1000 items
-\item If the system becomes degraded, an error should be thrown or the system should go offline until client can restart it
+\item There is no tolerance for any system degradation: the system is either fully functional or not functional at all, and there is no need to handle failures.
 \end{itemize}
 
 \section{Reliability Requirements}
