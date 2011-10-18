@@ -53,7 +53,125 @@ This document will define the usability requirements, performance requirements, 
 ~\\
 This document inherits information from the first milestone:  needs, features, and constraints.  Furthermore, the information in this document will be utilized in the usability report and the interface designs of the upcoming, fifth milestone.
 
-\section{Project Background}
+\section{User Environment}
+\begin{itemize}
+\item The client uses Chrome [9] whenever possible and prefers that development support Chrome [9] and Firefox [10] browsers.
+\item The final product should operate on a Linux server with standard programming languages, programming frameworks, and Apache[11].  Additional packages can be installed if necessary.
+\end{itemize}
+
+\section{User Needs}
+\begin{tabular}{ | p{0.15in} | p{4.0in} | p{.75in} |}
+\hline
+\textbf{ID} & \textbf{Need} & \textbf{Priority} \\
+\hline
+\hline
+N0 & Search for parts based off their attributes & Primary \\
+\hline
+N1 & Identify items via bar codes & Primary \\
+\hline
+N2 & Keep track of the data associated with an asset & Primary \\
+\hline
+N3 & Organize search results & Primary \\
+\hline
+N4 & Insert objects in the system at any point; do not freeze the database & Secondary \\
+\hline
+N5 & Modify objects; including adding notes to the objects & Secondary \\
+\hline
+N6 & Access from a second physical location & Optional \\
+\hline
+N7 & View most-recently acquired asset(s) & Optional \\
+\hline
+N8 & View a summary of inventory data & Optional \\
+\hline
+\end{tabular} \\
+\textbf{Legend:} \\
+Primary - Necessary to the system \\
+Secondary - Important to the system \\
+Optional - Would be nice to have in the system \\
+
+\section{Features}
+\subsection{Feature Listing}
+\begin{tabular}{ | p{0.15in} | p{2.0in} | p{0.5in} | p{0.5in} | p{0.5in} | p{0.6in} | p{0.5in} | p{0.65in} | }
+\hline
+\textbf{ID} & \textbf{Feature}\label{feature} & \textbf{Priority}\label{priority} & \textbf{Effort}\label{effort} & \textbf{Risk}\label{risk} & \textbf{Stability}\label{stability} & \textbf{Target Release}\label{target_release} & \textbf{Assigned To}\label{assigned_to} \\
+\hline
+\hline
+F0 & Online UI & Critical & High & High & Low & 1.0 & Eric \\
+\hline
+F1 & Add assets to the inventory & Critical & Low & High & Low & 1.0 & Richard \\
+\hline
+F2 & Modify assets in the inventory & Critical & Low & High & Low & 1.0 & Taylor \\
+\hline
+F3 & The system keeps track of attributes based on category & Critical & Low & High & Low & 1.0 & Susi \\
+\hline
+F4 & Use a UPC-A barcode as the unique identifier for each asset\label{upc} & Critical & Low & Medium & Low & 1.0 & Eric \\
+\hline
+F5 & Provide an updated list of recently-added assets & Useful & Medium & Low & Medium & 1.5 & Richard \\
+\hline
+F6 & Generate reports of asset inventory & Useful & High & Low & Medium & 2.0 & Taylor \\
+\hline
+F7 & Sort search results based off of barcode, title, and modified/created timestamp & Useful & High & Low & Low & 2.0 & Susi \\
+\hline
+F8 & Basic search for items based on name or UPC & Critical & High & High & Low & 1.0 & Eric \\
+\hline
+F9 & Advanced search for items based on all fields related to the item and its category & Critical & High & High & Low & 1.0 & Richard \\
+\hline
+F10 & Basic and Advanced searches allow the user to include wildcards in the query & Critical & High & High & Low & 1.0 & Taylor \\
+\hline
+F11 & Basic and Advanced searches will search first by exact/wildcard match, then by fuzzy match & Critical & High & High & Low & 1.0 & Susi \\
+\hline
+F12 & REST API & Critical & High & High & Low & 1.0 & Eric \\
+\hline
+\end{tabular}\\
+\textbf{Legend:} \\
+Critical - Highest importance \\
+Important - Medium importance \\
+Useful - Lowest importance \\
+High/Medium/Low - Degree of a category \\
+1.0 - First release of the system \\
+1.5 - Next release of the system with significant changes \\
+2.0 - Final release of the system \\
+~\\
+~\\
+\subsection{Feature-to-Need Correspondence}
+\begin{tabular}{ | c || c | c | c | c | c | c | c | c | c | c | }
+\hline
+    & N0 & N1 & N2 & N3 & N4 & N5 & N6 & N7 & N8 \\
+\hline
+\hline
+F0  &    &    &    &    &    &    & X  &    &    \\
+\hline
+F1  &    &    & X  &    & X  &    &    &    &    \\
+\hline
+F2  &    &    & X  &    &    & X  &    &    &    \\
+\hline
+F3  &    &    & X  &    & X  & X  &    &    &    \\
+\hline
+F4  & X  & X  & X  &    &    &    &    &    &    \\
+\hline
+F5  &    &    &    &    &    &    &    & X  &    \\
+\hline
+F6  &    &    &    &    &    &    &    &    & X  \\
+\hline
+F7  & X  & X  &    & X  &    &    &    &    &    \\
+\hline
+F8  & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F9  & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F10 & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F11 & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F12 &    &    &    &    &    &    & X  &    &    \\
+\hline
+\end{tabular}
+
+\section{Client Background}
+Tim Ekl is a Rose-Hulman graduate student who possesses a significant amount of computer hardware.  He plans on using this system to be able to quickly and easily locate the equipment he wants to use.  Tim is an experienced developer and plans on maintaining the system after it is finished.  
+
+\section{Current System}
+The client does not have a software solution in place.  Currently, Tim has a primitive categorization system in place which involves labeling boxes and then trying to deduce the location of a desired component.  The current system poses a few issues such as not always allowing him to find his items, i.e. there have been instances where an item was found after capital was spent to replace it.
 
 \section{Usability Requirements}
 \begin{itemize}
