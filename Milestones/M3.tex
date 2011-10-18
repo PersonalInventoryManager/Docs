@@ -47,7 +47,7 @@
 This milestone, the third of a series, documents the context for a software project proposed by the client, Tim Ekl.  Primarily, this document defines and describers the non-functional requirements such as usability, performance, reliability, supportability, hardware/software interfaces, documentation/installation/legal/licensing, and design constraints requirements.  All of  these requirements are necessary to document since their effects are unobvious in the use cases defined in the second milestone.  In addition, this document contains the user interfaces for a variety of situations in order to provide a better way to enforce the usability requirements prescribed by the client.  This document inherits information from the features, needs, and constraints found in the first milestone and will contribute towards the usability report and the interface designs of the fifth and final milestone.
 
 \section{Introduction}
-This document is intended to augment the second milestone, which defined the use cases that satisfied the needs and features of the product, by explaining and elaborating on the nonfunctional requirements and features since use cases focus on user experience.  In addition, the nonfunctional requirements will justify the feature defined in the second milestone which was not satisfied by a use case.\\
+This document is intended to augment the second milestone, which defined the use cases that satisfied the needs and features of the product, by explaining and elaborating on the nonfunctional requirements and features since use cases focus on user experience.  In addition, the nonfunctional requirements will justify the feature, defined in the second milestone, which was not satisfied by a use case.\\
 ~\\
 This document will define the usability requirements, performance requirements, reliability requirements, supportability requirements, hardware/software interfaces, documentation/installation/legal/licensing requirements, and design constraints requirements--all of which are defined in the glossary.  The information listed is intended to describe behaviors of the system that are inherent in the use case pre-conditions, use case post-conditions, development phase, and post-development phase.\\
 ~\\
@@ -174,27 +174,26 @@ Tim Ekl is a Rose-Hulman graduate student who possesses a significant amount of 
 The client does not have a software solution in place.  Currently, Tim has a primitive categorization system in place which involves labeling boxes and then trying to deduce the location of a desired component.  The current system poses a few issues such as not always allowing him to find his items, i.e. there have been instances where an item was found after capital was spent to replace it.
 
 \section{Usability Requirements}
+\textbf{NOTE}: The client will judge the usability of the program
 \begin{itemize}
 \item User should be able to familiarize himself or herself with the software within one hour
-\item The client will judge the usability of the program
 \item An online help system/documentation will not be required
 \end{itemize}
 
 \section{Performance Requirements}
 \begin{itemize}
 \item Searches should take no longer than 3 seconds
-\item There should be no noticeable difference in search performance (the most complex task) between 10 items and 1000 items
+\item There should be no noticeable (as judged by the client) difference in search performance (the most complex task) between 10 items and 1000 items
 \item If the system becomes degraded, an error should be thrown or the system should go offline until client can restart it
 \end{itemize}
 
 \section{Reliability Requirements}
 \begin{itemize}
-\item System should not be down more than once every 2 months
+\item System should not be down more than once every two months
 \item System will be repaired when the client gets around to it
 \item The system must not have data corruption (100\% accuracy)
-\item No more than 2 bugs per thousand lines of code
+\item No more than two bugs per thousand lines of code
 \item Minimize the number of critical bugs, but they are still allowed
-\item Overly complex operations should be split up into several simpler operations
 \end{itemize}
 
 \section{Supportability Requirements}
