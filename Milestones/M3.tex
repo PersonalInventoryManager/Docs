@@ -44,11 +44,14 @@
 \clearpage
 
 \section{Executive Summary}
-TODO: \richard\\
-NOTE: mention that for supportability requirements, writing good code should take precedence over logging/tracing routes for errors
+This milestone, the third of a series, documents the context for a software project proposed by the client, Tim Ekl.  Primarily, this document defines and describers the non-functional requirements such as usability, performance, reliability, supportability, hardware/software interfaces, documentation/installation/legal/licensing, and design constraints requirements.  All of  these requirements are necessary to document since their effects are unobvious in the use cases defined in the second milestone.  In addition, this document contains the user interfaces for a variety of situations in order to provide a better way to enforce the usability requirements prescribed by the client.  This document inherits information from the features, needs, and constraints found in the first milestone and will contribute towards the usability report and the interface designs of the fifth and final milestone.
 
 \section{Introduction}
-TODO: \richard
+This document is intended to augment the second milestone, which defined the use cases that satisfied the needs and features of the product, by explaining and elaborating on the nonfunctional requirements and features since use cases focus on user experience.  In addition, the nonfunctional requirements will justify the feature defined in the second milestone which was not satisfied by a use case.\\
+~\\
+This document will define the usability requirements, performance requirements, reliability requirements, supportability requirements, hardware/software interfaces, documentation/installation/legal/licensing requirements, and design constraints requirements--all of which are defined in the glossary.  The information listed is intended to describe behaviors of the system that are inherent in the use case pre-conditions, use case post-conditions, development phase, and post-development phase.\\
+~\\
+This document inherits information from the first milestone:  needs, features, and constraints.  Furthermore, the information in this document will be utilized in the usability report and the interface designs of the upcoming, fifth milestone.
 
 \section{Project Background}
 
@@ -278,6 +281,16 @@ The generate report page with the report being displayed
 \end{tabular}
 
 \section{Index and Glossary}
+\textbf{Bug}: An error in a computer program. A critical bug is a bug that strongly affects important parts of a system.\\ \\
+\textbf{Data corruption}: Errors in data that introduce unintended changes to the data.\\ \\
+\textbf{Degraded system}: The system becomes degraded if there are too many queries performed too quickly or if the amount of data needing to be searched through becomes too large. When the system is degraded, it may result in the system ceasing to function and requiring a reboot.\\ \\
+\textbf{Interface}: A point of interaction between systems, whether hardware or software, that allows the systems to communicate using some protocol.\\ \\
+\textbf{Performance}: The speed and efficiency of an operation, program, or system at a set of tasks.\\ \\
+\textbf{Reliability}: The ability of a system to function in a range of conditions for a period of time without failing to perform its tasks.\\ \\
+\textbf{REST}: Stands for ``Representational state transfer;'' is a style software architecture often used in servers for simplicity and scalability. Amongst other aspects of REST, it is stateless. This means each request sent from the client of the server that uses REST to the server does not require any information from any previous requests. All information required to fulfill the request must be sent with the request.\\ \\
+\textbf{SOAP}: Stands for ``Simple Object Access Protocol;'' is a protocol for exchanging structured information across a network.\\ \\
+\textbf{Supportability}: The ease with which a system can be fixed should it become broken or out of order.\\ \\
+\textbf{Usability}: The ease with which one may use or learn to use a system.
 
 \section{References}
 \hangindent=1.4cm
