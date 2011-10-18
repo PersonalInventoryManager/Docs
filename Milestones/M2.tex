@@ -44,7 +44,7 @@
 \clearpage
 
 \section{Executive Summary}
-This milestone, the second of a series, documents the context for a software project proposed by the client, Tim Ekl. This document also keeps track of the use cases involved with the final product which include adding an item, basic searching, advanced searching, sorting search results, viewing item details, editing item details, and generating inventory reports. All of the use cases satisfy a set of features and keep track of actors, basic/alternative flow of events, pre-conditions, post-conditions, and extension points. In addition, this document storyboards the final product as well as keep track of the context/data flow diagrams.
+This milestone, the second of a series, documents the context for a software project proposed by the client, Tim Ekl. This document also keeps track of the use cases involved with the final product which include adding an item, basic searching, advanced searching, sorting search results, viewing item details, editing item details, and generating inventory reports. All of the use cases satisfy a set of features and keep track of actors, basic/alternative flow of events, pre-conditions, post-conditions, and extension points. In addition, this document storyboards the final product as well as keep track of the context/data flow diagrams.  The User Environment, User Needs, Features, Client Background, and the Current System are all information that is inherited from the first milestone.  Finally, this document will also contribute towards the project background and test cases in the fourth milestones, as well as the user interfaces in the third milestone, and usability testing in the fifth milestone.
 
 \section{Introduction}
 This document is intended as an aid for both the client (Tim Ekl) and the development team (Team Sriram) in order to maintain a consistent notion of the final product.  In addition to the user environment, user needs, features, client background, and current system (information derived from the first milestone), this documentation also contains all of the intended use cases for the final product which include:  adding an item, basic searching, advanced searching, sorting search results, viewing item details, editing item details, and generating inventory reports.  The use cases are derived from a set of features and consist of a basic description of the functionality, a listing of all the entities that interact with the system, the assumptions of the system state before the basic flow of events, the procedure for a successful run-through, the procedure for alternative run-throughs, the assumptions of the system state after the basic flow of events, and references to extensions of the use case.\\
@@ -65,27 +65,30 @@ In addition to the use cases, the document also contains the context and data fl
 \hline
 N0 & Search for parts based off their attributes & Primary \\
 \hline
-N1 & Identify items via bar codes & Primary \\
+N2 & Identify items via bar codes & Primary \\
 \hline
-N2 & Keep track of the data associated with an asset & Primary \\
+N3 & Keep track of the data associated with an asset & Primary \\
 \hline
-N3 & Organize search results & Primary \\
+N4 & Organize search results & Primary \\
 \hline
-N4 & Insert objects in the system at any point; do not freeze the database & Secondary \\
+N5 & Insert objects in the system at any point; do not freeze the database & Secondary \\
 \hline
-N5 & Modify objects; including adding notes to the objects & Secondary \\
+N6 & Modify objects; including adding notes to the objects & Secondary \\
 \hline
-N6 & Access from a second physical location & Optional \\
+N7 & Access from a second physical location & Optional \\
 \hline
-N7 & View most-recently acquired asset(s) & Optional \\
+N8 & View most-recently acquired asset(s) & Optional \\
 \hline
-N8 & View a summary of inventory data & Optional \\
+N9 & View a summary of inventory data & Optional \\
 \hline
 \end{tabular} \\
 \textbf{Legend:} \\
 Primary - Necessary to the system \\
 Secondary - Important to the system \\
 Optional - Would be nice to have in the system \\
+
+\subsection{Deltas}
+After further discussion with the client, it was determined that N1 (describing compatibility with a UNIX architecture) was better considered a constraint on the product rather than a user need.  In addition, N7 was modified to better express the client's need.
 
 \section{Features}
 \subsection{Feature Listing}
@@ -96,29 +99,29 @@ Optional - Would be nice to have in the system \\
 \hline
 F0 & Online UI & Critical & High & High & Low & 1.0 & Eric \\
 \hline
-F1 & Add assets to the inventory & Critical & Low & High & Low & 1.0 & Richard \\
+F2 & Add assets to the inventory & Critical & Low & High & Low & 1.0 & Richard \\
 \hline
-F2 & Modify assets in the inventory & Critical & Low & High & Low & 1.0 & Taylor \\
+F3 & Modify assets in the inventory & Critical & Low & High & Low & 1.0 & Taylor \\
 \hline
-F3 & The system keeps track of attributes based on category & Critical & Low & High & Low & 1.0 & Susi \\
+F4 & The system keeps track of attributes based on category & Critical & Low & High & Low & 1.0 & Susi \\
 \hline
-F4 & Use a UPC-A barcode as the unique identifier for each asset\label{upc} & Critical & Low & Medium & Low & 1.0 & Eric \\
+F5 & Use a UPC-A barcode as the unique identifier for each asset\label{upc} & Critical & Low & Medium & Low & 1.0 & Eric \\
 \hline
-F5 & Provide an updated list of recently-added assets & Useful & Medium & Low & Medium & 1.5 & Richard \\
+F6 & Provide an updated list of recently-added assets & Useful & Medium & Low & Medium & 1.5 & Richard \\
 \hline
-F6 & Generate reports of asset inventory & Useful & High & Low & Medium & 2.0 & Taylor \\
+F7 & Generate reports of asset inventory & Useful & High & Low & Medium & 2.0 & Taylor \\
 \hline
-F7 & Sort search results based off of barcode, title, and modified/created timestamp & Useful & High & Low & Low & 2.0 & Susi \\
+F8 & Sort search results based off of barcode, title, and modified/created timestamp & Useful & High & Low & Low & 2.0 & Susi \\
 \hline
-F8 & Basic search for items based on name or UPC & Critical & High & High & Low & 1.0 & Eric \\
+F10 & Basic search for items based on name or UPC & Critical & High & High & Low & 1.0 & Eric \\
 \hline
-F9 & Advanced search for items based on all fields related to the item and its category & Critical & High & High & Low & 1.0 & Richard \\
+F11 & Advanced search for items based on all fields related to the item and its category & Critical & High & High & Low & 1.0 & Richard \\
 \hline
-F10 & Basic and Advanced searches allow the user to include wildcards in the query & Critical & High & High & Low & 1.0 & Taylor \\
+F12 & Basic and Advanced searches allow the user to include wildcards in the query & Critical & High & High & Low & 1.0 & Taylor \\
 \hline
-F11 & Basic and Advanced searches will search first by exact/wildcard match, then by fuzzy match & Critical & High & High & Low & 1.0 & Susi \\
+F13 & Basic and Advanced searches will search first by exact/wildcard match, then by fuzzy match & Critical & High & High & Low & 1.0 & Susi \\
 \hline
-F12 & REST API & Critical & High & High & Low & 1.0 & Eric \\
+F14 & REST API & Critical & High & High & Low & 1.0 & Eric \\
 \hline
 \end{tabular}\\
 \textbf{Legend:} \\
@@ -131,37 +134,40 @@ High/Medium/Low - Degree of a category \\
 2.0 - Final release of the system \\
 ~\\
 ~\\
+\subsection{Deltas}
+After review with the client, the features F0 and F4 were reworded in order to better convey the intended functionality and broaden the defined capabilities of the respective features.  In addition, feature F9 was removed since it was deemed to be a constraint rather than a feature of the product.  Feature F1 was split into features F10, F11, F12, and F13 in order to better convey the capabilities of the final product.  Finally, feature F14 was split off of the original feature F0 in order to differentiate the API from the UI.
+
 \subsection{Feature-to-Need Correspondence}
 \begin{tabular}{ | c || c | c | c | c | c | c | c | c | c | c | }
 \hline
-    & N0 & N1 & N2 & N3 & N4 & N5 & N6 & N7 & N8 \\
+    & N0 & N2 & N3 & N4 & N5 & N6 & N7 & N8 & N9 \\
 \hline
 \hline
 F0  &    &    &    &    &    &    & X  &    &    \\
 \hline
-F1  &    &    & X  &    & X  &    &    &    &    \\
+F2  &    &    & X  &    & X  &    &    &    &    \\
 \hline
-F2  &    &    & X  &    &    & X  &    &    &    \\
+F3  &    &    & X  &    &    & X  &    &    &    \\
 \hline
-F3  &    &    & X  &    & X  & X  &    &    &    \\
+F4  &    &    & X  &    & X  & X  &    &    &    \\
 \hline
-F4  & X  & X  & X  &    &    &    &    &    &    \\
+F5  & X  & X  & X  &    &    &    &    &    &    \\
 \hline
-F5  &    &    &    &    &    &    &    & X  &    \\
+F6  &    &    &    &    &    &    &    & X  &    \\
 \hline
-F6  &    &    &    &    &    &    &    &    & X  \\
+F7  &    &    &    &    &    &    &    &    & X  \\
 \hline
-F7  & X  & X  &    & X  &    &    &    &    &    \\
-\hline
-F8  & X  & X  & X  & X  &    &    &    &    &    \\
-\hline
-F9  & X  & X  & X  & X  &    &    &    &    &    \\
+F8  & X  & X  &    & X  &    &    &    &    &    \\
 \hline
 F10 & X  & X  & X  & X  &    &    &    &    &    \\
 \hline
 F11 & X  & X  & X  & X  &    &    &    &    &    \\
 \hline
-F12 &    &    &    &    &    &    & X  &    &    \\
+F12 & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F13 & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F14 &    &    &    &    &    &    & X  &    &    \\
 \hline
 \end{tabular}
 
@@ -174,7 +180,7 @@ The client does not have a software solution in place.  Currently, Tim has a pri
 \section{Use Case-to-Feature Correspondence}
 \begin{tabular}{ | c || c | c | c | c | c | c | c | c | c | c | c | c | c | c | }
 \hline
-    & F0 & F1 & F2 & F3 & F4 & F5 & F6 & F7 & F8  & F9 & F10 & F11 & F12 \\
+    & F0 & F2 & F3 & F4 & F5 & F6 & F7 & F8 & F10 & F11 & F12 & F13 & F14 \\
 \hline
 \hline
 UC1  &  X &  X &    &  X &  X &  X &    &    &    &    &    &    &    \\
@@ -191,7 +197,8 @@ UC6  &  X &    &  X &  X &  X &  X &    &    &    &    &    &    &    \\
 \hline
 UC7  &  X &    &    &  X &  X &    &  X &    &    &    &    &    &    \\
 \hline
-\end{tabular}
+\end{tabular}\\ \\
+NOTE: F14 (REST API feature) is not mapped to a use case because it is not a visible user feature, but still serves as a function if there is an application that attempts to access the system.
 
 \section{Use Cases}
 \label{use_case}
@@ -227,7 +234,7 @@ This use case shows the procedure for adding an item to the inventory.
 \paragraph{Basic Flow of Events}
 \begin{enumerate}
 \item The user clicks the "Add Item" link. [A0]
-\item The user fills in the required fields. [A1]
+\item The user fills in the required fields (UPC and Name). [A1]
 \item The system dynamically adds the optional attribute fields for the category chosen.
 \item The user fills in the appropriate optional attributes and "Notes" fields.
 \item The user clicks the "Add Item" button. [A2]
@@ -281,7 +288,7 @@ This use case shows how a basic search from any page  would proceed. This case w
 \item The user clicks the search button.
 \item The browser sends a request to the server. [A0]
 \item The server queries the database for items entered into the system that match the query. [A1]
-\item The server responds with the formatted and sorted results of the database query. [A2]
+\item The server responds with all of the formatted and sorted results of the database query on the same page. [A2]
 \item The user is directed to the Advanced Search page with the results of the basic search displayed at the bottom.
 \end{enumerate}
 
@@ -497,6 +504,7 @@ This use case shows how a user would modify an item that already exists in the s
 \end{itemize}
 
 \paragraph{Basic Flow of Events}
+NOTE: The required fields cannot be unset after creation of the item.  This means that required fields may be changed to any valid and non-empty values.
 \begin{enumerate}
 \item The user clicks on the value of a field.
 \item The page replaces the element with a text field containing the text that was in the element.
@@ -516,6 +524,7 @@ This use case shows how a user would modify an item that already exists in the s
 \end{enumerate}
 
 \subparagraph{Alternative Flow A1: Change Unsuccessful}
+NOTE: This can happen when the database encounters an error or is not online.
 \begin{enumerate}
 \item The server responds that the value could not be changed.
 \item The page notifies the user that the value could not be changed.
@@ -550,8 +559,8 @@ This use case shows the procedure for generating reports of the item inventory.
 \begin{enumerate}
 \item The user clicks the "Generate Report" link. [A0]
 \item The user is brought to the "Generate Report" page.
-\item The user chooses what type of report to generate.
-\item The user chooses appropriate report fields for the respective option.
+\item The user chooses the type of report to generate.
+\item The user chooses appropriate report fields for the respective option (the options are defined as Master or Category, which will be elaborated on near the completion).
 \item The system generates the report accordingly.
 \end{enumerate}
 
@@ -637,7 +646,7 @@ With the bidirectional arrows the data listed above the arrow (like A) flows lef
 \begin{tabular}{ p{4.5in} }
 F0S0\\
 \includegraphics[keepaspectratio, width=4.5in]{addItemF0S0.pdf}\\
-The user clicks on the "Add Item" link and is taken to the "Add Item" page. 
+The user clicks on the ``Add Item'' link and is taken to the "Add Item" page. 
 \end{tabular}\\
 ~\\
 ~\\
@@ -651,7 +660,7 @@ The user opens the category selection box, which opens to display the available 
 \begin{tabular}{ p{4.5in} }
 F0S2\\
 \includegraphics[keepaspectratio, width=4.5in]{addItemF0S2.pdf}  \\
-The user selects "ram" as the category from the combo box.
+The user selects ``ram'' as the category from the combo box.
 \end{tabular}\\
 ~\\
 ~\\
@@ -665,14 +674,14 @@ The user expands the drop down box of attributes, which is filled with RAM attri
 \begin{tabular}{ p{4.5in} }
 F0S4\\
 \includegraphics[keepaspectratio, width=4.5in]{addItemF0S4.pdf} \\
-The user selects the "size" attribute and a new attribute/value line comes up which the user types the new attribute type "Manufacturer" into.
+The user selects the ``size'' attribute and a new attribute/value line comes up which the user types the new attribute type ``Manufacturer'' into.
 \end{tabular}\\
 ~\\
 ~\\
 \begin{tabular}{ p{4.5in} }
 F0S5\\
 \includegraphics[keepaspectratio, width=4.5in]{addItemF0S5.pdf}\\
-The user then goes about filling in all of the information for the name, UPC, and each attribute. Then the user clicks the "add" button, which returns them to the "Recent Changes" screen. [if no UPC filled before clicking "add," go to F1S5] [if UPC already exists in system upon clicking "add," go to F2S5] 
+The user then goes about filling in all of the information for the name, UPC, and each attribute. Then the user clicks the ``add'' button, which returns them to the ``Recent Changes'' screen. [if no UPC filled before clicking ``add,'' go to F1S5] [if UPC already exists in system upon clicking ``add,'' go to F2S5] 
 \end{tabular}\\
 ~\\
 ~\\
@@ -686,7 +695,7 @@ The top listing in the recent changes list is the RAM that the user had just add
 \begin{tabular}{ p{4.5in} }
 F1S5\\
 \includegraphics[keepaspectratio, width=4.5in]{addItemF1S5.pdf} \\
-A popup appears that informs the user that the UPC field is required. The user clicks "ok" and the popup goes away.
+A popup appears that informs the user that the UPC field is required. The user clicks ``ok'' and the popup goes away.
 \end{tabular}\\
 ~\\
 ~\\
@@ -700,28 +709,28 @@ A popup appears that informs the user that the UPC field is not unique. The user
 \begin{tabular}{ p{4.5in} }
 F0S0\\
 \includegraphics[keepaspectratio, width=4.5in]{basicSearchF0S0.pdf} \\
-The user fills in "2GB DDR3" into the search bar and clicks the "Search" button. This takes the user to the Advanced Search results page. [if query is empty, stay here]
+The user fills in ``2GB DDR3'' into the search bar and clicks the ``Search'' button. This takes the user to the Advanced Search results page. [if query is empty, stay here]
 \end{tabular}\\
 ~\\
 ~\\
 \begin{tabular}{ p{4.5in} }
 F0S1\\
 \includegraphics[keepaspectratio, width=4.5in]{basicSearchF0S1.pdf} \\
-The "Name" attribute is filled with the user's old query phrase and at the bottom of the screen is the list of search results. [if there are no search results, goto F2S1]
+The ``Name'' attribute is filled with the user's old query phrase and at the bottom of the screen is the list of search results. [if there are no search results, goto F2S1]
 \end{tabular}\\
 ~\\
 ~\\
 \begin{tabular}{ p{4.5in} }
 F2S1\\
 \includegraphics[keepaspectratio, width=4.5in]{basicSearchF2S1.pdf} \\
-The "Name" attribute is filled with the user's old query phrase and at the bottom of the screen is the title "Search Results" with "no results" underneath it.
+The ``Name'' attribute is filled with the user's old query phrase and at the bottom of the screen is the title ``Search Results'' with ``no results'' underneath it.
 \end{tabular}
 
 \subsection{Advanced Search for an Item}
 \begin{tabular}{ p{4.5in} }
 F0S0\\
 \includegraphics[keepaspectratio, width=4.5in]{advancedSearchF0S0.pdf} \\
-The user clicks on the "Advanced Search" link and is taken to the "Advanced Search" page.
+The user clicks on the ``Advanced Search'' link and is taken to the "Advanced Search" page.
 \end{tabular}\\
 ~\\
 ~\\
@@ -820,7 +829,9 @@ The user then clicks off of the editable sections of the item page and all of th
 \textbf{Context Flow Diagram}: the highest level of the DFD; it shows the entirety of the system. The next level of specification is level 0, followed by level 1, then level 2, and so on (\pageref{cfd}).\\ \\
 \textbf{Data Flow Diagram (DFD)}: A diagram that details the data and signals that are passed between different processes and subprocesses of the system. If a particular process is complex enough to warrant it, a separate diagram may be made that shows the subprocesses within that process, and if any of them is sufficiently complex, the repetition of the diagramming at each level can occur as much as is necessary to explain the system in enough detail (\pageref{dfd}).\\ \\
 \textbf{Effort}: Expectation of the resources and time consumed for a feature (\pageref{effort}).\\ \\
+\textbf{Exact Matching}: Valid search candidates are determined by strict equality with the search input(s) (\pageref{feature}).\\ \\
 \textbf{Feature}: A system capability that fulfills a user need (\pageref{feature}).\\ \\
+\textbf{Fuzzy Matching}: Valid search candidates are determined based on similarity to the original search input(s) (\pageref{feature}).\\ \\
 \textbf{Post-condition}: An expectation of the system's state after the events in a use case occur (\pageref{post_cond}).\\ \\
 \textbf{Pre-condition}: An assumption about the state of a system before a use case's events are followed (\pageref{pre_cond}).\\ \\
 \textbf{Priority}: Description of how essential a feature is to the project (\pageref{priority}).\\ \\
@@ -828,7 +839,8 @@ The user then clicks off of the editable sections of the item page and all of th
 \textbf{Stability}: Likelihood that the understanding of a feature will change (\pageref{stability}).\\ \\
 \textbf{Target Release}: Expected release iteration of a testable feature (\pageref{target_release}).\\ \\
 \textbf{Universal Product Code (UPC)}: a specific kind of barcode assign uniquely to each item in the server (\pageref{upc}).\\ \\
-\textbf{Use case}: A description of the steps performed by a user and system that leads the user towards a useful outcome (\pageref{use_case}).
+\textbf{Use case}: A description of the steps performed by a user and system that leads the user towards a useful outcome (\pageref{use_case}).\\ \\
+\textbf{Wildcard Matching}: Valid search candidates are determined based on adherence to the user's given search pattern (\pageref{feature}).
 
 \section{References}
 \hangindent=1.4cm
