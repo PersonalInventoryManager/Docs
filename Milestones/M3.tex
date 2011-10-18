@@ -44,12 +44,12 @@
 \clearpage
 
 \section{Executive Summary}
-This milestone, the third of a series, documents the context for a software project proposed by the client, Tim Ekl.  Primarily, this document defines and describers the non-functional requirements such as usability, performance, reliability, supportability, hardware/software interfaces, documentation/installation/legal/licensing, and design constraints requirements.  All of  these requirements are necessary to document since their effects are unobvious in the use cases defined in the second milestone.  In addition, this document contains the user interfaces for a variety of situations in order to provide a better way to enforce the usability requirements prescribed by the client.  This document inherits information from the features, needs, and constraints found in the first milestone and will contribute towards the usability report and the interface designs of the fifth and final milestone.
+This milestone, the third of a series, documents the context for a software project proposed by the client, Tim Ekl.  Primarily, this document defines and describers the non-functional requirements such as usability, performance, reliability, supportability, hardware / software interfaces, documentation / installation / legal / licensing, and design constraints requirements.  All of  these requirements are necessary to document since their effects are unobvious in the use cases defined in the second milestone.  In addition, this document contains the user interfaces for a variety of situations in order to provide a better way to enforce the usability requirements prescribed by the client.  This document inherits information from the features, needs, and constraints found in the first milestone and will contribute towards the usability report and the interface designs of the fifth and final milestone.
 
 \section{Introduction}
 This document is intended to augment the second milestone, which defined the use cases that satisfied the needs and features of the product, by explaining and elaborating on the nonfunctional requirements and features since use cases focus on user experience.  In addition, the nonfunctional requirements will justify the feature, defined in the second milestone, which was not satisfied by a use case.\\
 ~\\
-In addition, this document will define the usability requirements, performance requirements, reliability requirements, supportability requirements, hardware/software interfaces, documentation/installation/legal/licensing requirements, and design constraints requirements--all of which are defined in the glossary.  The information listed is intended to describe behaviors of the system that are inherent in the use case pre-conditions, use case post-conditions, development phase, and post-development phase.  While not explicitly stated, the nonfunctional requirements encourage a prioritization of code quality over error logging.\\
+In addition, this document will define the usability requirements, performance requirements, reliability requirements, supportability requirements, hardware / software interfaces, documentation / installation / legal / licensing requirements, and design constraints requirements--all of which are defined in the glossary.  The information listed is intended to describe behaviors of the system that are inherent in the use case pre-conditions, use case post-conditions, development phase, and post-development phase.  While not explicitly stated, the nonfunctional requirements encourage a prioritization of code quality over error logging.\\
 ~\\
 Finally, this document inherits information from the first milestone:  needs, features, and constraints.  Furthermore, the information in this document will be utilized in the usability report and the interface designs of the upcoming, fifth milestone.
 
@@ -110,7 +110,7 @@ F5 & Provide an updated list of recently-added assets & Useful & Medium & Low & 
 \hline
 F6 & Generate reports of asset inventory & Useful & High & Low & Medium & 2.0 & Taylor \\
 \hline
-F7 & Sort search results based off of barcode, title, and modified/created timestamp & Useful & High & Low & Low & 2.0 & Susi \\
+F7 & Sort search results based off of barcode, title, and modified / created timestamp & Useful & High & Low & Low & 2.0 & Susi \\
 \hline
 F8 & Basic search for items based on name or UPC & Critical & High & High & Low & 1.0 & Eric \\
 \hline
@@ -118,7 +118,7 @@ F9 & Advanced search for items based on all fields related to the item and its c
 \hline
 F10 & Basic and Advanced searches allow the user to include wildcards in the query & Critical & High & High & Low & 1.0 & Taylor \\
 \hline
-F11 & Basic and Advanced searches will search first by exact/wildcard match, then by fuzzy match & Critical & High & High & Low & 1.0 & Susi \\
+F11 & Basic and Advanced searches will search first by exact / wildcard match, then by fuzzy match & Critical & High & High & Low & 1.0 & Susi \\
 \hline
 F12 & REST API & Critical & High & High & Low & 1.0 & Eric \\
 \hline
@@ -127,7 +127,7 @@ F12 & REST API & Critical & High & High & Low & 1.0 & Eric \\
 Critical - Highest importance \\
 Important - Medium importance \\
 Useful - Lowest importance \\
-High/Medium/Low - Degree of a category \\
+High / Medium / Low - Degree of a category \\
 1.0 - First release of the system \\
 1.5 - Next release of the system with significant changes \\
 2.0 - Final release of the system \\
@@ -177,7 +177,7 @@ The client does not have a software solution in place.  Currently, Tim has a pri
 \textbf{NOTE}: The client will judge the usability of the program
 \begin{itemize}
 \item User should be able to familiarize himself or herself with the software within one hour
-\item An online help system/documentation will not be required
+\item An online help system / documentation will not be required
 \end{itemize}
 
 \section{Performance Requirements}
@@ -204,11 +204,11 @@ NOTE: Any times described in the Performance Requirements are based on the clien
 \item The source code will follow Ruby coding standards and naming conventions
 \item The client should be able to extend the system with features of moderate complexity within four hours; this is an intended effect from following the Ruby coding standards
 \item The source code should be as modular as possible in order to simplify extension
-\item Adding/modifying an API route should as difficult as adding/modifying a web application feature of equal complexity
+\item Adding / modifying an API route should as difficult as adding / modifying a web application feature of equal complexity
 \end{itemize}
 
 \section{Hardware and Software Interfaces}
-The final product will utilize and/or be compatible with the following software products:\\
+The final product will utilize and / or be compatible with the following software products:\\
 \begin{itemize}
 \item Ruby 1.9.2 [2]
 \item Sinatra 1.3.0 [3]
