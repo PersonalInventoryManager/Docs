@@ -44,7 +44,7 @@
 \clearpage
 
 \section{Executive Summary}
-This milestone, the third of a series, documents the context for a software project proposed by the client, Tim Ekl.  Primarily, this document defines and describers the non-functional requirements such as usability, performance, reliability, supportability, hardware / software interfaces, documentation / installation / legal / licensing, and design constraints requirements.  All of  these requirements are necessary to document since their effects are unobvious in the use cases defined in the second milestone.  In addition, this document contains the user interfaces for a variety of situations in order to provide a better way to enforce the usability requirements prescribed by the client.  This document inherits information from the features, needs, and constraints found in the first milestone and will contribute towards the usability report and the interface designs of the fifth and final milestone.
+This milestone, the third of a series, documents the context for a software project proposed by the client, Tim Ekl.  Primarily, this document defines and describers the non-functional requirements such as usability, performance, reliability, supportability, hardware / software interfaces, documentation / installation / legal / licensing, and design constraints requirements.  All of  these requirements are necessary to document since their effects are unobvious in the use cases defined in the second milestone.  In addition, this document contains the user interfaces for a variety of situations in order to provide a better way to enforce the usability requirements prescribed by the client.  This document inherits information from the features, needs, and constraints found in the first milestone and will contribute towards the usability report and the interface designs of the fifth and final milestone.\label{interface}
 
 \section{Introduction}
 This document is intended to augment the second milestone, which defined the use cases that satisfied the needs and features of the product, by explaining and elaborating on the nonfunctional requirements and features since use cases focus on user experience.  In addition, the nonfunctional requirements will justify the feature, defined in the second milestone, which was not satisfied by a use case.\\
@@ -67,21 +67,21 @@ Finally, this document inherits information from the first milestone:  needs, fe
 \hline
 N0 & Search for parts based off their attributes & Primary \\
 \hline
-N1 & Identify items via bar codes & Primary \\
+N2 & Identify items via bar codes & Primary \\
 \hline
-N2 & Keep track of the data associated with an asset & Primary \\
+N3 & Keep track of the data associated with an asset & Primary \\
 \hline
-N3 & Organize search results & Primary \\
+N4 & Organize search results & Primary \\
 \hline
-N4 & Insert objects in the system at any point; do not freeze the database & Secondary \\
+N5 & Insert objects in the system at any point; do not freeze the database & Secondary \\
 \hline
-N5 & Modify objects; including adding notes to the objects & Secondary \\
+N6 & Modify objects; including adding notes to the objects & Secondary \\
 \hline
-N6 & Access from a second physical location & Optional \\
+N7 & Access from a second physical location & Optional \\
 \hline
-N7 & View most-recently acquired asset(s) & Optional \\
+N8 & View most-recently acquired asset(s) & Optional \\
 \hline
-N8 & View a summary of inventory data & Optional \\
+N9 & View a summary of inventory data & Optional \\
 \hline
 \end{tabular} \\
 \textbf{Legend:} \\
@@ -98,31 +98,31 @@ Optional - Would be nice to have in the system \\
 \hline
 F0 & Online UI & Critical & High & High & Low & 1.0 & Eric \\
 \hline
-F1 & Add assets to the inventory & Critical & Low & High & Low & 1.0 & Richard \\
+F2 & Add assets to the inventory & Critical & Low & High & Low & 1.0 & Richard \\
 \hline
-F2 & Modify assets in the inventory & Critical & Low & High & Low & 1.0 & Taylor \\
+F3 & Modify assets in the inventory & Critical & Low & High & Low & 1.0 & Taylor \\
 \hline
-F3 & The system keeps track of attributes based on category & Critical & Low & High & Low & 1.0 & Susi \\
+F4 & The system keeps track of attributes based on category & Critical & Low & High & Low & 1.0 & Susi \\
 \hline
-F4 & Use a UPC-A barcode as the unique identifier for each asset\label{upc} & Critical & Low & Medium & Low & 1.0 & Eric \\
+F5 & Use a UPC-A barcode as the unique identifier for each asset\label{upc} & Critical & Low & Medium & Low & 1.0 & Eric \\
 \hline
-F5 & Provide an updated list of recently-added assets & Useful & Medium & Low & Medium & 1.5 & Richard \\
+F6 & Provide an updated list of recently-added assets & Useful & Medium & Low & Medium & 1.5 & Richard \\
 \hline
-F6 & Generate reports of asset inventory & Useful & High & Low & Medium & 2.0 & Taylor \\
+F7 & Generate reports of asset inventory & Useful & High & Low & Medium & 2.0 & Taylor \\
 \hline
-F7 & Sort search results based off of barcode, title, and modified / created timestamp & Useful & High & Low & Low & 2.0 & Susi \\
+F8 & Sort search results based off of barcode, title, and modified / created timestamp & Useful & High & Low & Low & 2.0 & Susi \\
 \hline
-F8 & Basic search for items based on name or UPC & Critical & High & High & Low & 1.0 & Eric \\
+F10 & Basic search for items based on name or UPC & Critical & High & High & Low & 1.0 & Eric \\
 \hline
-F9 & Advanced search for items based on all fields related to the item and its category & Critical & High & High & Low & 1.0 & Richard \\
+F11 & Advanced search for items based on all fields related to the item and its category & Critical & High & High & Low & 1.0 & Richard \\
 \hline
-F10 & Basic and Advanced searches allow the user to include wildcards in the query & Critical & High & High & Low & 1.0 & Taylor \\
+F12 & Basic and Advanced searches allow the user to include wildcards in the query & Critical & High & High & Low & 1.0 & Taylor \\
 \hline
-F11 & Basic and Advanced searches will search first by exact / wildcard match, then by fuzzy match & Critical & High & High & Low & 1.0 & Susi \\
+F13 & Basic and Advanced searches will search first by exact / wildcard match, then by fuzzy match & Critical & High & High & Low & 1.0 & Susi \\
 \hline
-F12 & REST API & Critical & High & High & Low & 1.0 & Eric \\
+F14 & REST API & Critical & High & High & Low & 1.0 & Eric \\
 \hline
-\end{tabular}\\
+\end{tabular}\label{rest}\\
 \textbf{Legend:} \\
 Critical - Highest importance \\
 Important - Medium importance \\
@@ -136,34 +136,34 @@ High / Medium / Low - Degree of a category \\
 \subsection{Feature-to-Need Correspondence}
 \begin{tabular}{ | c || c | c | c | c | c | c | c | c | c | c | }
 \hline
-    & N0 & N1 & N2 & N3 & N4 & N5 & N6 & N7 & N8 \\
+    & N0 & N2 & N3 & N4 & N5 & N6 & N7 & N8 & N9 \\
 \hline
 \hline
 F0  &    &    &    &    &    &    & X  &    &    \\
 \hline
-F1  &    &    & X  &    & X  &    &    &    &    \\
+F2  &    &    & X  &    & X  &    &    &    &    \\
 \hline
-F2  &    &    & X  &    &    & X  &    &    &    \\
+F3  &    &    & X  &    &    & X  &    &    &    \\
 \hline
-F3  &    &    & X  &    & X  & X  &    &    &    \\
+F4  &    &    & X  &    & X  & X  &    &    &    \\
 \hline
-F4  & X  & X  & X  &    &    &    &    &    &    \\
+F5  & X  & X  & X  &    &    &    &    &    &    \\
 \hline
-F5  &    &    &    &    &    &    &    & X  &    \\
+F6  &    &    &    &    &    &    &    & X  &    \\
 \hline
-F6  &    &    &    &    &    &    &    &    & X  \\
+F7  &    &    &    &    &    &    &    &    & X  \\
 \hline
-F7  & X  & X  &    & X  &    &    &    &    &    \\
-\hline
-F8  & X  & X  & X  & X  &    &    &    &    &    \\
-\hline
-F9  & X  & X  & X  & X  &    &    &    &    &    \\
+F8  & X  & X  &    & X  &    &    &    &    &    \\
 \hline
 F10 & X  & X  & X  & X  &    &    &    &    &    \\
 \hline
 F11 & X  & X  & X  & X  &    &    &    &    &    \\
 \hline
-F12 &    &    &    &    &    &    & X  &    &    \\
+F12 & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F13 & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F14 &    &    &    &    &    &    & X  &    &    \\
 \hline
 \end{tabular}
 
@@ -174,6 +174,7 @@ Tim Ekl is a Rose-Hulman graduate student who possesses a significant amount of 
 The client does not have a software solution in place.  Currently, Tim has a primitive categorization system in place which involves labeling boxes and then trying to deduce the location of a desired component.  The current system poses a few issues such as not always allowing him to find his items, i.e. there have been instances where an item was found after capital was spent to replace it.
 
 \section{Usability Requirements}
+\label{usability}
 \textbf{NOTE}: The client will judge the usability of the program
 \begin{itemize}
 \item User should be able to familiarize himself or herself with the software within one hour
@@ -181,23 +182,26 @@ The client does not have a software solution in place.  Currently, Tim has a pri
 \end{itemize}
 
 \section{Performance Requirements}
+\label{performance}
 NOTE: Any times described in the Performance Requirements are based on the client's machine specifications, which are: Pentium 4 2.8GHz processor with 1.5GB memory.
 \begin{itemize}
 \item Searches should take no longer than three seconds
 \item There should be no noticeable (as judged by the client) difference in search performance (the most complex task) between 10 items and 1000 items
-\item There is no tolerance for any system degradation: the system is either fully functional or not functional at all, and there is no need to handle failures.
+\item There is no tolerance for any system degradation: the system is either fully functional or not functional at all, and there is no need to handle failures.\label{degrad_sys}
 \end{itemize}
 
 \section{Reliability Requirements}
+\label{reliability}
 \begin{itemize}
 \item The system should not be down more than once every two months
 \item The system repair will be the responsibility of the client after the product is delivered
-\item The system must have no data corruption (100\% accuracy)
-\item The system will have no more than two bugs per thousand lines of code
+\item The system must have no data corruption (100\% accuracy)\label{data_corruption}
+\item The system will have no more than two bugs per thousand lines of code\label{bug}
 \item The system should minimize the number of critical bugs, though there is no defined threshold
 \end{itemize}
 
 \section{Supportability Requirements}
+\label{support}
 \begin{itemize}
 \item The system should be able to be supported by open source community and the client
 \item The source code needs to be kept clean and easy to understand
@@ -235,7 +239,7 @@ The final product will utilize and / or be compatible with the following softwar
 \item The project must be open source
 \item The project must be completed within five months
 \item The project must be completed without funding from the client
-\item The project must utilize REST, not SOAP
+\item The project must utilize REST, not SOAP\label{soap}
 \item Develop in Ruby utilizing Sinatra for web framework
 \item Accessible via the web.
 \end{itemize} 
@@ -347,13 +351,13 @@ The item details page for an item that could not be found.
 ~\\
 \begin{tabular}{ p{4.5in} }
 \includegraphics[keepaspectratio, width=4.5in]{modifyDetailsF0S1.pdf} \\
-The item details page after the user has clicked on the empty attribute key field and caused the element to be replaced with a autocomplete text field
+The item details page after the user has clicked on the empty attribute key field and caused the element to be replaced with an autocomplete text field
 \end{tabular}\\
 ~\\
 ~\\
 \begin{tabular}{ p{4.5in} }
 \includegraphics[keepaspectratio, width=4.5in]{modifyDetailsF0S2.pdf} \\
-The item details page after a attribute key has been selected
+The item details page after an attribute key has been selected
 \end{tabular}\\
 ~\\
 ~\\
@@ -399,16 +403,16 @@ The generate report page with the report being displayed
 \end{tabular}
 
 \section{Index and Glossary}
-\textbf{Bug}: An error in a computer program. A critical bug is a bug that strongly affects important parts of a system.\\ \\
-\textbf{Data corruption}: Errors in data that introduce unintended changes to the data.\\ \\
-\textbf{Degraded system}: The system becomes degraded if there are too many queries performed too quickly or if the amount of data needing to be searched through becomes too large. When the system is degraded, it may result in the system ceasing to function and requiring a reboot.\\ \\
-\textbf{Interface}: A point of interaction between systems, whether hardware or software, that allows the systems to communicate using some protocol.\\ \\
-\textbf{Performance}: The speed and efficiency of an operation, program, or system at a set of tasks.\\ \\
-\textbf{Reliability}: The ability of a system to function in a range of conditions for a period of time without failing to perform its tasks.\\ \\
-\textbf{REST}: Stands for ``Representational state transfer;'' is a style software architecture often used in servers for simplicity and scalability. Amongst other aspects of REST, it is stateless. This means each request sent from the client of the server that uses REST to the server does not require any information from any previous requests. All information required to fulfill the request must be sent with the request.\\ \\
-\textbf{SOAP}: Stands for ``Simple Object Access Protocol;'' is a protocol for exchanging structured information across a network.\\ \\
-\textbf{Supportability}: The ease with which a system can be fixed should it become broken or out of order.\\ \\
-\textbf{Usability}: The ease with which one may use or learn to use a system.
+\textbf{Bug}: An error in a computer program. A critical bug is a bug that strongly affects important parts of a system (\pageref{bug}).\\ \\
+\textbf{Data corruption}: Errors in data that introduce unintended changes to the data (\pageref{data_corruption}).\\ \\
+\textbf{Degraded system}: The system becomes degraded if there are too many queries performed too quickly or if the amount of data needing to be searched through becomes too large. When the system is degraded, it may result in the system ceasing to function and requiring a reboot (\pageref{degrad_sys}).\\ \\
+\textbf{Interface}: A point of interaction between systems, whether hardware or software, that allows the systems to communicate using some protocol (\pageref{interface}).\\ \\
+\textbf{Performance}: The speed and efficiency of an operation, program, or system at a set of tasks (\pageref{performance}).\\ \\
+\textbf{Reliability}: The ability of a system to function in a range of conditions for a period of time without failing to perform its tasks (\pageref{reliability}).\\ \\
+\textbf{REST}: Stands for ``Representational state transfer;'' is a style software architecture often used in servers for simplicity and scalability. Amongst other aspects of REST, it is stateless. This means each request sent from the client of the server that uses REST to the server does not require any information from any previous requests. All information required to fulfill the request must be sent with the request (\pageref{rest}).\\ \\
+\textbf{SOAP}: Stands for ``Simple Object Access Protocol;'' is a protocol for exchanging structured information across a network (\pageref{soap}).\\ \\
+\textbf{Supportability}: The ease with which a system can be fixed should it become broken or out of order (\pageref{support}).\\ \\
+\textbf{Usability}: The ease with which one may use or learn to use a system (\pageref{usability}).
 
 \section{References}
 \hangindent=1.4cm
