@@ -44,7 +44,7 @@
 \item The code will use indentation increments of two spaces
 \item The code will use underscores to separate words in variable names
 \item The code will follow any other Ruby coding standards
-\item The code will follow any Sinatra coding standards
+\item The folder structure for the product will be similar to that of the GasTracker project, a folder structure the client is familiar with
 \end{itemize}
 
 \section{Change Control}
@@ -69,18 +69,91 @@ If the client wishes to change the code, he will notify the team at a meeting.  
 \section{Test Cases}
 
 \subsection{Add an Item}
+\paragraph{Description}
+~\\ \\
+\textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.
+
+\paragraph{Scenario Matrix}~\\ \\
+\begin{tabular}{ c  c  c  c }
+\hline
+Scenario ID & Originating Flow & Alternate Flow & Next Alternate\\
+\hline
+\hline
+S0 & Basic &  & \\
+\hline
+S1 & Basic & A1 & \\
+\hline
+S2 & Basic & A2 & \\
+\hline
+S3 & Basic & A1 & A2\\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Testing Matrix}~\\ \\
+\begin{tabular}{ p{0.5in}  p{2.4in}  p{0.4in}  p{0.7in}  p{2.5in} }
+\hline
+Test Case ID & Description & Name & UPC & Expected Result\\
+\hline
+\hline
+T0 & Basic Flow & Present & Unique & The item is added successfully and the user is redirected to the main page with an updated Recent Changes list\\
+\hline
+T1 & Alternate Flow A1 & Absent & Unique & The user is notified that a required field was omitted\\
+\hline
+T2 & Alternate Flow A1 & Present & Absent & The user is notified that a required field was omitted\\
+\hline
+T3 & Alternate Flow A1 & Absent & Absent & The user is notified that a required field was omitted\\
+\hline
+T4 & Alternate Flow A2 & Present & Non-unique & The user is notified that the UPC is not unique\\
+\hline
+T5 & Alternate Flows A1, A2 & Absent & Non-unique & The user is notified that a required field was omitted and that the UPC is not unique\\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Test Case to Scenario Matrix}~\\ \\
+\begin{tabular}{ | c || c | c | c | c | }
+\hline
+    & S0 & S1 & S2 & S3\\
+\hline
+\hline
+T0 & X  &    &    &    \\
+\hline
+T1 &    & X  &    &    \\
+\hline
+T2 &    & X  &    &    \\
+\hline
+T3 &    & X  &    &    \\
+\hline
+T4 &    &    & X  &    \\
+\hline
+T5 &    &    &    & X  \\
+\hline
+\end{tabular}
 
 \subsection{Basic Search for an Item}
+\paragraph{Description}
+
 
 \subsection{Advanced Search for an Item}
+\paragraph{Description}
+
 
 \subsection{Search Result Sorting}
+\paragraph{Description}
+
 
 \subsection{View Details of an Item}
+\paragraph{Description}
+
 
 \subsection{Edit Details of an Item}
+\paragraph{Description}
+
 
 \subsection{Generate Inventory Report}
+\paragraph{Description}
+
 
 \section{Index and Glossary}
 \textbf{TODO:} \taylor
