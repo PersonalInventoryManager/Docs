@@ -133,11 +133,114 @@ T5 &    &    &    & X  \\
 
 \subsection{Basic Search for an Item}
 \paragraph{Description}
+~\\ \\
+\textbf{NOTE:} Alternate Flow A1 will not be tested, since the server going offline is not an attribute of the system that can be measured.
+
+\paragraph{Scenario Matrix}~\\ \\
+\begin{tabular}{ c  c  c }
+\hline
+Scenario ID & Originating Flow & Alternate Flow\\
+\hline
+\hline
+S0 & Basic &  \\
+\hline
+S1 & Basic & A0 \\
+\hline
+S2 & Basic & A2 \\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Testing Matrix}~\\ \\
+\begin{tabular}{ p{0.5in}  p{1.9in}  p{0.4in}  p{0.7in}  p{2in} }
+\hline
+Test Case ID & Description & Query & Matches & Expected Result\\
+\hline
+\hline
+T6 & Basic Flow & Present & Present & The results of the query are displayed on the page\\
+\hline
+T7 & Alternate Flow A0 & Absent & & The user remains on the same page\\
+\hline
+T8 & Alternate Flow A2 & Present & Absent & The text ``No results'' is displayed on the page\\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Test Case to Scenario Matrix}~\\ \\
+\begin{tabular}{ | c || c | c | c | }
+\hline
+    & S0 & S1 & S2 \\
+\hline
+\hline
+T6 & X  &    &    \\
+\hline
+T7 &    & X  &    \\
+\hline
+T8 &    &    & X  \\
+\hline
+\end{tabular}
 
 
 \subsection{Advanced Search for an Item}
 \paragraph{Description}
+~\\ \\
+\textbf{NOTE:} Alternate Flow A1 will not be tested, since the server going offline is not an attribute of the system that can be measured.
 
+\paragraph{Scenario Matrix}~\\ \\
+\begin{tabular}{ c  c  c  c }
+\hline
+Scenario ID & Originating Flow & Alternate Flow & Next Alternate \\
+\hline
+\hline
+S0 & Basic &  & \\
+\hline
+S1 & Basic & A0 & \\
+\hline
+S2 & Basic & A0 & A2 \\
+\hline
+S3 & Basic & A0 & A3 \\
+\hline
+S4 & Basic & A3 &  \\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Testing Matrix}~\\ \\
+\begin{tabular}{ p{0.5in}  p{1.7in}  p{0.4in} p{0.4in}  p{0.7in}  p{1.8in} }
+\hline
+Test Case ID & Description & Category & Name/UPC & Matches & Expected Result\\
+\hline
+\hline
+T0 & Basic Flow & Present &  & Present & The results of the query are displayed on the page\\
+\hline
+T1 & Alternate Flow A0 & Absent & Present & Present & The results of the query are displayed on the page\\
+\hline
+T2 & Alternate Flows A0, A2 & Absent & Absent &  & The user remains on the current page\\
+\hline
+T3 & Alternate Flows A0, A3 & Absent & Present & Absent & The text ``No results'' is displayed on the page\\
+\hline
+T4 & Alternate Flows A3 & Present &  & Absent & The text ``No results'' is displayed on the page\\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Test Case to Scenario Matrix}~\\ \\
+\begin{tabular}{ | c || c | c | c | c | c | }
+\hline
+    & S0 & S1 & S2 & S3 & S4 \\
+\hline
+\hline
+T0 & X  &    &    &    &    \\
+\hline
+T1 &    & X  &    &    &    \\
+\hline
+T2 &    &    & X  &    &    \\
+\hline
+T3 &    &    &    & X  &    \\
+\hline
+T4 &    &    &    &    & X  \\
+\hline
+\end{tabular}
 
 \subsection{Search Result Sorting}
 \paragraph{Description}
@@ -296,8 +399,41 @@ T8 &    & X  \\
 
 \subsection{Generate Inventory Report}
 \paragraph{Description}
+~\\ \\
+\textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.
 
+\paragraph{Scenario Matrix}~\\ \\
+\begin{tabular}{ c  c }
+\hline
+Scenario ID & Originating Flow \\
+\hline
+\hline
+S0 & Basic \\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Testing Matrix}~\\ \\
+\begin{tabular}{ p{1.0in}  p{2.1in}  p{2.2in} }
+\hline
+Test Case ID & Description & Expected Result\\
+\hline
+\hline
+T0 & Basic Flow & The report is displayed on the page\\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Test Case to Scenario Matrix}~\\ \\
+\begin{tabular}{ | c || c | }
+\hline
+    & S0 \\
+\hline
+\hline
+T0 & X  \\
+\hline
 
+\end{tabular}
 \section{Index and Glossary}
 \textbf{TODO:} \taylor
 
