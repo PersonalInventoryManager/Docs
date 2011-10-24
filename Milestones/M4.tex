@@ -93,7 +93,7 @@ S3 & Basic & A1 & A2\\
 \paragraph{Testing Matrix}~\\ \\
 \begin{tabular}{ p{0.5in}  p{1.9in}  p{0.4in}  p{0.7in}  p{2in} }
 \hline
-Test Case ID & Description & Name & UPC & Expected Result\\
+Test Case ID & Description & Name Field & UPC Field & Expected Result\\
 \hline
 \hline
 T0 & Basic Flow & Present & Unique & The item is added successfully and the user is redirected to the main page with an updated Recent Changes list\\
@@ -141,15 +141,158 @@ T5 &    &    &    & X  \\
 
 \subsection{Search Result Sorting}
 \paragraph{Description}
-
+~\\ \\
+\textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.
+\paragraph{Scenario Matrix}~\\ \\
+\begin{tabular}{ c  c }
+\hline
+Scenario ID & Originating Flow\\
+\hline
+\hline
+S0 & Basic\\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Testing Matrix}~\\ \\
+\begin{tabular}{ p{0.6in}  p{0.8in}  p{1.0in}  p{2.0in} }
+\hline
+Test Case ID & Description & Sort Type Field & Expected Result\\
+\hline
+\hline
+T0 & Basic Flow & Name & The search results are sorted by the Name field\\
+\hline
+T1 & Basic Flow & UPC & The search results are sorted by the UPC field\\
+\hline
+T2 & Basic Flow & Recently Created & The search results are sorted by the Recently Created field\\
+\hline
+T3 & Basic Flow & Recently Modified & The search results are sorted by the Recently Modified field\\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Test Case to Scenario Matrix}~\\ \\
+\begin{tabular}{ | c || c | }
+\hline
+    & S0\\
+\hline
+\hline
+T0 & X  \\
+\hline
+T1 & X  \\
+\hline
+T2 & X  \\
+\hline
+T3 & X  \\
+\hline
+\end{tabular}
 
 \subsection{View Details of an Item}
 \paragraph{Description}
+~\\ \\
+\textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.
 
+\paragraph{Scenario Matrix}~\\ \\
+\begin{tabular}{ c  c }
+\hline
+Scenario ID & Originating Flow\\
+\hline
+\hline
+S0 & Basic\\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Testing Matrix}~\\ \\
+\begin{tabular}{ p{0.6in}  p{2.3in}  p{2.6in} }
+\hline
+Test Case ID & Description & Expected Result\\
+\hline
+\hline
+T0 & Basic Flow & The user is taken to a page showing all of the item details\\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Test Case to Scenario Matrix}~\\ \\
+\begin{tabular}{ | c || c | }
+\hline
+    & S0\\
+\hline
+\hline
+T0 & X  \\
+\hline
+\end{tabular}
 
 \subsection{Edit Details of an Item}
 \paragraph{Description}
-
+~\\ \\
+\textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.
+\paragraph{Scenario Matrix}~\\ \\
+\begin{tabular}{ c  c  c }
+\hline
+Scenario ID & Originating Flow & Alternate Flow\\
+\hline
+\hline
+S0 & Basic & \\
+\hline
+S1 & Basic & A1\\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Testing Matrix}~\\ \\
+\begin{tabular}{ p{0.6in}  p{0.8in}  p{1.0in}  p{1.0in}  p{2.0in}}
+\hline
+Test Case ID & Description & Name Field & UPC Field & Expected Result\\
+\hline
+\hline
+T0 & Basic Flow & Unchanged & Unchanged & The user is shown the item details page with the modified information\\
+\hline
+T1 & Basic Flow & Valid Change & Unchanged & The user is shown the item details page with the modified information\\
+\hline
+T2 & Basic Flow & Unchanged & Valid Change & The user is shown the item details page with the modified information\\
+\hline
+T3 & Basic Flow & Valid Change & Valid Change & The user is shown the item details page with the modified information\\
+\hline
+T4 & Basic Flow & Invalid Change & Unchanged & A pop-up with `Invalid Information' is shown\\
+\hline
+T5 & Basic Flow & Invalid Change & Valid Change & A pop-up with `Invalid Information' is shown\\
+\hline
+T6 & Basic Flow & Invalid Change & Invalid Change & A pop-up with `Invalid Information' is shown\\
+\hline
+T7 & Basic Flow & Unchanged & Invalid Change & A pop-up with `Invalid Information' is shown\\
+\hline
+T8 & Basic Flow & Valid Change & Invalid Change & A pop-up with `Invalid Information' is shown\\
+\hline
+\end{tabular}\\
+~\\
+~\\
+\paragraph{Test Case to Scenario Matrix}~\\ \\
+\begin{tabular}{ | c || c | c | }
+\hline
+    & S0 & S1 \\
+\hline
+\hline
+T0 & X  &    \\
+\hline
+T1 & X  &    \\
+\hline
+T2 & X  &    \\
+\hline
+T3 & X  &    \\
+\hline
+T4 &    & X  \\
+\hline
+T5 &    & X  \\
+\hline
+T6 &    & X  \\
+\hline
+T7 &    & X  \\
+\hline
+T8 &    & X  \\
+\hline
+\end{tabular}
 
 \subsection{Generate Inventory Report}
 \paragraph{Description}
