@@ -69,8 +69,6 @@ If the client wishes to change the code, he will notify the team at a meeting.  
 \section{Test Cases}
 
 \subsection{Add an Item}
-\paragraph{Description}
-~\\ \\
 \textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.
 
 \paragraph{Scenario Matrix}~\\ \\
@@ -91,22 +89,22 @@ S3 & Basic & A1 & A2\\
 ~\\
 ~\\
 \paragraph{Testing Matrix}~\\ \\
-\begin{tabular}{ p{0.5in}  p{1.9in}  p{0.4in}  p{0.7in}  p{2in} }
+\begin{tabular}{ p{0.8in}  p{0.7in}  p{0.7in}  p{3.3in} }
 \hline
-Test Case ID & Description & Name Field & UPC Field & Expected Result\\
+Test Case ID & Name Field & UPC Field & Expected Result\\
 \hline
 \hline
-T0 & Basic Flow & Present & Unique & The item is added successfully and the user is redirected to the main page with an updated Recent Changes list\\
+T0 & Present & Unique & The item is added successfully and the user is redirected to the main page with an updated Recent Changes list\\
 \hline
-T1 & Alternate Flow A1 & Absent & Unique & The user is notified that a required field was omitted\\
+T1 & Absent & Unique & The user is notified that a required field was omitted\\
 \hline
-T2 & Alternate Flow A1 & Present & Absent & The user is notified that a required field was omitted\\
+T2 & Present & Absent & The user is notified that a required field was omitted\\
 \hline
-T3 & Alternate Flow A1 & Absent & Absent & The user is notified that a required field was omitted\\
+T3 & Absent & Absent & The user is notified that a required field was omitted\\
 \hline
-T4 & Alternate Flow A2 & Present & Non-unique & The user is notified that the UPC is not unique\\
+T4 & Present & Non-unique & The user is notified that the UPC is not unique\\
 \hline
-T5 & Alternate Flows A1, A2 & Absent & Non-unique & The user is notified that a required field was omitted and that the UPC is not unique\\
+T5 & Absent & Non-unique & The user is notified that a required field was omitted and that the UPC is not unique\\
 \hline
 \end{tabular}\\
 ~\\
@@ -132,8 +130,6 @@ T5 &    &    &    & X  \\
 \end{tabular}
 
 \subsection{Basic Search for an Item}
-\paragraph{Description}
-~\\ \\
 \textbf{NOTE:} Alternate Flow A1 will not be tested, since the server going offline is not an attribute of the system that can be measured.
 
 \paragraph{Scenario Matrix}~\\ \\
@@ -152,16 +148,16 @@ S6 & Basic & A2 \\
 ~\\
 ~\\
 \paragraph{Testing Matrix}~\\ \\
-\begin{tabular}{ p{0.5in}  p{1.9in}  p{0.4in}  p{0.7in}  p{2in} }
+\begin{tabular}{ p{0.8in}  p{0.75in}  p{0.5in}  p{3in} }
 \hline
-Test Case ID & Description & Query Field & Matches & Expected Result\\
+Test Case ID & Query Field & Matches & Expected Result\\
 \hline
 \hline
-T6 & Basic Flow & Present & Present & The results of the query are displayed on the page\\
+T6 & Present & Present & The results of the query are displayed on the page\\
 \hline
-T7 & Alternate Flow A0 & Absent & & The user remains on the same page\\
+T7 & Absent & & The user remains on the same page\\
 \hline
-T8 & Alternate Flow A2 & Present & Absent & The text ``No results'' is displayed on the page\\
+T8 & Present & Absent & The text ``No results'' is displayed on the page\\
 \hline
 \end{tabular}\\
 ~\\
@@ -182,8 +178,6 @@ T8 &    &    & X  \\
 
 
 \subsection{Advanced Search for an Item}
-\paragraph{Description}
-~\\ \\
 \textbf{NOTE:} Alternate Flow A1 will not be tested, since the server going offline is not an attribute of the system that can be measured.
 
 \paragraph{Scenario Matrix}~\\ \\
@@ -206,20 +200,20 @@ S11 & Basic & A3 &  \\
 ~\\
 ~\\
 \paragraph{Testing Matrix}~\\ \\
-\begin{tabular}{ p{0.5in}  p{1.7in}  p{0.4in} p{0.4in}  p{0.7in}  p{1.8in} }
+\begin{tabular}{ p{0.8in}  p{0.5in} p{0.7in}  p{0.5in}  p{3in} }
 \hline
-Test Case ID & Description & Category Field & Name/UPC Field & Matches & Expected Result\\
+Test Case ID & Category Field & Name/UPC Field & Matches & Expected Result\\
 \hline
 \hline
-T9 & Basic Flow & Present &  & Present & The results of the query are displayed on the page\\
+T9 & Present &  & Present & The results of the query are displayed on the page\\
 \hline
-T10 & Alternate Flow A0 & Absent & Present & Present & The results of the query are displayed on the page\\
+T10 & Absent & Present & Present & The results of the query are displayed on the page\\
 \hline
-T11 & Alternate Flows A0, A2 & Absent & Absent &  & The user remains on the current page\\
+T11 & Absent & Absent &  & The user remains on the current page\\
 \hline
-T12 & Alternate Flows A0, A3 & Absent & Present & Absent & The text ``No results'' is displayed on the page\\
+T12 & Absent & Present & Absent & The text ``No results'' is displayed on the page\\
 \hline
-T13 & Alternate Flows A3 & Present &  & Absent & The text ``No results'' is displayed on the page\\
+T13 & Present &  & Absent & The text ``No results'' is displayed on the page\\
 \hline
 \end{tabular}\\
 ~\\
@@ -243,8 +237,6 @@ T13 &     &     &     &     &  X  \\
 \end{tabular}
 
 \subsection{Search Result Sorting}
-\paragraph{Description}
-~\\ \\
 \textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.
 \paragraph{Scenario Matrix}~\\ \\
 \begin{tabular}{ c  c }
@@ -258,18 +250,18 @@ S12 & Basic\\
 ~\\
 ~\\
 \paragraph{Testing Matrix}~\\ \\
-\begin{tabular}{ p{0.6in}  p{0.8in}  p{1.0in}  p{2.0in} }
+\begin{tabular}{ p{0.8in}  p{1.1in}  p{3.6in} }
 \hline
-Test Case ID & Description & Sort Type Field & Expected Result\\
+Test Case ID & Sort Type Field & Expected Result\\
 \hline
 \hline
-T14 & Basic Flow & Name & The search results are sorted by the Name field\\
+T14 & Name & The search results are sorted by the Name field\\
 \hline
-T15 & Basic Flow & UPC & The search results are sorted by the UPC field\\
+T15 & UPC & The search results are sorted by the UPC field\\
 \hline
-T16 & Basic Flow & Recently Created & The search results are sorted by the Recently Created field\\
+T16 & Recently Created & The search results are sorted by the Recently Created field\\
 \hline
-T17 & Basic Flow & Recently Modified & The search results are sorted by the Recently Modified field\\
+T17 & Recently Modified & The search results are sorted by the Recently Modified field\\
 \hline
 \end{tabular}\\
 ~\\
@@ -291,8 +283,6 @@ T17 &  X  \\
 \end{tabular}
 
 \subsection{View Details of an Item}
-\paragraph{Description}
-~\\ \\
 \textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.
 
 \paragraph{Scenario Matrix}~\\ \\
@@ -307,12 +297,12 @@ S13 & Basic\\
 ~\\
 ~\\
 \paragraph{Testing Matrix}~\\ \\
-\begin{tabular}{ p{0.6in}  p{2.3in}  p{2.6in} }
+\begin{tabular}{ p{0.8in}  p{3.4in} }
 \hline
-Test Case ID & Description & Expected Result\\
+Test Case ID & Expected Result\\
 \hline
 \hline
-T18 & Basic Flow & The user is taken to a page showing all of the item details\\
+T18 & The user is taken to a page showing all of the item details\\
 \hline
 \end{tabular}\\
 ~\\
@@ -328,8 +318,6 @@ T18 &  X  \\
 \end{tabular}
 
 \subsection{Edit Details of an Item}
-\paragraph{Description}
-~\\ \\
 \textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.
 \paragraph{Scenario Matrix}~\\ \\
 \begin{tabular}{ c  c  c }
@@ -345,28 +333,28 @@ S15 & Basic & A1\\
 ~\\
 ~\\
 \paragraph{Testing Matrix}~\\ \\
-\begin{tabular}{ p{0.6in}  p{0.8in}  p{1.0in}  p{1.0in}  p{2.0in}}
+\begin{tabular}{ p{0.8in}  p{0.9in}  p{0.9in}  p{2.8in}}
 \hline
-Test Case ID & Description & Name Field & UPC Field & Expected Result\\
+Test Case ID & Name Field & UPC Field & Expected Result\\
 \hline
 \hline
-T19 & Basic Flow & Unchanged & Unchanged & The user is shown the item details page with the modified information\\
+T19 & Unchanged & Unchanged & The user is shown the item details page with the modified information\\
 \hline
-T20 & Basic Flow & Valid Change & Unchanged & The user is shown the item details page with the modified information\\
+T20 & Valid Change & Unchanged & The user is shown the item details page with the modified information\\
 \hline
-T21 & Basic Flow & Unchanged & Valid Change & The user is shown the item details page with the modified information\\
+T21 & Unchanged & Valid Change & The user is shown the item details page with the modified information\\
 \hline
-T22 & Basic Flow & Valid Change & Valid Change & The user is shown the item details page with the modified information\\
+T22 & Valid Change & Valid Change & The user is shown the item details page with the modified information\\
 \hline
-T23 & Basic Flow & Invalid Change & Unchanged & A pop-up with `Invalid Information' is shown\\
+T23 & Invalid Change & Unchanged & A pop-up with `Invalid Information' is shown\\
 \hline
-T24 & Basic Flow & Invalid Change & Valid Change & A pop-up with `Invalid Information' is shown\\
+T24 & Invalid Change & Valid Change & A pop-up with `Invalid Information' is shown\\
 \hline
-T25 & Basic Flow & Invalid Change & Invalid Change & A pop-up with `Invalid Information' is shown\\
+T25 & Invalid Change & Invalid Change & A pop-up with `Invalid Information' is shown\\
 \hline
-T26 & Basic Flow & Unchanged & Invalid Change & A pop-up with `Invalid Information' is shown\\
+T26 & Unchanged & Invalid Change & A pop-up with `Invalid Information' is shown\\
 \hline
-T27 & Basic Flow & Valid Change & Invalid Change & A pop-up with `Invalid Information' is shown\\
+T27 & Valid Change & Invalid Change & A pop-up with `Invalid Information' is shown\\
 \hline
 \end{tabular}\\
 ~\\
@@ -398,8 +386,6 @@ T27 &     &  X  \\
 \end{tabular}
 
 \subsection{Generate Inventory Report}
-\paragraph{Description}
-~\\ \\
 \textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.
 
 \paragraph{Scenario Matrix}~\\ \\
@@ -414,12 +400,12 @@ S16 & Basic \\
 ~\\
 ~\\
 \paragraph{Testing Matrix}~\\ \\
-\begin{tabular}{ p{1.0in}  p{2.1in}  p{2.2in} }
+\begin{tabular}{ p{0.8in}  p{2.2in} }
 \hline
-Test Case ID & Description & Expected Result\\
+Test Case ID & Expected Result\\
 \hline
 \hline
-T28 & Basic Flow & The report is displayed on the page\\
+T28 & The report is displayed on the page\\
 \hline
 \end{tabular}\\
 ~\\
