@@ -31,12 +31,609 @@
 \end{tabular}
 \clearpage
 \section{Executive Summary}
-\textbf{TODO:} \richard
+This milestone, the fourth of a series, documents the context for a software project proposed by the client, Tim Ekl.  The primary purpose of this document is to define and establish the coding standards and change control policies that will be maintained throughout the entirety of the development of the product.  In addition, this document will define the test cases that will be covered to assess the robustness of the use cases of the product.  The test cases include scenario matrices to explain the flow of events being tested, testing matrices in order to explain the special conditions for each scenario, and a test-case-to-scenario mapping to designate the test cases to specific scenarios.  This document inherits  the Use-Case-to-Feature Correspondence as well as the Use Cases from the second milestone, as well as the Needs, Features, and Feature-to-Need mappings from the first milestone, and is considered to be fully-developed--though not exempt from change--as an artifact for future software development.
 
 \section{Introduction}
-\textbf{TODO:} \richard
+This document is intended to extend the second milestone, which defined the use cases that satisfied the needs and features of the product, by describing the test cases that verify the functionality of the product.  The test cases will contain the scenarios, tests, and test-case-to-scenario mappings.  The scenarios will explain an expected path defined by the basic flow and alternative paths defined in the respective use case.  The tests will describe the characteristics of the relevant input fields or conditions and the expected outcome that will be enacted in response to such.  The test-case-to-scenario matrix describes the scope of the test cases over the scenarios described and help ensure completeness as well as traceability.\\
+~\\
+In addition, this document will define the coding standards to be used throughout the software implementation process as well as the policy for controlling change--both for software and artifacts.\\
+~\\
+Finally, this document inherits information from the second milestone:  Use-Case-to-Feature Correspondence and the Use Cases.  Furthermore, the information from this document is to be considered fully-developed--though not exempt from change--as an artifact for future software development.
 
-\section{Project Background}
+\section{User Environment}
+\begin{itemize}
+\item The client uses Chrome [9] whenever possible and prefers that development support Chrome [9] and Firefox [10] browsers.
+\item The final product should operate on a Linux server with standard programming languages, programming frameworks, and Apache[11].  Additional packages can be installed if necessary.
+\end{itemize}
+
+\section{User Needs}
+\begin{tabular}{ | p{0.15in} | p{4.0in} | p{.75in} |}
+\hline
+\textbf{ID} & \textbf{Need} & \textbf{Priority} \\
+\hline
+\hline
+N0 & Search for parts based off their attributes & Primary \\
+\hline
+N2 & Identify items via bar codes & Primary \\
+\hline
+N3 & Keep track of the data associated with an asset & Primary \\
+\hline
+N4 & Organize search results & Primary \\
+\hline
+N5 & Insert objects in the system at any point; do not freeze the database & Secondary \\
+\hline
+N6 & Modify objects; including adding notes to the objects & Secondary \\
+\hline
+N7 & Access from a second physical location & Optional \\
+\hline
+N8 & View most-recently acquired asset(s) & Optional \\
+\hline
+N9 & View a summary of inventory data & Optional \\
+\hline
+\end{tabular} \\
+\textbf{Legend:} \\
+Primary - Necessary to the system \\
+Secondary - Important to the system \\
+Optional - Would be nice to have in the system \\
+
+\section{Features}
+\subsection{Feature Listing}
+\begin{tabular}{ | p{0.15in} | p{2.0in} | p{0.5in} | p{0.5in} | p{0.5in} | p{0.6in} | p{0.5in} | p{0.65in} | }
+\hline
+\textbf{ID} & \textbf{Feature}\label{feature} & \textbf{Priority}\label{priority} & \textbf{Effort}\label{effort} & \textbf{Risk}\label{risk} & \textbf{Stability}\label{stability} & \textbf{Target Release}\label{target_release} & \textbf{Assigned To}\label{assigned_to} \\
+\hline
+\hline
+F0 & Online UI & Critical & High & High & Low & 1.0 & Eric \\
+\hline
+F2 & Add assets to the inventory & Critical & Low & High & Low & 1.0 & Richard \\
+\hline
+F3 & Modify assets in the inventory & Critical & Low & High & Low & 1.0 & Taylor \\
+\hline
+F4 & The system keeps track of attributes based on category & Critical & Low & High & Low & 1.0 & Susi \\
+\hline
+F5 & Use a UPC-A barcode as the unique identifier for each asset\label{upc} & Critical & Low & Medium & Low & 1.0 & Eric \\
+\hline
+F6 & Provide an updated list of recently-added assets & Useful & Medium & Low & Medium & 1.5 & Richard \\
+\hline
+F7 & Generate reports of asset inventory & Useful & High & Low & Medium & 2.0 & Taylor \\
+\hline
+F8 & Sort search results based off of barcode, title, and modified / created timestamp & Useful & High & Low & Low & 2.0 & Susi \\
+\hline
+F10 & Basic search for items based on name or UPC & Critical & High & High & Low & 1.0 & Eric \\
+\hline
+F11 & Advanced search for items based on all fields related to the item and its category & Critical & High & High & Low & 1.0 & Richard \\
+\hline
+F12 & Basic and Advanced searches allow the user to include wildcards in the query & Critical & High & High & Low & 1.0 & Taylor \\
+\hline
+F13 & Basic and Advanced searches will search first by exact / wildcard match, then by fuzzy match & Critical & High & High & Low & 1.0 & Susi \\
+\hline
+F14 & REST API & Critical & High & High & Low & 1.0 & Eric \\
+\hline
+\end{tabular}\label{rest}\\
+\textbf{Legend:} \\
+Critical - Highest importance \\
+Important - Medium importance \\
+Useful - Lowest importance \\
+High / Medium / Low - Degree of a category \\
+1.0 - First release of the system \\
+1.5 - Next release of the system with significant changes \\
+2.0 - Final release of the system \\
+~\\
+~\\
+\subsection{Feature-to-Need Correspondence}
+\begin{tabular}{ | c || c | c | c | c | c | c | c | c | c | c | }
+\hline
+    & N0 & N2 & N3 & N4 & N5 & N6 & N7 & N8 & N9 \\
+\hline
+\hline
+F0  &    &    &    &    &    &    & X  &    &    \\
+\hline
+F2  &    &    & X  &    & X  &    &    &    &    \\
+\hline
+F3  &    &    & X  &    &    & X  &    &    &    \\
+\hline
+F4  &    &    & X  &    & X  & X  &    &    &    \\
+\hline
+F5  & X  & X  & X  &    &    &    &    &    &    \\
+\hline
+F6  &    &    &    &    &    &    &    & X  &    \\
+\hline
+F7  &    &    &    &    &    &    &    &    & X  \\
+\hline
+F8  & X  & X  &    & X  &    &    &    &    &    \\
+\hline
+F10 & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F11 & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F12 & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F13 & X  & X  & X  & X  &    &    &    &    &    \\
+\hline
+F14 &    &    &    &    &    &    & X  &    &    \\
+\hline
+\end{tabular}
+
+\section{Client Background}
+Tim Ekl is a Rose-Hulman graduate student who possesses a significant amount of computer hardware.  He plans on using this system to be able to quickly and easily locate the equipment he wants to use.  Tim is an experienced developer and plans on maintaining the system after it is finished.  
+
+\section{Current System}
+The client does not have a software solution in place.  Currently, Tim has a primitive categorization system in place which involves labeling boxes and then trying to deduce the location of a desired component.  The current system poses a few issues such as not always allowing him to find his items, i.e. there have been instances where an item was found after capital was spent to replace it.
+
+\section{Use Case-to-Feature Correspondence}
+\begin{tabular}{ | c || c | c | c | c | c | c | c | c | c | c | c | c | c | c | }
+\hline
+    & F0 & F2 & F3 & F4 & F5 & F6 & F7 & F8 & F10 & F11 & F12 & F13 & F14 \\
+\hline
+\hline
+UC1  &  X &  X &    &  X &  X &  X &    &    &    &    &    &    &    \\
+\hline
+UC2  &  X &    &    &    &  X &    &    &  X &  X &    &  X &  X &    \\
+\hline
+UC3  &  X &    &    &  X &  X &    &    &  X &    &  X &  X &  X &    \\
+\hline
+UC4  &  X &    &    &  X &  X &    &    &  X &    &    &    &    &    \\
+\hline
+UC5  &  X &    &    &  X &  X &    &    &    &    &    &    &    &    \\
+\hline
+UC6  &  X &    &  X &  X &  X &  X &    &    &    &    &    &    &    \\
+\hline
+UC7  &  X &    &    &  X &  X &    &  X &    &    &    &    &    &    \\
+\hline
+\end{tabular}\\ \\
+NOTE: F14 (REST API feature) is not mapped to a use case because it is not a visible user feature, but still serves as a function if there is an application that attempts to access the system.
+
+\section{Use Cases}
+\label{use_case}
+
+\paragraph{Use case syntax}
+~\\
+Each use case is divided into 8 sections:
+\begin{itemize}
+\item A ``Basic Description'' section which gives an overview of what functionality the use case demonstrates.
+\item An ``Actors'' section to describe who or what interacts with the system in the use case.
+\item A ``Pre-conditions'' section which contains the assumptions made, especially those pertaining to the state of the system, prior to the start of the use case.\label{pre_cond}
+\item A ``Basic Flow of Events'' section which details the order of events done by the actor(s) and the system under standard conditions. If a particular step in the basic flow has the possibility of failing to occur successfully, one or more alternative flow listings are presented in brackets following the possibility of failure. Each alternative flow listing matches to an alternative flow in the ``Alternative Flow'' section. If a basic flow step fails, the alternative flow that is listed with it is followed as the next step.
+\item An ``Alternative Flow of Events'' section which holds each alternative flow listed in the basic flow. Each alternative flow has a unique identifier used to reference it, a short name describing the condition that would cause the alternative flow to be followed, and the order of actions performed by the actor(s) and the system under the flow's conditions. If an action has the possibility of failing, alternatives to that flow are presented just as they are in the basic flow with a reference to the alternative flow to take.
+\item A ``Post-conditions'' section which contains guarantees on the result of the use case.\label{post_cond}
+\item An ``Extension Points'' section which contains references to other use cases which the completion of the current use case might lead into.
+\end{itemize}
+
+\subsection{Add an Item}
+
+\paragraph{Brief Description}
+This use case shows the procedure for adding an item to the inventory.
+
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must have a link to the ``Add Item'' page.
+\end{itemize}
+
+\paragraph{Basic Flow of Events}
+\begin{enumerate}
+\item The user clicks the ``Add Item'' link. [A0]
+\item The user fills in the required fields (UPC and Name). [A1]
+\item The system dynamically adds the optional attribute fields for the category chosen.
+\item The user fills in the appropriate optional attributes and ``Notes'' fields.
+\item The user clicks the ``Add Item'' button. [A2]
+\item The system adds the item to the inventory database.
+\end{enumerate}
+
+\paragraph{Alternative Flows of Events}
+
+\subparagraph{Alternative Flow A0: Server is Down}
+\begin{enumerate}
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+\subparagraph{Alternative Flow A1: Required Fields Ommitted}
+\begin{enumerate}
+\item The user does not fill in the required title or UPC fields.
+\item Steps 3, 4, and 5 from the basic flow.
+\item The server notifies the user that the required fields were not completed.
+\end{enumerate}
+\subparagraph{Alternative Flow A2: UPC not Unique}
+\begin{enumerate}
+\item The system notifies the user that the item cannot be added because the UPC is not unique.
+\end{enumerate}
+
+\paragraph{Post-conditions}
+\begin{itemize}
+\item The user is brought to the home page.
+\item The added item is displayed under the ``Recent Changes'' list.
+\end{itemize}
+
+\paragraph{Extension Points}
+None
+
+\subsection{Basic Search for an Item}
+
+\paragraph{Brief Description}
+This use case shows how a basic search from any page  would proceed. This case will encompass the progression from the user entering the search term to the display of the search result(s).
+
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must have a basic search box.
+\end{itemize}
+
+\paragraph{Basic Flow of Events}
+\begin{enumerate}
+\item The user types a query in the search box.
+\item The user clicks the search button.
+\item The browser sends a request to the server. [A0]
+\item The server queries the database for items entered into the system that match the query. [A1]
+\item The server responds with all of the formatted and sorted results of the database query on the same page. [A2]
+\item The user is directed to the Advanced Search page with the results of the basic search displayed at the bottom.
+\end{enumerate}
+
+\paragraph{Alternative Flows of Events}
+
+\subparagraph{Alternative Flow A0: Empty Query}
+\begin{enumerate}
+\item The user remains on the current page.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A1: Server is Down}
+\begin{enumerate}
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A2: No Matches}
+\begin{enumerate}
+\item The server responds with the message ``No results.''
+\item The results page displays the message returned by the server.
+\end{enumerate}
+
+\paragraph{Post-conditions}
+\begin{itemize}
+\item The results page will display the response from the server or that the server was unreachable.
+\item The search box will preserve the search term that was originally entered.
+\item The results will be prioritized and sorted according to exact matching, then fuzzy matching.
+\item The results will be matched using wildcards if they are present in the query.  This will replace the exact matching, and fuzzy matching will then be done on the query with the wildcard characters removed.
+\end{itemize}
+
+\paragraph{Extension Points}
+\begin{itemize}
+\item 5.4 Search Result Sorting
+\item 5.5 View Details of an Item
+\end{itemize}
+
+
+\subsection{Advanced Search for an Item}
+
+\paragraph{Brief Description}
+This use case shows how a search from the advanced search page  would proceed. This case will encompass the progression from the user entering the search term to the display of the search result(s).
+
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must be the advanced search page.
+\end{itemize}
+
+\paragraph{Basic Flow of Events}
+\begin{enumerate}
+\item The user chooses a category from a dropdown menu. [A0]
+\item The category selection is sent to the server.
+\item The server responds with the attribute fields related to the category. [A1]
+\item The category's attribute fields are dynamically added to the page.
+\item The user optionally fills in the attribute, name, and UPC fields appropriately.
+\item The user clicks the search button.
+\item The browser sends a request to the server.
+\item The server queries the database for items entered into the system that match the query. [A1]
+\item The server responds with the formatted and sorted results of the database query. [A3]
+\item The list of candidates for the search parameter(s) provided is dynamically added to the bottom part of the page.
+\end{enumerate}
+
+\paragraph{Alternative Flow of Events}
+
+\subparagraph{Alternative Flow A0: No Category}
+\begin{enumerate}
+\item The user fills in the name and/or UPC.
+\item Return to basic flow step 6.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A1: Server is Down}
+\begin{enumerate}
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A2: Empty Query}
+\begin{enumerate}
+\item The user remains on the current page.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A3: No Matches}
+\begin{enumerate}
+\item The server responds with the message ``No results.''
+\item The results page displays the message returned by the server.
+\end{enumerate}
+
+\paragraph{Post-conditions}
+\begin{itemize}
+\item The results page will display the results of the search.
+\item The search fields will preserve the search parameter(s) that were originally entered.
+\item If appropriate, the results will be prioritized and sorted according to exact matching, then fuzzy matching.
+\item The results will be matched using wildcards if they are present in the query.  This will replace the exact matching, and fuzzy matching will then be done on the query with the wildcard characters removed.
+\item If completed, the category field will only use exact matching.
+\end{itemize}
+
+\paragraph{Extension Points}
+\begin{itemize}
+\item 5.4 Search Result Sorting
+\item 5.5 View Details of an Item
+\end{itemize}
+
+
+\subsection{Search Result Sorting}
+
+\paragraph{Brief Description}
+This use case shows how changing the sorting of the items on the search results page would proceed. This case will encompass the progression from the user clicking the sort type link to the display of the search result(s) in the new order.
+
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must be the search results page.
+\end{itemize}
+
+\paragraph{Basic Flow of Events}
+\begin{enumerate}
+\item The user clicks on a sort type link (options are Name, UPC, Recently Created, and Recently Modified).
+\item The browser sends a request to the server.
+\item The server queries the database for items entered into the system that match the query. [A0]
+\item The server responds with the formatted and sorted results of the database query. [A1]
+\item The screen displays to the user a list of candidates for the search parameter(s) provided.
+\end{enumerate}
+
+\paragraph{Alternative Flow of Events}
+
+\subparagraph{Alternative Flow A0: Server is Down}
+\begin{enumerate}
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A1: No Matches}
+\begin{enumerate}
+\item The server responds with the message ``No results.''
+\item The results page displays the message returned by the server.
+\end{enumerate}
+
+\paragraph{Post-conditions}
+\begin{itemize}
+\item The results page will display the results of the search.
+\item The search field(s) will preserve the search parameter(s) that were originally entered.
+\item The search fields will be sorted by match method first (wildcard, exact, or fuzzy), then by the selected sort type.
+\end{itemize}
+
+\paragraph{Extension Points}
+\begin{itemize}
+\item 5.5 View Details of an Item
+\end{itemize}
+
+
+\subsection{View Details of an Item}
+\paragraph{Brief Description}
+This use case shows how a user would select an item from a list to view more detailed information about it.
+
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must have a link to the item which the user would like to view, as might happen in search results list or the recently modified items list.
+\end{itemize}
+
+\paragraph{Basic Flow of Events}
+\begin{enumerate}
+\item The user clicks on an item (in search results, the recent changes list, or any other place with items listed).
+\item The browser queries the server for the item using the UPC code to specify the item.
+\item The server responds with all the data stored about the item. [A0]
+\item The browser takes the user to a new page with all the data about the item that the server sent.  It is displayed in elements labeled with ``Category:'', ``Size:'', etc. [A1]
+\end{enumerate}
+
+\paragraph{Alternative Flow of Events}
+
+\subparagraph{Alternative Flow A0: Server is Down}
+\begin{enumerate}
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A1: Item not Found}
+\begin{enumerate}
+\item The page displays a message saying that the item could not be found.
+\end{enumerate}
+
+\paragraph{Post-conditions}
+\begin{itemize}
+\item The page will display all data about the item that the system currently has logged for the item
+\end{itemize}
+
+\paragraph{Extension Points}
+\begin{itemize}
+\item 5.6 Edit Details of an Item
+\end{itemize}
+
+\subsection{Edit Details of an Item}
+
+\paragraph{Brief Description}
+This use case shows how a user would modify an item that already exists in the server and save the edited/new field information for future viewing.
+
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must be an item's detailed description page.
+\end{itemize}
+
+\paragraph{Basic Flow of Events}
+NOTE: The required fields cannot be unset after creation of the item.  This means that required fields may be changed to any valid and non-empty values.
+\begin{enumerate}
+\item The user clicks on the value of a field.
+\item The page replaces the element with a text field containing the text that was in the element.
+\item The user makes the desired changes to the value.
+\item The user clicks outside of the field.
+\item The browser sends a request to the server asking the value to be changed in the database.
+\item The server changes the value in the database. [A0, A1]
+\item The server responds that the value was changed.
+\item The page changes the text field back into a div element that contains the updated value of the field.
+\end{enumerate}
+
+\paragraph{Alternative Flow of Events}
+
+\subparagraph{Alternative Flow A0: Server is Down}
+\begin{enumerate}
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+
+\subparagraph{Alternative Flow A1: Change Unsuccessful}
+NOTE: This can happen when the database encounters an error or is not online.
+\begin{enumerate}
+\item The server responds that the value could not be changed.
+\item The page notifies the user that the value could not be changed.
+\item The user presses ``Ok'' in the message dialog.
+\item The text field is focused again.
+\end{enumerate}
+
+\paragraph{Post-conditions}
+\begin{itemize}
+\item The data on the page will represent the updated state of the data in the system.
+\end{itemize}
+
+\paragraph{Extension Points}
+None
+
+\subsection{Generate Inventory Report}
+
+\paragraph{Brief Description}
+This use case shows the procedure for generating reports of the item inventory.
+
+\paragraph{Actors}
+\begin{itemize}
+\item User
+\end{itemize}
+
+\paragraph{Pre-conditions}
+\begin{itemize}
+\item The current page must have a link to the ``Generate Report'' page.
+\end{itemize}
+
+\paragraph{Basic Flow of Events}
+\begin{enumerate}
+\item The user clicks the ``Generate Report'' link. [A0]
+\item The user is brought to the ``Generate Report'' page.
+\item The user chooses the type of report to generate.
+\item The user chooses appropriate report fields for the respective option (the options are defined as Master or Category, which will be elaborated on near the completion).
+\item The system generates the report accordingly.
+\end{enumerate}
+
+\paragraph{Alternative Flows of Events}
+
+\subparagraph{Alternative Flow A0: Server is Down}
+\begin{enumerate}
+\item The user is notified that the server could not be reached.
+\end{enumerate}
+
+\paragraph{Post-conditions}
+\begin{itemize}
+\item After basic step 5, the user is displayed the report which is generated as specified.
+\end{itemize}
+
+\paragraph{Extension Points}
+None
+
+
+\section{Usability Requirements}
+\label{usability}
+\textbf{NOTE}: The client will judge the usability of the program
+\begin{itemize}
+\item User should be able to familiarize himself or herself with the software within one hour
+\item An online help system / documentation will not be required
+\end{itemize}
+
+\section{Performance Requirements}
+\label{performance}
+NOTE: Any times described in the Performance Requirements are based on the client's machine specifications, which are: Pentium 4 2.8GHz processor with 1.5GB memory.
+\begin{itemize}
+\item Searches should take no longer than three seconds
+\item There should be no noticeable (as judged by the client) difference in search performance (the most complex task) between 10 items and 1000 items
+\item There is no tolerance for any system degradation: the system is either fully functional or not functional at all, and there is no need to handle failures.\label{degrad_sys}
+\end{itemize}
+
+\section{Reliability Requirements}
+\label{reliability}
+\begin{itemize}
+\item The system should not be down more than once every two months
+\item The system repair will be the responsibility of the client after the product is delivered
+\item The system must have no data corruption (100\% accuracy)\label{data_corruption}
+\item The system will have no more than two bugs per thousand lines of code\label{bug}
+\item The system should minimize the number of critical bugs, though there is no defined threshold
+\end{itemize}
+
+\section{Supportability Requirements}
+\label{support}
+\begin{itemize}
+\item The system should be able to be supported by open source community and the client
+\item The source code needs to be kept clean and easy to understand
+\item The source code will follow Ruby coding standards and naming conventions
+\item The client should be able to extend the system with features of moderate complexity within four hours; this is an intended effect from following the Ruby coding standards
+\item The source code should be as modular as possible in order to simplify extension
+\item Adding / modifying an API route should as difficult as adding / modifying a web application feature of equal complexity
+\end{itemize}
+
+\section{Hardware and Software Interfaces}
+\label{interface}
+The final product will utilize and / or be compatible with the following software products:\\
+\begin{itemize}
+\item Ruby 1.9.2 [2]
+\item Sinatra 1.3.0 [3]
+\item Ubuntu 11.04 [4]
+\item SQLite 3.7.8 [5]
+\item Cucumber 1.1.0 [6]
+\item RSpec 2.6.0 [7]
+\item DataMapper 1.1.0 [8]
+\item Google Chrome 14.0.8 [9]
+\item Firefox 7.0.1 [10]
+\item Apache 2.2 [11]
+\end{itemize}
+
+\section{Documentation, Installation, Legal, and Licensing Requirements}
+\begin{itemize}
+\item The project should be open source, distributed under the BSD license
+\item Copyright ownership will be given to the client
+\item Installation should only require installing the necessary packages and pulling the code from the Git repository into the web server directory
+\item The only documentation necessary is a simple readme as well as comments near complex sections of code
+\end{itemize}
+
+\section{Design Constraints}
+\begin{itemize}
+\item The project must be open source
+\item The project must be completed within five months
+\item The project must be completed without funding from the client
+\item The project must utilize REST, not SOAP\label{soap}
+\item Develop in Ruby utilizing Sinatra for web framework
+\item Accessible via the web.
+\end{itemize}
 
 \section{Coding Standards}
 \begin{itemize}
@@ -61,15 +658,16 @@ If the client wishes to change the code, he will notify the team at a meeting.  
 \item The source will be kept in a public repository on GitHub[13]
 \end{itemize}
 
-\section{Test Cases}
+\section{Test Cases}'
+\label{test_case}
 
 \subsection{Add an Item}
-\textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.
+\textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.\label{flow}
 
 \paragraph{Scenario Matrix}~\\ \\
 \begin{tabular}{ c  c  c  c }
 \hline
-Scenario ID & Originating Flow & Alternate Flow & Next Alternate\\
+Scenario ID & Originating Flow & Alternate Flow & Next Alternate\label{scenario}\\
 \hline
 \hline
 S0 & Basic &  & \\
@@ -125,7 +723,7 @@ T5 &    &    &    & X  \\
 \end{tabular}
 
 \subsection{Basic Search for an Item}
-\textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.
+\textbf{NOTE:} Alternate Flow A1 will not be tested, since the server going offline is not an attribute of the system that can be measured.
 
 \paragraph{Scenario Matrix}~\\ \\
 \begin{tabular}{ c  c  c }
@@ -135,7 +733,7 @@ Scenario ID & Originating Flow & Alternate Flow\\
 \hline
 S4 & Basic &  \\
 \hline
-S5 & Basic & A1 \\
+S5 & Basic & A0 \\
 \hline
 S6 & Basic & A2 \\
 \hline
@@ -173,7 +771,7 @@ T8 &    &    & X  \\
 
 
 \subsection{Advanced Search for an Item}
-\textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.
+\textbf{NOTE:} Alternate Flow A1 will not be tested, since the server going offline is not an attribute of the system that can be measured.
 
 \paragraph{Scenario Matrix}~\\ \\
 \begin{tabular}{ c  c  c  c }
@@ -183,11 +781,11 @@ Scenario ID & Originating Flow & Alternate Flow & Next Alternate \\
 \hline
 S7 & Basic &  & \\
 \hline
-S8 & Basic & A1 & \\
+S8 & Basic & A0 & \\
 \hline
-S9 & Basic & A1 & A2 \\
+S9 & Basic & A0 & A2 \\
 \hline
-S10 & Basic & A1 & A3 \\
+S10 & Basic & A0 & A3 \\
 \hline
 S11 & Basic & A3 &  \\
 \hline
@@ -416,7 +1014,33 @@ T28 &  X  \\
 
 \end{tabular}
 \section{Index and Glossary}
-\textbf{TODO:} \taylor
+\textbf{Assigned to}: Developer ultimately responsible for the implementation of a feature (\pageref{feature}).\\ \\
+\textbf{Bug}: An error in a computer program. A critical bug is a bug that strongly affects important parts of a system (\pageref{bug}).\\ \\
+\textbf{Data corruption}: Errors in data that introduce unintended changes to the data (\pageref{data_corruption}).\\ \\
+\textbf{Degraded system}: The system becomes degraded if there are too many queries performed too quickly or if the amount of data needing to be searched through becomes too large. When the system is degraded, it may result in the system ceasing to function and requiring a reboot (\pageref{degrad_sys}).\\ \\
+\textbf{Effort}: Expectation of the resources and time consumed for a feature (\pageref{feature}).\\ \\
+\textbf{Exact Matching}: Valid search candidates are determined by strict equality with the search input(s) (\pageref{feature}).\\ \\
+\textbf{Feature}: A system capability that fulfills a user need (\pageref{feature}).\\ \\
+\textbf{Flow}: A particular series of ordered steps through a sequence of events in a use case (\pageref{flow}).\\ \\
+\textbf{Fuzzy Matching}: Valid search candidates are determined based on similarity to the original search input(s) (\pageref{feature}).\\ \\
+\textbf{Interface}: A point of interaction between systems, whether hardware or software, that allows the systems to communicate using some protocol (\pageref{interface}).\\ \\
+\textbf{Performance}: The speed and efficiency of an operation, program, or system at a set of tasks (\pageref{performance}).\\ \\
+\textbf{Post-condition}: An expectation of the system's state after the events in a use case occur (\pageref{post_cond}).\\ \\
+\textbf{Pre-condition}: An assumption about the state of a system before a use case's events are followed (\pageref{pre_cond}).\\ \\
+\textbf{Priority}: Description of how essential a feature is to the project (\pageref{feature}).\\ \\
+\textbf{Reliability}: The ability of a system to function in a range of conditions for a period of time without failing to perform its tasks (\pageref{reliability}).\\ \\
+\textbf{REST}: Stands for ``Representational state transfer;'' is a style software architecture often used in servers for simplicity and scalability. Amongst other aspects of REST, it is stateless. This means each request sent from the client of the server that uses REST to the server does not require any information from any previous requests. All information required to fulfill the request must be sent with the request (\pageref{rest}).\\ \\
+\textbf{Risk}: Probability that a feature will instigate delays in the project (\pageref{feature}).\\ \\
+\textbf{Scenario}: A possible permutation of a set of flows that lead from one flow to another (\pageref{scenario}).\\ \\
+\textbf{SOAP}: Stands for ``Simple Object Access Protocol;'' is a protocol for exchanging structured information across a network (\pageref{soap}).\\ \\
+\textbf{Stability}: Likelihood that the understanding of a feature will change (\pageref{feature}).\\ \\
+\textbf{Supportability}: The ease with which a system can be fixed should it become broken or out of order (\pageref{support}).\\ \\
+\textbf{Target Release}: Expected release iteration of a testable feature (\pageref{feature}).\\ \\
+\textbf{Test Case}: Specifies what the expected result of a series of actions will have in a system (\pageref{test_case}).\\ \\
+\textbf{Universal Product Code (UPC)}: a specific kind of barcode assign uniquely to each item in the server (\pageref{upc}).\\ \\
+\textbf{Use case}: A description of the steps performed by a user and system that leads the user towards a useful outcome (\pageref{use_case}).\\ \\
+\textbf{Usability}: The ease with which one may use or learn to use a system (\pageref{usability}).\\ \\
+\textbf{Wildcard Matching}: Valid search candidates are determined based on adherence to the user's given search pattern (\pageref{feature}).\\ \\
 
 \section{References}
 \hangindent=1.4cm
