@@ -74,8 +74,7 @@ N9 & View a summary of inventory data & Optional \\
 \textbf{Legend:} \\
 Primary - Necessary to the system \\
 Secondary - Important to the system \\
-Optional - Would be nice to have in the system \\
-
+Optional - Would be nice to have in the system
 \section{Features}
 \subsection{Feature Listing}
 \begin{tabular}{ | p{0.15in} | p{2.0in} | p{0.5in} | p{0.5in} | p{0.5in} | p{0.6in} | p{0.5in} | p{0.65in} | }
@@ -109,7 +108,7 @@ F13 & Basic and Advanced searches will search first by exact / wildcard match, t
 \hline
 F14 & REST API & Critical & High & High & Low & 1.0 & Eric \\
 \hline
-\end{tabular}\label{rest}\\
+\end{tabular}\label{rest}\\ \\ \\
 \textbf{Legend:} \\
 Critical - Highest importance \\
 Important - Medium importance \\
@@ -562,85 +561,12 @@ This use case shows the procedure for generating reports of the item inventory.
 \paragraph{Extension Points}
 None
 
-
-\section{Usability Requirements}
-\label{usability}
-\textbf{NOTE}: The client will judge the usability of the program
-\begin{itemize}
-\item User should be able to familiarize himself or herself with the software within one hour
-\item An online help system / documentation will not be required
-\end{itemize}
-
-\section{Performance Requirements}
-\label{performance}
-NOTE: Any times described in the Performance Requirements are based on the client's machine specifications, which are: Pentium 4 2.8GHz processor with 1.5GB memory.
-\begin{itemize}
-\item Searches should take no longer than three seconds
-\item There should be no noticeable (as judged by the client) difference in search performance (the most complex task) between 10 items and 1000 items
-\item There is no tolerance for any system degradation: the system is either fully functional or not functional at all, and there is no need to handle failures.\label{degrad_sys}
-\end{itemize}
-
-\section{Reliability Requirements}
-\label{reliability}
-\begin{itemize}
-\item The system should not be down more than once every two months
-\item The system repair will be the responsibility of the client after the product is delivered
-\item The system must have no data corruption (100\% accuracy)\label{data_corruption}
-\item The system will have no more than two bugs per thousand lines of code\label{bug}
-\item The system should minimize the number of critical bugs, though there is no defined threshold
-\end{itemize}
-
-\section{Supportability Requirements}
-\label{support}
-\begin{itemize}
-\item The system should be able to be supported by open source community and the client
-\item The source code needs to be kept clean and easy to understand
-\item The source code will follow Ruby coding standards and naming conventions
-\item The client should be able to extend the system with features of moderate complexity within four hours; this is an intended effect from following the Ruby coding standards
-\item The source code should be as modular as possible in order to simplify extension
-\item Adding / modifying an API route should as difficult as adding / modifying a web application feature of equal complexity
-\end{itemize}
-
-\section{Hardware and Software Interfaces}
-\label{interface}
-The final product will utilize and / or be compatible with the following software products:\\
-\begin{itemize}
-\item Ruby 1.9.2 [2]
-\item Sinatra 1.3.0 [3]
-\item Ubuntu 11.04 [4]
-\item SQLite 3.7.8 [5]
-\item Cucumber 1.1.0 [6]
-\item RSpec 2.6.0 [7]
-\item DataMapper 1.1.0 [8]
-\item Google Chrome 14.0.8 [9]
-\item Firefox 7.0.1 [10]
-\item Apache 2.2 [11]
-\end{itemize}
-
-\section{Documentation, Installation, Legal, and Licensing Requirements}
-\begin{itemize}
-\item The project should be open source, distributed under the BSD license
-\item Copyright ownership will be given to the client
-\item Installation should only require installing the necessary packages and pulling the code from the Git repository into the web server directory
-\item The only documentation necessary is a simple readme as well as comments near complex sections of code
-\end{itemize}
-
-\section{Design Constraints}
-\begin{itemize}
-\item The project must be open source
-\item The project must be completed within five months
-\item The project must be completed without funding from the client
-\item The project must utilize REST, not SOAP\label{soap}
-\item Develop in Ruby utilizing Sinatra for web framework
-\item Accessible via the web.
-\end{itemize}
-
 \section{Coding Standards}
 \begin{itemize}
 \item The code will use spaces, not tabs, to indent blocks
 \item The code will use indentation increments of two spaces
 \item The code will use underscores to separate words in variable names
-\item The code will follow any other Ruby[2] coding standards
+\item The code will follow any other Ruby coding standards[14]
 \item The folder structure for the product will be similar to that of the GasTracker project, a folder structure the client is familiar with
 \end{itemize}
 
@@ -658,8 +584,16 @@ If the client wishes to change the code, he will notify the team at a meeting.  
 \item The source will be kept in a public repository on GitHub[13]
 \end{itemize}
 
-\section{Test Cases}'
+\section{Test Cases}
 \label{test_case}
+
+\paragraph{Test Case Syntax}
+Each test case is divided into three sections:
+\begin{itemize}
+\item A ``Scenario Matrix'' section which describes each possible combination of flows (both basic and alternative) of a use case.
+\item A ``Testing Matrix'' section which identifies distinct test cases defined by what conditions must be present in order to enact an expected result in response to the situation.
+\item A ``Test Case to Scenario Matrix'' section which shows the correspondence between scenarios and test cases in order to help ensure completeness and traceability.
+
 
 \subsection{Add an Item}
 \textbf{NOTE:} Alternate Flow A0 will not be tested, since the server going offline is not an attribute of the system that can be measured.\label{flow}
@@ -702,10 +636,10 @@ T5 & Absent & Non-unique & The user is notified that a required field was omitte
 \end{tabular}\\
 ~\\
 ~\\
-Present - \\
-Absent - \\
-Unique - \\
-Non-unique - 
+Present - a non-empty input\\
+Absent - an empty input\\
+Unique - a UPC code that is exclusive to the item\\
+Non-unique - a UPC code that is no exclusive to the item
 \paragraph{Test Case to Scenario Matrix}~\\ \\
 \begin{tabular}{ | c || c | c | c | c | }
 \hline
@@ -759,8 +693,8 @@ T8 & Present & Absent & The text ``No results'' is displayed on the page\\
 \end{tabular}\\
 ~\\
 ~\\
-Present - \\
-Absent - 
+Present - a non-empty input\\
+Absent - an empty input
 \paragraph{Test Case to Scenario Matrix}~\\ \\
 \begin{tabular}{ | c || c | c | c | }
 \hline
@@ -817,8 +751,8 @@ T13 & Present &  & Absent & The text ``No results'' is displayed on the page\\
 \end{tabular}\\
 ~\\
 ~\\
-Present - \\
-Absent - 
+Present - a non-empty input\\
+Absent - an empty input
 \paragraph{Test Case to Scenario Matrix}~\\ \\
 \begin{tabular}{ | c || c | c | c | c | c | }
 \hline
@@ -867,10 +801,10 @@ T17 & Recently Modified & The search results are sorted by the Recently Modified
 \end{tabular}\\
 ~\\
 ~\\
-Name - \\
-UPC - \\
-Recently Created - \\
-Recently Modified - 
+Name - a required field that serves as a label; sorting for this field is alphanumeric (ascending or descending)\\
+UPC - a required field that serves as an unique identifier; sorting for this field is numeric (ascending or descending)\\
+Recently Created - an automatically generated field that denotes the timestamp of when an item was added; sorting for this field is based on date and time (ascending or descending)\\
+Recently Modified - an automatically generated field that denotes the timestamp of when an item was added or changed; sorting for this field is based on date and time (ascending or descending)
 \paragraph{Test Case to Scenario Matrix}~\\ \\
 \begin{tabular}{ | c || c | }
 \hline
@@ -964,9 +898,11 @@ T27 & Valid Change & Invalid Change & A pop-up with `Invalid Information' is sho
 \end{tabular}\\
 ~\\
 ~\\
-Unchanged - \\
-Valid Change - \\
-Invalid Change - 
+Unchanged - the field was not modified\\
+Valid Change (relative to Name Field) - the field was modified to be non-empty\\
+Valid Change (relative to UPC Field) - the field was modified to be non-empty and unique\\
+Invalid Change (relative to Name Field) - the field was modified to be empty\\
+Invalid Change (relative to UPC Field) - the field was modified to be empty or non-unique
 \paragraph{Test Case to Scenario Matrix}~\\ \\
 \begin{tabular}{ | c || c | c | }
 \hline
@@ -1030,31 +966,22 @@ T28 &  X  \\
 \end{tabular}
 \section{Index and Glossary}
 \textbf{Assigned to}: Developer ultimately responsible for the implementation of a feature (\pageref{feature}).\\ \\
-\textbf{Bug}: An error in a computer program. A critical bug is a bug that strongly affects important parts of a system (\pageref{bug}).\\ \\
-\textbf{Data corruption}: Errors in data that introduce unintended changes to the data (\pageref{data_corruption}).\\ \\
-\textbf{Degraded system}: The system becomes degraded if there are too many queries performed too quickly or if the amount of data needing to be searched through becomes too large. When the system is degraded, it may result in the system ceasing to function and requiring a reboot (\pageref{degrad_sys}).\\ \\
 \textbf{Effort}: Expectation of the resources and time consumed for a feature (\pageref{feature}).\\ \\
 \textbf{Exact Matching}: Valid search candidates are determined by strict equality with the search input(s) (\pageref{feature}).\\ \\
 \textbf{Feature}: A system capability that fulfills a user need (\pageref{feature}).\\ \\
 \textbf{Flow}: A particular series of ordered steps through a sequence of events in a use case (\pageref{flow}).\\ \\
 \textbf{Fuzzy Matching}: Valid search candidates are determined based on similarity to the original search input(s) (\pageref{feature}).\\ \\
-\textbf{Interface}: A point of interaction between systems, whether hardware or software, that allows the systems to communicate using some protocol (\pageref{interface}).\\ \\
-\textbf{Performance}: The speed and efficiency of an operation, program, or system at a set of tasks (\pageref{performance}).\\ \\
 \textbf{Post-condition}: An expectation of the system's state after the events in a use case occur (\pageref{post_cond}).\\ \\
 \textbf{Pre-condition}: An assumption about the state of a system before a use case's events are followed (\pageref{pre_cond}).\\ \\
 \textbf{Priority}: Description of how essential a feature is to the project (\pageref{feature}).\\ \\
-\textbf{Reliability}: The ability of a system to function in a range of conditions for a period of time without failing to perform its tasks (\pageref{reliability}).\\ \\
 \textbf{REST}: Stands for ``Representational state transfer;'' is a style software architecture often used in servers for simplicity and scalability. Amongst other aspects of REST, it is stateless. This means each request sent from the client of the server that uses REST to the server does not require any information from any previous requests. All information required to fulfill the request must be sent with the request (\pageref{rest}).\\ \\
 \textbf{Risk}: Probability that a feature will instigate delays in the project (\pageref{feature}).\\ \\
 \textbf{Scenario}: A possible permutation of a set of flows that lead from one flow to another (\pageref{scenario}).\\ \\
-\textbf{SOAP}: Stands for ``Simple Object Access Protocol;'' is a protocol for exchanging structured information across a network (\pageref{soap}).\\ \\
 \textbf{Stability}: Likelihood that the understanding of a feature will change (\pageref{feature}).\\ \\
-\textbf{Supportability}: The ease with which a system can be fixed should it become broken or out of order (\pageref{support}).\\ \\
 \textbf{Target Release}: Expected release iteration of a testable feature (\pageref{feature}).\\ \\
 \textbf{Test Case}: Specifies what the expected result of a series of actions will have in a system (\pageref{test_case}).\\ \\
 \textbf{Universal Product Code (UPC)}: a specific kind of barcode assign uniquely to each item in the server (\pageref{upc}).\\ \\
 \textbf{Use case}: A description of the steps performed by a user and system that leads the user towards a useful outcome (\pageref{use_case}).\\ \\
-\textbf{Usability}: The ease with which one may use or learn to use a system (\pageref{usability}).\\ \\
 \textbf{Wildcard Matching}: Valid search candidates are determined based on adherence to the user's given search pattern (\pageref{feature}).\\ \\
 
 \section{References}
@@ -1112,5 +1039,8 @@ Addison-Wesley, Boston,
 \noindent\hangindent=1.4cm
 \textbf{(13)} ``GitHub''
 \emph{GitHub - Social Coding.} GitHub, Inc. Web. 28 October 2011.\\
+
+\noindent\hangindent=1.4cm
+\textbf{(14)} ``The Unofficial Ruby Usage Guide'' \emph{The Unofficial Ruby Usage Guide.} Caliban. 28 October 2011.\\
 
 \end{document}
