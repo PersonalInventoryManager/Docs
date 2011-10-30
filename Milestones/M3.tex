@@ -44,7 +44,7 @@
 \clearpage
 
 \section{Executive Summary}
-This milestone, the third of a series, documents the context for a software project proposed by the client, Tim Ekl.  Primarily, this document defines and describers the non-functional requirements such as usability, performance, reliability, supportability, hardware / software interfaces, documentation / installation / legal / licensing, and design constraints requirements.  All of  these requirements are necessary to document since their effects are unobvious in the use cases defined in the second milestone.  In addition, this document contains the user interfaces for a variety of situations in order to provide a better way to enforce the usability requirements prescribed by the client.  This document inherits information from the features, needs, and constraints found in the first milestone and will contribute towards the usability report and the interface designs of the fifth and final milestone.\label{interface}
+This milestone, the third of a series, documents the context for a software project proposed by the client, Tim Ekl.  Primarily, this document defines and describers the non-functional requirements such as usability, performance, reliability, supportability, hardware / software interfaces, documentation / installation / legal / licensing, and design constraints requirements.  All of  these requirements need to be documented since their effects are unobvious in the use cases defined in the second milestone.  In addition, this document contains the user interfaces for a variety of situations in order to provide a better way to enforce the usability requirements prescribed by the client.  This document inherits information from the features, needs, and constraints found in the first milestone and will contribute towards the usability report and the interface designs of the fifth and final milestone.\label{interface}
 
 \section{Introduction}
 This document is intended to augment the second milestone, which defined the use cases that satisfied the needs and features of the product, by explaining and elaborating on the nonfunctional requirements and features since use cases focus on user experience.  In addition, the nonfunctional requirements will justify the feature, defined in the second milestone, which was not satisfied by a use case.\\
@@ -175,10 +175,10 @@ The client does not have a software solution in place.  Currently, Tim has a pri
 
 \section{Usability Requirements}
 \label{usability}
-\textbf{NOTE}: The client will judge the usability of the program
 \begin{itemize}
 \item User should be able to familiarize himself or herself with the software within one hour
 \item An online help system / documentation will not be required
+\item Since the client is not greatly concerned with the usability of the product, there will be very relaxed criteria concerning this aspect.  As such, if the client has any issues with usability of the product, the client will request the change or implement it on his own time, depending on the constraints of the development team.
 \end{itemize}
 
 \section{Performance Requirements}
@@ -203,7 +203,7 @@ NOTE: Any times described in the Performance Requirements are based on the clien
 \section{Supportability Requirements}
 \label{support}
 \begin{itemize}
-\item The system should be able to be supported by open source community and the client
+\item The system will be able to be supported by open source community and the client
 \item The source code needs to be kept clean and easy to understand
 \item The source code will follow Ruby coding standards and naming conventions
 \item The client should be able to extend the system with features of moderate complexity within four hours; this is an intended effect from following the Ruby coding standards
@@ -249,7 +249,7 @@ The final product will utilize and / or be compatible with the following softwar
 ~\\
 \begin{tabular}{ p{4.5in} }
 \includegraphics[keepaspectratio, width=4.5in]{addItemF0S0.pdf}\\
-The main page
+The main page, showing no more than the top five most recent changes: a design aspect requested by the client
 \end{tabular}\\
 ~\\
 ~\\
@@ -261,7 +261,7 @@ The main page with a basic search query filled in
 ~\\
 \begin{tabular}{ p{4.5in} }
 \includegraphics[keepaspectratio, width=4.5in]{addItemF0S1.pdf}\\
-The add item page with category autocomplete showing
+The add item page with category autocomplete showing.  The Name and UPC fields are required to be non-empty (and in the case of UPCs, unique as well).
 \end{tabular}\\
 ~\\
 ~\\
@@ -279,7 +279,7 @@ The add item page after one attribute key has been selected and another field ad
 ~\\
 \begin{tabular}{ p{4.5in} }
 \includegraphics[keepaspectratio, width=4.5in]{addItemF0S5.pdf}\\
-The add item page with data filled in
+The add item page with data filled in, showing that arbitrary attribute names can be used.  It is also possible to use arbitrary categories.
 \end{tabular}\\
 ~\\
 ~\\
@@ -297,7 +297,7 @@ Popup message informing the user that the UPC entered has been previously entere
 ~\\
 \begin{tabular}{ p{4.5in} }
 \includegraphics[keepaspectratio, width=4.5in]{basicSearchF0S1.pdf} \\
-The results of the basic search
+The results of the basic search, showing all of the results on one page
 \end{tabular}\\
 ~\\
 ~\\
