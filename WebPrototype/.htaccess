@@ -1,0 +1,7 @@
+Options FollowSymLinks
+RewriteEngine on
+
+RewriteCond %{ENV:REDIRECT_STATUS} !200
+RewriteRule ^(\w+)\.php$ /MyWebsite/371Prototype/$1 [R=301]
+
+RewriteRule ^(\w+)/?$ /MyWebsite/371Prototype/$1.php
