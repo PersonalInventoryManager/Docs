@@ -3,7 +3,10 @@ Milestones/*.aux
 Milestones/*.synctex.gz
 Milestones/M?.pdf
 Milestones/M?.toc
-Milestones/Master.pdf
-Milestones/Master.toc
+Milestones/CSSE374/*.log
+Milestones/CSSE374/*.aux
+Milestones/CSSE374/*.synctex.gz
+Milestones/CSSE374/M?.pdf
+Milestones/CSSE374/M?.toc
 */.DS_Store
 

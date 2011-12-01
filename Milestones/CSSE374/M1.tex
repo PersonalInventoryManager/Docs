@@ -11,10 +11,11 @@
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 \begin{document}
 \setlength{\voffset}{3.5in}
-\title{Milestone Master Document}
+\title{Milestone 1}
 \author{Team Sriram\\
+CM 1394\\
 (Susi Cisneros, Eric Henderson, Taylor Purviance and Richard Thai)}
-\date{11 November 2011}
+\date{2 December 2011}
 \maketitle
 \clearpage
 \setlength{\voffset}{0pt}
@@ -55,6 +56,7 @@ The client will be the main user of the system. While the client is very familia
 \end{itemize}
 
 \subsection{User Needs}
+NOTE: The unorthodox ids are to preserve the original identification of the needs prior to revisions.  This is intended to help maintain consistency across all versions of the information.\\ \\
 \begin{tabular}{ | p{0.15in} | p{4.0in} | p{.75in} |}
 \hline
 \textbf{ID} & \textbf{Need} & \textbf{Priority} \\
@@ -78,7 +80,7 @@ N8 & View most-recently acquired asset(s) & Optional \\
 \hline
 N9 & View a summary of inventory data & Optional \\
 \hline
-\end{tabular} \\
+\end{tabular} \\ \\ \\
 \textbf{Legend:} \\
 Primary - Necessary to the system \\
 Secondary - Important to the system \\
@@ -114,7 +116,6 @@ Compatible with the client's current user environment & F9\\
 Change data associated with items & F3\\
 \hline
 \end{tabular}
-\clearpage
 \subsection{Assumptions and Dependencies}
 \begin{itemize}
 \item Availability of network/web hosting.
@@ -143,6 +144,7 @@ Since the solution will be the product of a course project, no monetary capital 
 
 \section{Features}
 \subsection{Feature Listing}
+NOTE: The unorthodox ids are to preserve the original identification of the features prior to revisions.  This is intended to help maintain consistency across all versions of the information.\\ \\
 \begin{tabular}{ | p{0.15in} | p{2.0in} | p{0.5in} | p{0.5in} | p{0.5in} | p{0.6in} | p{0.5in} | p{0.65in} | }
 \hline
 \textbf{ID} & \textbf{Feature}\label{feature} & \textbf{Priority}\label{priority} & \textbf{Effort}\label{effort} & \textbf{Risk}\label{risk} & \textbf{Stability}\label{stability} & \textbf{Target Release}\label{target_release} & \textbf{Assigned To}\label{assigned_to} \\
@@ -362,8 +364,8 @@ This use case shows how a basic search from any page  would proceed. This case w
 
 \paragraph{Extension Points}
 \begin{itemize}
-\item 5.4 Search Result Sorting
-\item 5.5 View Details of an Item
+\item 8.4 Search Result Sorting
+\item 8.5 View Details of an Item
 \end{itemize}
 
 
@@ -431,8 +433,8 @@ This use case shows how a search from the advanced search page  would proceed. T
 
 \paragraph{Extension Points}
 \begin{itemize}
-\item 5.4 Search Result Sorting
-\item 5.5 View Details of an Item
+\item 8.4 Search Result Sorting
+\item 8.5 View Details of an Item
 \end{itemize}
 
 
@@ -482,7 +484,7 @@ This use case shows how changing the sorting of the items on the search results 
 
 \paragraph{Extension Points}
 \begin{itemize}
-\item 5.5 View Details of an Item
+\item 8.5 View Details of an Item
 \end{itemize}
 
 
@@ -527,7 +529,7 @@ This use case shows how a user would select an item from a list to view more det
 
 \paragraph{Extension Points}
 \begin{itemize}
-\item 5.6 Edit Details of an Item
+\item 8.6 Edit Details of an Item
 \end{itemize}
 
 \subsection{Edit Details of an Item}
@@ -623,6 +625,7 @@ None
 
 
 \section{Data Flow Diagrams}
+\graphicspath{{../}}
 \label{dfd}
 \paragraph{DFD Legend}
 ~\\
@@ -718,7 +721,7 @@ NOTE: Any times described in the Performance Requirements are based on the clien
 \item Adding / modifying an API route should as difficult as adding / modifying a web application feature of equal complexity
 \end{itemize}
 
-\section{Hardware and Software Interfaces}
+\section{Hardware and Software Interfaces}\label{interface}
 The final product will utilize and / or be compatible with the following software products:\\
 \begin{itemize}
 \item Ruby 1.9.2 [2]
@@ -752,7 +755,7 @@ The final product will utilize and / or be compatible with the following softwar
 \end{itemize} 
 
 \section{User Interfaces}
-\graphicspath{{../StoryboardImages/}}
+\graphicspath{{../../StoryboardImages/}}
 ~\\
 \begin{tabular}{ p{4.5in} }
 \includegraphics[keepaspectratio, width=4.5in]{addItemF0S0.pdf}\\
@@ -1322,8 +1325,8 @@ T28 &  X  \\
 \textbf{Effort}: Expectation of the resources and time consumed for a feature (\pageref{feature}).\\ \\
 \textbf{Exact Matching}: Valid search candidates are determined by strict equality with the search input(s) (\pageref{feature}).\\ \\
 \textbf{Feature}: A system capability that fulfills a user need (\pageref{feature}).\\ \\
-\textbf{Flow}: A particular series of ordered steps through a sequence of events in a use case (\pageref{flow}).\\ \\
-\textbf{Fuzzy Matching}: Valid search candidates are determined based on similarity to the original search input(s) (\pageref{feature}).\\ \\
+\textbf{Flow}: A particular series of ordered steps through a sequence of events in a use case (\pageref{flow}).\\\clearpage ~\\
+\textbf{Fuzzy Matching}: Valid search candidates are determined based on similarity to the original search\\input(s) (\pageref{feature}).\\ \\
 \textbf{Interface}: A point of interaction between systems, whether hardware or software, that allows the systems to communicate using some protocol (\pageref{interface}).\\ \\
 \textbf{Performance}: The speed and efficiency of an operation, program, or system at a set of tasks (\pageref{performance}).\\ \\
 \textbf{Post-condition}: An expectation of the system's state after the events in a use case occur (\pageref{post_cond}).\\ \\
