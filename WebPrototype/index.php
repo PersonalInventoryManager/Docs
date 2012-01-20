@@ -15,6 +15,14 @@
         </div>
         <?php
             require 'searchbar.php';
+            if(isset($_GET['state']) && $_GET['state'] == 'added')
+            {
+        ?><br />
+        <div style="font-size:20px;color:lightgreen;background-color:teal;margin-right:25px;">
+            Item added successfully.
+        </div><br />
+        <?php
+            }
             require 'recent_changes'.$_SESSION['rcstate'].'.php';
         ?>
     </body>

@@ -3,7 +3,7 @@
     if(isset($_POST['state']) && $_POST['state'] == 'added')
     {
         $_SESSION['rcstate'] = '2';
-        header('Location: index');
+        header('Location: index?state=added');
     }
 ?>
 <html>
@@ -57,7 +57,7 @@
                 tmpin = document.createElement("input");
                 cnt.appendChild(tmpin);
                 tmpin.type = "text";
-                tmpin.style.fontSize = "20px;";
+                tmpin.style.fontSize = "20px";
                 cnt.appendChild(document.createElement("br"));
                 cnt.appendChild(document.createElement("br"));
                 setupAutocomplete("fld"+fldind, keylist);

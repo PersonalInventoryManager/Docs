@@ -83,6 +83,9 @@
     if(isset($_REQUEST['state']) && $_REQUEST['state'] == 'basic' && (!isset($_GET['sort']) || $_GET['sort'] == '' || $_GET['sort'] == 'name' || $_GET['sort'] == 'created' || $_GET['sort'] == 'modified'))
     {
 ?>
+            <div style="font-size:20px;">
+                Search Results Found: 2
+            </div><br />
             <div style="padding:10px;background-color:#BBBBBB;border: 5px solid #000000;">
                 <div style="font-size:35px;"><a href="details" style="color:#0000FF;cursor:pointer;">2GB DDR3 RAM for Dell Inspiron 1520 laptop</a></div>
                 <div style="font-size:18px;">Created: 29/9/2011 3:20 pm</div>
@@ -108,6 +111,9 @@
     else if(isset($_REQUEST['state']) && $_REQUEST['state'] == 'basic' && isset($_GET['sort']) && $_GET['sort'] == 'upc')
     {
 ?>
+            <div style="font-size:20px;">
+                Search Results Found: 2
+            </div><br />
             <div style="padding:10px;background-color:#BBBBBB;border: 5px solid #000000;">
                 <div style="font-size:35px;"><a href="details" style="color:#0000FF;cursor:pointer;">2GB DDR3 RAM for Dell Inspiron 1520 laptop</a></div>
                 <div style="font-size:18px;">Created: 23/9/2011 3:45 pm</div>
@@ -133,6 +139,9 @@
     else if(isset($_REQUEST['state']) && $_REQUEST['state'] == 'searched' && isset($_GET['sort']) && $_GET['sort'] == 'modified')
     {
 ?>
+            <div style="font-size:20px;">
+                Search Results Found: 3
+            </div><br />
             <div style="padding:10px;background-color:#BBBBBB;border: 5px solid #000000;">
                 <div style="font-size:35px;"><a href="details" style="color:#0000FF;cursor:pointer;">2GB DDR3 RAM for Dell Inspiron 1520 laptop</a></div>
                 <div style="font-size:18px;">Created: 29/9/2011 3:20 pm</div>
@@ -168,6 +177,9 @@
     else if(isset($_REQUEST['state']) && $_REQUEST['state'] == 'searched' && (!isset($_GET['sort']) || $_GET['sort'] == '' || $_GET['sort'] == 'name' || $_GET['sort'] == 'created'))
     {
 ?>
+            <div style="font-size:20px;">
+                Search Results Found: 3
+            </div><br />
             <div style="padding:10px;background-color:#BBBBBB;border: 5px solid #000000;">
                 <div style="font-size:35px;"><a href="details" style="color:#0000FF;cursor:pointer;">2GB DDR3 RAM for Dell Inspiron 1520 laptop</a></div>
                 <div style="font-size:18px;">Created: 29/9/2011 3:20 pm</div>
@@ -203,6 +215,9 @@
     else if(isset($_REQUEST['state']) && $_REQUEST['state'] == 'searched' && isset($_GET['sort']) && $_GET['sort'] == 'upc')
     {
 ?>
+            <div style="font-size:20px;">
+                Search Results Found: 3
+            </div><br />
             <div style="padding:10px;background-color:#BBBBBB;border: 5px solid #000000;">
                 <div style="font-size:35px;"><a href="details" style="color:#0000FF;cursor:pointer;">4GB DDR2 RAM for HP EliteBook 8530w laptop</a></div>
                 <div style="font-size:18px;">Created: 23/9/2011 3:20 pm&nbsp;&nbsp;&nbsp;&nbsp;Modified: 23/9/2011 3:50 pm</div>

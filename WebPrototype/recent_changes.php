@@ -1,4 +1,4 @@
-<div style="padding:10px;background-color:#DDDDDD;border: 5px solid #000000;overflow:auto;">
+<div style="padding:10px;background-color:#DDDDDD;border: 5px solid #000000;margin-right:25px;">
     <div style="font-size:50px;">Recent Changes</div>
     <div style="padding:10px;background-color:#BBBBBB;border: 5px solid #000000;">
         <div style="font-size:35px;"><a href="details" style="color:#0000FF;cursor:pointer;">4GB DDR2 RAM for HP EliteBook 8530w laptop</a></div>
