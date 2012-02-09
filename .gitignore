@@ -3,6 +3,7 @@ Milestones/*.aux
 Milestones/*.synctex.gz
 Milestones/M?.pdf
 Milestones/M?.toc
+Milestones/M?.out
 Milestones/CSSE374/*.log
 Milestones/CSSE374/*.aux
 Milestones/CSSE374/*.synctex.gz
